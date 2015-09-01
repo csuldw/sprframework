@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hoki.spring.award.dao.SnPoolMapper">
+    <resultMap id="checkResult" type="com.hoki.spring.award.domain.CheckInfo">
+        <result property="sn" column="title" />
+        <result property="award" column="award" />
+        <result property="status" column="status" />
+        <result property="appid" column="appid"/>
+        <result property="userid" column="userid"/>
+    </resultMap>
+
+    <insert id="insertSn" useGeneratedKeys="true" parameterType="java.util.List">
+
+        <selectKey resultType="long" keyProperty="id" order="AFTER">
+            SELECT
+            LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO `sn_pool`(sn,appid,status,award,award_score) VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.sn},#{item.appid},#{item.status},#{item.award},#{item.awardScore})
+        </foreach>
+    </insert>
+    <update id="updateSnStatus">
+      UPDATE `sn_pool`
+      SET `status`=#{status} WHERE  `sn`=#{sn};
+    </update>
+
+    <select id="getCount" resultType="java.lang.Integer">
+
+    SELECT  COUNT  (`id`) FROM  `sn_pool` WHERE  `sn`=#{sn} and `status`=0 ;
+    </select>
+    <select id="getSNCheck" resultMap="checkResult">
+         select  A.sn as sn, A.award as award, A.status as status,A.appid as appid,B.userid as userid
+         from `sn_pool` A
+         join record B on A.sn=B.sn WHERE A.status=${status} and A.appid=${appid}
+    </select>
+    <select id="getSNInfo" resultType="com.hoki.spring.award.domain.SN">
+         SELECT * FROM  `sn_pool` WHERE  `sn`=${sn}  ;
+    </select>
+    <select id="getMaxScoreSN" resultType="java.lang.String">
+        SELECT  `sn` FROM  `sn_pool` WHERE  `appid`=${appid} and `status`=1 and `award_score` &lt;=${score} order by award_score desc limit 1 ;
+    </select>
+
+
+</mapper>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <link rel="stylesheet" type="text/css" href="deploy/web/css/my.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/my.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/knockout-3.3.0.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script>
+        (function(){
+            var ef = function(){};
+            window.console = window.console || {log:ef,warn:ef,error:ef,dir:ef};
+        }());
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/3.4.0/es5-shim.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/3.4.0/es5-sham.js"></script>
+    <![endif]-->
+
+
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+            </button>
+            <a class="navbar-brand" href="#">H-Project</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Hoki_jim
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">个人资料</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Help</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Search...">
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar" id="nav" role="tablist">
+                <li role="presentation" class="active"><a href="#yxgl" role="tab" data-toggle="tab">游戏管理</a></li>
+                <li role="presentation" ><a href="#wjgl" role="tab" data-toggle="tab">玩家管理</a></li>
+            </ul>
+        </div>
+        <div class="tab-content">
+            <!--游戏管理-->
+            <div role="tabpanel" class="col-sm-8 col-md-10 tab-pane active" id="yxgl">
+                <div class="page-header">
+                    <h1>游戏管理</h1>
+                </div>
+                <div class="col-sm-8 col-md-10">
+                    <!--<ul class="nav nav-pills" style="padding-bottom: 30px">-->
+                        <!--<li role="presentation" class="active"><a href="#youxi" aria-controls="home" role="tab" data-toggle="tab">游戏信息</a></li>-->
+                        <!--<li role="presentation"><a href="#jiangxiang" aria-controls="home" role="tab" data-toggle="tab">奖项管理</a></li>-->
+                    <!--</ul>-->
+                    <!--<div class="tab-content">-->
+                        <!--&lt;!&ndash;游戏管理&ndash;&gt;-->
+                        <!--<div id="youxi" role="tabpanel" class="tab-pane active">-->
+                            <!--<form class="form-horizontal">-->
+                                <!--<div class="form-group">-->
+                                    <!--<label for="atitle" class="col-sm-2 control-label">游戏标题</label>-->
+                                    <!--<div class="col-sm-10">-->
+                                        <!--<input type="text" class="form-control" id="atitle" placeholder="游戏标题">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="form-group">-->
+                                    <!--<label for="arule" class="col-sm-2 control-label">游戏规则</label>-->
+                                    <!--<div class="col-sm-10">-->
+                                        <!--<textarea class="form-control" rows="3" id="arule"></textarea>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="form-group">-->
+                                    <!--<label for="astart" class="col-sm-2 control-label">开始时间</label>-->
+                                    <!--<div class="col-sm-4">-->
+                                        <!--<input type="datetime-local" class="form-control" id="astart" >-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="form-group">-->
+                                    <!--<label for="aend" class="col-sm-2 control-label">结束时间</label>-->
+                                    <!--<div class="col-sm-4">-->
+                                        <!--<input type="datetime-local" class="form-control" id="aend" >-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="form-group">-->
+                                    <!--<div class="col-sm-offset-2 col-sm-10">-->
+                                        <!--<button type="submit" class="btn btn-primary">提交</button>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</form>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash;奖项管理&ndash;&gt;-->
+                        <!--<div id="jiangxiang" role="tabpanel" class="tab-pane">-->
+                            <!--<form class="form-horizontal">-->
+                                <!--<div class="form-group">-->
+                                    <!--<label for="ajlwp" class="col-sm-2 control-label">奖励物品</label>-->
+                                    <!--<div class="col-sm-10">-->
+                                        <!--<input type="text" class="form-control" id="ajlwp" placeholder="奖励物品">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="form-group">-->
+                                    <!--<label for="afstj" class="col-sm-2 control-label">奖励分数</label>-->
+                                    <!--<div class="col-sm-10">-->
+                                        <!--<input type="text" class="form-control" id="afstj" placeholder="奖励分数 （例如输入10，就是大于等于10分的可以获得奖励）">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="form-group">-->
+                                    <!--<label for="asn" class="col-sm-2 control-label">sn码数量</label>-->
+                                    <!--<div class="col-sm-10">-->
+                                        <!--<input type="text" class="form-control" id="asn" placeholder="sn码数量">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="form-group">-->
+                                    <!--<div class="col-sm-offset-2 col-sm-10">-->
+                                        <!--<button type="submit" class="btn btn-primary">提交</button>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</form>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <table class="table table-hover">
+                        <thead>
+                        <tr class="btn-primary">
+                            <th>ID</td>
+                            <th>标题</td>
+                            <th>规则</td>
+                            <th>开始时间</td>
+                            <th>结束时间</td>
+                            <th>操作</td>
+                        </tr>
+                        </thead>
+                        <tbody data-bind="foreach:activity">
+                        <tr>
+                            <td data-bind="text:id"></td>
+                            <td data-bind="text:title"></td>
+                            <td data-bind="text:rule"></td>
+                            <td data-bind="text:start"></td>
+                            <td data-bind="text:end"></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--玩家管理-->
+            <div role="tabpanel" class="col-sm-8 col-md-10 tab-pane" id="wjgl">
+                <div class="page-header">
+                    <h1>玩家管理</h1>
+                </div>
+                <div class="col-sm-8 col-md-10">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr class="btn-primary">
+                            <td>111</td>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>222</td>
+                            </tr>
+                            <tr>
+                                <td>222</td>
+                            </tr>
+                            <tr>
+                                <td>222</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    var remote="http://localhost:8080";
+    var currentPage=1;
+    var userid="zhanxuejian";
+    var ViewModel=function() {
+        this.activity = ko.observableArray();
+    }
+    var vo=new ViewModel();
+    ko.applyBindings(vo);
+    $(document).ready(function() {
+        $.getJSON(remote+"/activity/list?userid="+userid+"&page="+currentPage+"&limit=20", function(json){
+            vo.activity(json)
+        });
+
+
+    });
+</script>
+</body>
+</html>

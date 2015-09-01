@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hoki.spring.award.dao.ActivityMapper">
+    <insert id="insertAct">
+        <selectKey resultType="long" keyProperty="id" order="AFTER">
+            SELECT
+            LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO `activity` (`start`, `end`, `rule`, `title`, `image_url`) VALUES
+        <foreach collection="list" item="item" index="index" separator="," >
+            (#{item.start},#{item.end},#{item.rule},#{item.title},#{item.imageUrl})
+        </foreach>
+    </insert>
+    <update id="updateAct" parameterType="com.hoki.spring.award.domain.Activity">
+        UPDATE `activity`
+        SET
+            `start`=#{start}, `end`=#{end}, `rule`=#{rule}, `title`=#{title}, `image_url`=#{imageUrl}
+        WHERE  `id`=#{id};
+    </update>
+    <select id="getActByAppId" resultType="com.hoki.spring.award.domain.Activity">
+           select * from activity  WHERE id=#{appid};
+    </select>
+    <select id="getActByUserid" resultType="com.hoki.spring.award.domain.Activity">
+          select * from activity  WHERE  user_id=#{userid};
+    </select>
+
+</mapper>

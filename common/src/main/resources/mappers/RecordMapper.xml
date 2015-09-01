@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hoki.spring.record.dao.RecordMapper">
+    <resultMap id="recordMap" type="com.hoki.spring.record.domain.Record">
+        <id property="id" column="id" />
+        <result property="userid" column="userid" />
+        <result property="sn" column="sn" />
+        <result property="score" column="score" />
+        <result property="appid" column="appid" />
+        <result property="award" column="award" />
+        <result property="creatTime" column="createTime" />
+    </resultMap>
+
+    <resultMap id="rankMap" type="com.hoki.spring.record.domain.Rank">
+        <id property="id" column="id" />
+        <result property="userid" column="userid" />
+        <result property="sn" column="sn" />
+        <result property="score" column="score" />
+        <result property="appid" column="appid" />
+        <result property="creatTime" column="createTime" />
+    </resultMap>
+    <parameterMap id="saveScoreMap" type="com.hoki.spring.record.domain.Record">
+        <parameter property="userid" javaType="string" jdbcType="VARCHAR"></parameter>
+        <parameter property="sn" javaType="string" jdbcType="VARCHAR"></parameter>
+        <parameter property="appid" javaType="int" jdbcType="INTEGER"></parameter>
+        <parameter property="score" javaType="long" jdbcType="BIGINT"></parameter>
+        <parameter property="creatTime" javaType="long" jdbcType="VARCHAR"></parameter>
+    </parameterMap>
+    <insert id="saveScore" useGeneratedKeys="true" parameterMap="saveScoreMap">
+        INSERT INTO record(userid,appid,score,sn,createTime) VALUES (#{userid},#{appid},#{score},#{sn},#{creatTime})
+    </insert>
+
+    <select id="getRank" resultMap="rankMap">
+      select id,max(score) score,userid,sn,appid,createTime from record  WHERE  appid=${appid} group by userid order by score desc;
+    </select>
+    <select id="getRecordByUserid"  resultMap="recordMap" >
+         select  A.sn as sn, A.award as award,B.userid as userid ,B.id as id, B.score as score ,B.appid as appid,B.createTime as createTime
+         from `sn_pool` A
+         join record B on A.sn=B.sn WHERE  A.appid=${appid} and userid=#{userid}
+    </select>
+
+</mapper>
