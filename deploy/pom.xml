@@ -54,7 +54,8 @@
                             <maxIdleTime>60000</maxIdleTime>
                         </connector>
                     </connectors>
-                    <webAppSourceDirectory>web</webAppSourceDirectory>
+                    <!--<webAppSourceDirectory>web</webAppSourceDirectory>-->
+                    <webAppSourceDirectory>syb</webAppSourceDirectory>
                 </configuration>
             </plugin>
             <plugin>

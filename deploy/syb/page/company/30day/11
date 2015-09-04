@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<title>Strikingly - hiStarter团队小站</title>
+<head>
+<link rel="stylesheet" href="/res/css/day30/company_get_30day.css"/>
+</head>
+<body>
+<div>
+<div class="company_header">
+<div style="text-align: center;">
+<img id="company_logo" src="http://img.histarter.com/upload/2015-06-10/10/27/22/7567300012dc4eddb6a0219b619aa5c4/1433903242101/wt6dgd_fixhw300">
+<h1>「Strikingly」</h1>
+<h4>15分钟完成建站的工具，无需任何技术背景</h4>
+</div>
+</div>
+<div class="container">
+<div class="body-1">
+<div class="title-1">
+<img src="http://img.histarter.com/img/company/title_1.png"/>
+</div>
+<div style="padding-top:160px;padding-left:45px;padding-right:45px;">
+<div class="founder">
+<img src="http://img.histarter.com/img/company/company_j.png" class="cursor-left" alt=""/>
+<img class="avatar" src="http://img.histarter.com/upload/2015-06-10/10/39/45/bfd17bfbac044eb38eb2b35923cc1907/1433903985682/jaohe9_fixhw385"/>
+<div class="founder-text">
+<div class="founder-name">
+陈海沙
+</div>
+<div class="founder-position">
+CEO
+</div>
+<div class="founder-desc">
+大三从芝加哥大学休学一年和其他两位创始人开始创建Strikingly。在做Strikingly之前，陈海沙和朋友一起创立了Moneythink, 一个旨在普及金融知识的非盈利性组织。Moneythink是由Blackstone和戴维斯和平项目共同资助，曾被福布斯，MTV等多家知名媒体报道。在2011-2012年，陈海沙还曾担任了易社的执行总监，易社作为中国第一个社会企业孵化器，曾被克林顿高度赞赏。
+</div>
+</div>
+</div>
+<div class="founder">
+<div class="founder-text">
+<div class="founder-name-right">
+郭达峰
+</div>
+<div class="founder-position-right">
+CTO
+</div>
+<div class="founder-desc-right">
+曾以最高荣誉毕业于香港中文大学，他从中学开始一直研究构建网站应用。在2010年，他开发了三款在Facebook平台上的应用并达到了超过2千万的用户。在创建Strikingly之前，他一直在摩根士丹利从事构建大规模交易系统
+</div>
+</div>
+<img src="http://img.histarter.com/img/company/company_j_right.png" class="cursor-right" alt=""/>
+<img class="avatar" src="http://img.histarter.com/upload/2015-06-10/10/42/24/05bdf99a06de42e1838017aa31afa211/1433904144024/wr6gyt_fixhw385"/>
+</div>
+<div class="founder">
+<img src="http://img.histarter.com/img/company/company_j.png" class="cursor-left" alt=""/>
+<img class="avatar" src="http://img.histarter.com/upload/2015-06-12/13/09/27/d3e08b9fd824471a9879623ae5f8ca92/1434085767601/8upsvo_fixhw385"/>
+<div class="founder-text">
+<div class="founder-name">
+鲍腾
+</div>
+<div class="founder-position">
+CPO
+</div>
+<div class="founder-desc">
+在2012年以芝加哥大学最高学术荣誉毕业。从中学开始，他就一直在从事设计和软件开发的工作，他曾经开发了一款Flash游戏，吸引了超过1千万点击，他也曾担任过两家创业公司的产品研发和UX/UI 研发和优化。
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="body-2">
+<img src="http://img.histarter.com/img/company/iphone.png" class="product-ios" alt=""/>
+<img src="http://img.histarter.com/img/company/android.png" class="product-android" alt=""/>
+<img src="http://img.histarter.com/img/company/mac.png" class="product-web" alt=""/>
+<img class="product-img-ios" src="http://img.histarter.com/upload/2015-06-10/10/31/59/6da316a12a6e42c3b528fe7a51f69f61/1433903519818/0douz3_fixw350"/>
+<img class="product-img-android" src="http://img.histarter.com/upload/2015-06-10/10/32/09/32583ab5f22643fb8350c8525acd3410/1433903529273/li5dd2_fixw350"/>
+<img class="product-img-web" src="http://img.histarter.com/upload/2015-06-10/10/32/14/e4ea22cb69c84262834397ae4a0ec41c/1433903534755/ibnl08_fixw350"/>
+<div class="product-desc">
+Strikingly, 一款简洁美观好用的建站平台，一个为移动互联网而生的建站平台。任何没有设计或编程背景的人都可以在几分钟内用Strikingly做出一个精美的网站。除了快，我们更重要的特色是将你的网站自动适配到手机，平板，和电脑屏幕上，保证网站的设计在任何终端上都呈现最美观的状态。
+</div>
+</div>
+<div class="body-3">
+<div class="team-title">团队风采</div>
+<div class="team-desc"></div>
+<div class="team-img-list">
+<img class="team-img" src="http://img.histarter.com/upload/2015-06-10/10/32/40/e622faf3a2784ffa8a0762f8a4cf375f/1433903560866/oszx5m_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-06-10/10/33/07/c4b36e16e3eb424fbe95424bf5f1b59c/1433903587241/r3lvde_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-06-10/10/33/16/1b6708970b07486a93fe1e2f73297904/1433903596593/h3deg4_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-06-10/10/38/43/28249d75c66247f68151cc7506c993a6/1433903923761/mpoyk6_fixhw220" alt=""/>
+</div>
+</div>
+<div class="body-4">
+<div class="job-list">
+<span class="job">前端工程师，产品设计师，安卓工程师，IOS工程师</span>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

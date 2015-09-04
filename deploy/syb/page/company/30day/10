@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<title>Hola - hiStarter团队小站</title>
+<head>
+<link rel="stylesheet" href="/res/css/day30/company_get_30day.css"/>
+</head>
+<body>
+<div>
+<div class="company_header">
+<div style="text-align: center;">
+<img id="company_logo" src="http://img.histarter.com/upload/2015-06-09/16/51/36/8986d1ce32b848c39df68bfa928a8572/1433839896712/6gremh_fixhw300">
+<h1>「Hola」</h1>
+<h4>重新定义社交</h4>
+</div>
+</div>
+<div class="container">
+<div class="body-1">
+<div class="title-1">
+<img src="http://img.histarter.com/img/company/title_1.png"/>
+</div>
+<div style="padding-top:160px;padding-left:45px;padding-right:45px;">
+<div class="founder">
+<img src="http://img.histarter.com/img/company/company_j.png" class="cursor-left" alt=""/>
+<img class="avatar" src="http://img.histarter.com/upload/2015-06-10/10/14/17/1d025869992c496e8fabe06fdb6cf3de/1433902457092/naw9nn_fixhw385"/>
+<div class="founder-text">
+<div class="founder-name">
+段冰洁
+</div>
+<div class="founder-position">
+创始人
+</div>
+<div class="founder-desc">
+传统规则适应不良，对感兴趣的事会不遗余力去做。独立思考，感性与理性胡乱切换，享受工作也享受生活。创业三年，从点到面，从片段到系统，创业让我不断的怀疑，突破，进化...最后一切再回到初心
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="body-2">
+<img src="http://img.histarter.com/img/company/iphone.png" class="product-ios" alt=""/>
+<img src="http://img.histarter.com/img/company/android.png" class="product-android" alt=""/>
+<img src="http://img.histarter.com/img/company/mac.png" class="product-web" alt=""/>
+<img class="product-img-ios" src="http://img.histarter.com/upload/2015-06-10/10/12/44/29e0f09b53b94079b4323265b6dbb2d4/1433902364051/elpuo9_fixw350"/>
+<img class="product-img-android" src="http://img.histarter.com/upload/2015-06-10/10/12/49/59de72ab54ed47f8bdc27d7feeeb0440/1433902369030/cih08g_fixw350"/>
+<img class="product-img-web" src="http://img.histarter.com/upload/2015-06-10/10/12/54/63732b58948841e7a85402296dbc04fb/1433902374354/7af2cg_fixw350"/>
+<div class="product-desc">
+HOLA颠覆我们习以为常的线上社交方式，帮助我们和身边的人建立连接，线上与线下无缝结合，社交行为将不再局限于网络，相较于发达的线上社交，我们身边的价值却未被充分运用。
+放弃已有的关系、关心身边的人、关注周围的环境，活在当下，回到我们最初充满新鲜与好奇的样子。这样的生活方式不仅健康，也代表了未来。
+</div>
+</div>
+<div class="body-3">
+<div class="team-title">团队风采</div>
+<div class="team-desc"></div>
+<div class="team-img-list">
+<img class="team-img" src="http://img.histarter.com/upload/2015-06-09/16/54/45/c04ce3acee6640ec9ef13a8e8cd45185/1433840085848/rurpup_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-06-09/16/55/10/0a061cc7050c404f881300020cfcd442/1433840110768/dkb42v_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-06-09/16/55/10/c2c552083b544f8daf6365221a182bca/1433840110681/e80bkl_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-06-09/16/58/41/dcf638ee12b04dda822552c004d6e627/1433840321723/lzhyem_fixhw220" alt=""/>
+</div>
+</div>
+<div class="body-4">
+<div class="job-list">
+<span class="job">ios工程师</span>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

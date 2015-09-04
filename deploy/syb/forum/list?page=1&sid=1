@@ -1,0 +1,660 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="创业社区,创业活动,创业报道,互联网创业,90后创业,互联网招聘">
+<meta name="description" content="在hiStarter吐槽社区聊话题，聊工作、找团队、找合伙人、认识更多朋友。">
+<link href="/res/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="/res/css/style_1.css?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321" rel="stylesheet">
+<link href="/res/css/style_2.css?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321" rel="stylesheet">
+<meta name="fragment" content="!"/>
+ 
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+<script type="text/javascript" src="/res/js/src/lib/require.js"></script>
+<script type="text/javascript" src="/res/js/src/main.js?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321"></script>
+<script type="text/javascript" src="/res/js/bin/starter.js?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script id="common-loading-tmpl" type="text/x-jsrender">
+	<span ><i class="fa fa-spinner fa-spin"></i> {{:data}}</span>
+</script>
+<script id="common-loading-mini-tmpl" type="text/x-jsrender">
+	<span ><i class="fa fa-spinner fa-spin"></i> {{:data}}</span>
+</script>
+<script type="text/javascript">
+    var path = '';
+    var ctxRoot = '';
+    var ISLOGIN = 'false';
+    var ISACTIVE = 'true';
+    var ISPERFECT = 'true';
+    var ISCOMPANY = 'false'
+    var appId = 'forum/forum_main';
+</script>
+<title>吐槽社区 - hiStarter | 靠谱的创业团队都在这儿</title>
+<style type="text/css"></style>
+</head>
+<body class="bg-white">
+<ul id="notyfy_container_top" class="notyfy_container navbar-fixed-top i-am-new"></ul>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" id="top-nav" ng-controller="headerCtrl">
+<div class="progress top-progress" style="display: none">
+<div class="progress-bar progress-bar-success" id="top-progress-div" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+</div>
+<div class="container relative_pos">
+<div class="container header_to_re">
+<div id="wrap" style="display: none">
+<label id='sideMenuControl' for='sideToggle'>=</label>
+</div>
+<div class="navbar-header ">
+<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+</button>
+<img class="hide" src="http://img.histarter.com/index/new_logo.png_fixhw300"/>
+<a class="navbar-brand navbar-brand-jobmain" href="/">
+<img style="width: auto; height: 60px;" src="http://img.histarter.com/index/new_logo.png"/></a>
+</div>
+<div class="navbar-to-hide navbar-to-hider">
+<ul class="nav navbar-nav navbar-title">
+<li style="display: none;"><a href="/page/company/list/1">团队列表</a>
+<a href="/page/people/list">团队列表</a> <a href="/page/jobs/list">职位列表</a></li>
+<li class="now"><a href="/" title="首页">首页</a></li>
+<li><a href="/p/company/company_main" title="团队">团队</a></li>
+<li><a href="/p/people/people_main" class="btn-action" title="人才">人才</a></li>
+<li><a href="/p/jobs/job_main" title="职位">职位</a></li>
+<li><a class="text-primary" href="/forum/list">社区</a> <span class="community_new" style="position: absolute; top: 10px; right: 0px;"><img src="http://img.histarter.com/index/NEW.png"> </span></li>
+<li class="dropdown mrg25R"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">更多 <span class="caret"></span>
+</a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="/event/list" title="活动">活动</a></li>
+</ul></li>
+<li class="input-icon search-icon no_border"><i class="fa fa-search"></i> <input class="form-control form-searchkey" name="searchkey" data-toggle="dropdown" aria-expanded="false" popover-postion="left" maxlength="20" type="text" data-type="1" placeholder="搜索职位">
+<ul class="dropdown-menu" role="menu" style="border: none;">
+<li data-v="1" style="display: none;"><a class="btn ">切换职位搜索</a></li>
+<li data-v="2"><a class="btn ">切换公司搜索</a></li>
+<li data-v="3"><a class="btn ">切换人才搜索</a></li>
+</ul></li>
+</ul>
+<ul class="nav navbar-nav navbar-right header-btns">
+<li><a href="javascript:void(0)" style="padding-top: 15px; padding-bottom: 1px; background-color: #fff;"><button type="button" class="btn btn-default openRegModal">注册</button></a></li>
+<li><a href="javascript:void(0)" style="padding-top: 15px; padding-bottom: 1px; background-color: #fff;"><button type="button" class="btn btn-success  openLogModal" ng-click="openLogin()">登录</button></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<script type="text/x-jsrender" id="temp-search-div">
+<div class="btn btn-neeed cb" data-s-v="{{>code}}">{{>value}}</div>
+</script>
+<input id='sessionUID' value='5DC8A2613A6F475359AC8C6BA67DEA6F' type="hidden"/>
+<div class="container">
+<div class="row">
+<div class="col-xs-9 to_full">
+<div class="" id="content-liquid-full mh500">
+<div class="tab-content" id="mainContain">
+<h4 class="mrg20B" style="color: #b5b5b5; font-size: 16px">梦想是什么，梦想就是一种让你感到坚持就是幸福的东西。&nbsp;&nbsp;&nbsp;&nbsp;-《中国合伙人》</h4>
+<ul id="myTab" class="nav clearfix nav-tabs">
+<li class=""><a href="/forum/list">全部</a></li>
+<li class="active"><a href="/forum/list?sid=1">话题讨论</a></li>
+<li class=""><a href="/forum/list?sid=2">求职区</a></li>
+<li class=""><a href="/forum/list?sid=3">组队创业</a></li>
+<li class=""><a href="/forum/list?sid=4">产品反馈/BUG</a></li>
+<li class=""><a href="/forum/list?sid=5">其他</a></li>
+</ul>
+<div class="aw-mod aw-explore-list bg-white">
+<div class="mod-body">
+<div class="aw-common-list">
+<div class="aw-item active" data-topic-id="">
+<a class="aw-user-name data-popover-f-u" data-placement="bottom" data-container="body" data-trigger="hover" href="/people/288" rel="nofollow"><img target="_blank" class="img-circle" src="http://img.histarter.com/upload/2014-12-22/23/18/00/a0d2b2d625b1403995106a985dd86470/1419261480623/IMG_05360.jpg_fixhw80" alt="Tony84">
+<div class="hide ">
+<div class="user-info-popover">
+<img src="http://img.histarter.com/upload/2014-12-22/23/18/00/a0d2b2d625b1403995106a985dd86470/1419261480623/IMG_05360.jpg_fixhw80" class="img-circle">
+<h3 class="meta-heading">Tony84</h3>
+<h4 class="meta-subheading">
+创业=创新+商业
+</h4>
+</div>
+</div></a>
+<div class="aw-question-content">
+<h4>
+<a class='isTop' href="/forum/topic/get/166" target="_blank"> 一个传统制造业的人如何开始创业？
+</a>
+<img class="" style="margin-top: -5px;" src="http://img.histarter.com/img/forum/zd.gif" alt="置顶">
+</h4>
+<p>
+• <a href="/people/288" target="_blank" class="aw-user-name">Tony84</a> •<span class="text-color-999">合伙人 <span class="text-color-999 to_hide">发起的话题 •
+1897 次围观 • 前天17:17:27
+• 最后回复人： <a style="color: #999;" href="/people/288">Tony84</a>
+</span>
+</p>
+</div>
+<div class="topic-right-info ">
+<a href="/forum/topic/get/166" target="_blank" class="hint-comm-article"><span class="a">47</span><span class="b">吐槽</span></a>
+</div>
+</div>
+<div class="aw-item active" data-topic-id="">
+<a class="aw-user-name data-popover-f-u" data-placement="bottom" data-container="body" data-trigger="hover" href="/people/1146" rel="nofollow"><img target="_blank" class="img-circle" src="http://img.histarter.com/upload/2015-02-12/15/27/20/0ac236d1c41a4db4b4ed00f2f6a68165/1423726040497/3n36ab_fixhw80" alt="huangyangme">
+<div class="hide ">
+<div class="user-info-popover">
+<img src="http://img.histarter.com/upload/2015-02-12/15/27/20/0ac236d1c41a4db4b4ed00f2f6a68165/1423726040497/3n36ab_fixhw80" class="img-circle">
+<h3 class="meta-heading">huangyangme</h3>
+<h4 class="meta-subheading">
+Trying to leave something a little better than I found it.
+</h4>
+</div>
+</div></a>
+<div class="aw-question-content">
+<h4>
+<a class='isTop' href="/forum/topic/get/132" target="_blank"> 纪，我成功通过 hiStarter 找到现在的工作
+</a>
+<img class="" style="margin-top: -5px;" src="http://img.histarter.com/img/forum/zd.gif" alt="置顶">
+</h4>
+<p>
+• <a href="/people/1146" target="_blank" class="aw-user-name">huangyangme</a> •<span class="text-color-999">前端工程师 <span class="text-color-999 to_hide">发起的话题 •
+3458 次围观 • 2015-08-17 10:37:53
+• 最后回复人： <a style="color: #999;" href="/people/2506">好买车</a>
+</span>
+</p>
+</div>
+<div class="topic-right-info ">
+<a href="/forum/topic/get/132" target="_blank" class="hint-comm-article"><span class="a">40</span><span class="b">吐槽</span></a>
+</div>
+</div>
+<div class="aw-item active" data-topic-id="">
+<a class="aw-user-name data-popover-f-u" data-placement="bottom" data-container="body" data-trigger="hover" href="/people/392" rel="nofollow"><img target="_blank" class="img-circle" src="http://img.histarter.com/upload/2014-12-24/10/23/57/c6120a248ce7494c94c935d6003e8ac2/1419387837779/IMG_1268.JPG_fixhw80" alt="hiStarter小奇">
+<div class="hide ">
+<div class="user-info-popover">
+<img src="http://img.histarter.com/upload/2014-12-24/10/23/57/c6120a248ce7494c94c935d6003e8ac2/1419387837779/IMG_1268.JPG_fixhw80" class="img-circle">
+<h3 class="meta-heading">hiStarter小奇</h3>
+<h4 class="meta-subheading">
+hiStarter吉祥物小奇
+</h4>
+</div>
+</div></a>
+<div class="aw-question-content">
+<h4>
+<a class='isTop' href="/forum/topic/get/61" target="_blank"> hiStarter漫游全攻略
+</a>
+<img class="" style="margin-top: -5px;" src="http://img.histarter.com/img/forum/zd.gif" alt="置顶">
+</h4>
+<p>
+• <a href="/people/392" target="_blank" class="aw-user-name">hiStarter小奇</a> •<span class="text-color-999">hiStarter吉祥物 <span class="text-color-999 to_hide">发起的话题 •
+1174 次围观 • 2015-07-23 18:00:26
+• 最后回复人： <a style="color: #999;" href="/people/6503">檎</a>
+</span>
+</p>
+</div>
+<div class="topic-right-info ">
+<a href="/forum/topic/get/61" target="_blank" class="hint-comm-article"><span class="a">21</span><span class="b">吐槽</span></a>
+</div>
+</div>
+<div class="aw-item active" data-topic-id="">
+<a class="aw-user-name data-popover-f-u" data-placement="bottom" data-container="body" data-trigger="hover" href="/people/1015" rel="nofollow"><img target="_blank" class="img-circle" src="http://img.histarter.com/upload/2015-08-20/14/45/51/4a39f076139241049bc10c75f4c341db/1440053151130/0ca4kb_fixhw80" alt="Anastasia秋">
+<div class="hide ">
+<div class="user-info-popover">
+<img src="http://img.histarter.com/upload/2015-08-20/14/45/51/4a39f076139241049bc10c75f4c341db/1440053151130/0ca4kb_fixhw80" class="img-circle">
+<h3 class="meta-heading">Anastasia秋</h3>
+<h4 class="meta-subheading">
+头像来源于网络。
+</h4>
+</div>
+</div></a>
+<div class="aw-question-content">
+<h4>
+<a class='isTop' href="/forum/topic/get/202" target="_blank"> 【hiStarter线下活动】想参与分享的团队戳这里~\(≧▽≦)/~
+</a>
+<img class="" style="margin-top: -5px;" src="http://img.histarter.com/img/forum/zd.gif" alt="置顶">
+</h4>
+<p>
+• <a href="/people/1015" target="_blank" class="aw-user-name">Anastasia秋</a> •<span class="text-color-999">市场营销 <span class="text-color-999 to_hide">发起的话题 •
+1136 次围观 • 2015-05-27 10:14:08
+• 最后回复人： <a style="color: #999;" href="/people/1015">Anastasia秋</a>
+</span>
+</p>
+</div>
+<div class="topic-right-info ">
+<a href="/forum/topic/get/202" target="_blank" class="hint-comm-article"><span class="a">19</span><span class="b">吐槽</span></a>
+</div>
+</div>
+<div class="aw-item active" data-topic-id="">
+<a class="aw-user-name data-popover-f-u" data-placement="bottom" data-container="body" data-trigger="hover" href="/people/6531" rel="nofollow"><img target="_blank" class="img-circle" src="http://img.histarter.com/upload/2015-07-28/13/13/00/4410ee2b47a24377beea532b222dc3b5/1438060380341/o58x88_fixhw80" alt="saraYuan">
+<div class="hide ">
+<div class="user-info-popover">
+<img src="http://img.histarter.com/upload/2015-07-28/13/13/00/4410ee2b47a24377beea532b222dc3b5/1438060380341/o58x88_fixhw80" class="img-circle">
+<h3 class="meta-heading">saraYuan</h3>
+<h4 class="meta-subheading">
+</h4>
+</div>
+</div></a>
+<div class="aw-question-content">
+<h4>
+<a href="/forum/topic/get/482" target="_blank"> 寻求新的孵化器~快收留我们这个创业团队吧~
+</a>
+</h4>
+<p>
+• <a href="/people/6531" target="_blank" class="aw-user-name">saraYuan</a> •<span class="text-color-999">其他 <span class="text-color-999 to_hide">发起的话题 •
+9 次围观 • 6小时前
+• 最后回复人： <a style="color: #999;" href="/people/6531">saraYuan</a>
+</span>
+</p>
+</div>
+<div class="topic-right-info ">
+<a href="/forum/topic/get/482" target="_blank" class="hint-comm-article bg-gray"><span class="a" style="color: #808185;">0</span><span class="b" style="color: #808185;">吐槽</span></a>
+</div>
+</div>
+<div class="aw-item active" data-topic-id="">
+<a class="aw-user-name data-popover-f-u" data-placement="bottom" data-container="body" data-trigger="hover" href="/people/2099" rel="nofollow"><img target="_blank" class="img-circle" src="http://img.histarter.com/upload/2015-02-11/14/06/46/986f6c5c6eb54d5e887a5382f3672959/1423634806158/rka9oi_fixhw80" alt="KKringo">
+<div class="hide ">
+<div class="user-info-popover">
+<img src="http://img.histarter.com/upload/2015-02-11/14/06/46/986f6c5c6eb54d5e887a5382f3672959/1423634806158/rka9oi_fixhw80" class="img-circle">
+<h3 class="meta-heading">KKringo</h3>
+<h4 class="meta-subheading">
+Nya
+</h4>
+</div>
+</div></a>
+<div class="aw-question-content">
+<h4>
+<a href="/forum/topic/get/448" target="_blank"> 关于孵化器的一些事情。
+</a>
+</h4>
+<p>
+• <a href="/people/2099" target="_blank" class="aw-user-name">KKringo</a> •<span class="text-color-999">运营 <span class="text-color-999 to_hide">发起的话题 •
+41 次围观 • 6小时前
+• 最后回复人： <a style="color: #999;" href="/people/6531">saraYuan</a>
+</span>
+</p>
+</div>
+<div class="topic-right-info ">
+<a href="/forum/topic/get/448" target="_blank" class="hint-comm-article"><span class="a">8</span><span class="b">吐槽</span></a>
+</div>
+</div>
+<div class="aw-item active" data-topic-id="">
+<a class="aw-user-name data-popover-f-u" data-placement="bottom" data-container="body" data-trigger="hover" href="/people/6935" rel="nofollow"><img target="_blank" class="img-circle" src="http://img.histarter.com/upload/2015-08-10/14/59/06/da8e5535d0544b479d9df076c851c5d4/1439189946095/1bf8gj_fixhw80" alt="melodyouc">
+<div class="hide ">
+<div class="user-info-popover">
+<img src="http://img.histarter.com/upload/2015-08-10/14/59/06/da8e5535d0544b479d9df076c851c5d4/1439189946095/1bf8gj_fixhw80" class="img-circle">
+<h3 class="meta-heading">melodyouc</h3>
+<h4 class="meta-subheading">
+</h4>
+</div>
+</div></a>
+<div class="aw-question-content">
+<h4>
+<a href="/forum/topic/get/481" target="_blank"> 上海创业团队，诚邀前端工程师加盟~
+</a>
+</h4>
+<p>
+• <a href="/people/6935" target="_blank" class="aw-user-name">melodyouc</a> •<span class="text-color-999">合伙人 <span class="text-color-999 to_hide">发起的话题 •
+13 次围观 • 23小时前
+• 最后回复人： <a style="color: #999;" href="/people/6935">melodyouc</a>
+</span>
+</p>
+</div>
+<div class="topic-right-info ">
+<a href="/forum/topic/get/481" target="_blank" class="hint-comm-article bg-gray"><span class="a" style="color: #808185;">0</span><span class="b" style="color: #808185;">吐槽</span></a>
+</div>
+</div>
+<div class="aw-item active" data-topic-id="">
+<a class="aw-user-name data-popover-f-u" data-placement="bottom" data-container="body" data-trigger="hover" href="/people/3689" rel="nofollow"><img target="_blank" class="img-circle" src="http://img.histarter.com/upload/2015-04-18/01/06/17/7f7404dc77ba4f75949619dd99782669/1429290377496/39iphz_fixhw80" alt="xiaobudian">
+<div class="hide ">
+<div class="user-info-popover">
+<img src="http://img.histarter.com/upload/2015-04-18/01/06/17/7f7404dc77ba4f75949619dd99782669/1429290377496/39iphz_fixhw80" class="img-circle">
+<h3 class="meta-heading">xiaobudian</h3>
+<h4 class="meta-subheading">
+2海归博士师兄弟从澳洲车库开始创业，2014年回国创业，于全球7000竞争项目中进入前30，入选南京321重点项目.
+</h4>
+</div>
+</div></a>
+<div class="aw-question-content">
+<h4>
+<a href="/forum/topic/get/237" target="_blank"> 创业团队寻找合伙人
+</a>
+</h4>
+<p>
+• <a href="/people/3689" target="_blank" class="aw-user-name">xiaobudian</a> •<span class="text-color-999">其他 <span class="text-color-999 to_hide">发起的话题 •
+376 次围观 • 昨天16:35:06
+• 最后回复人： <a style="color: #999;" href="/people/288">Tony84</a>
+</span>
+</p>
+</div>
+<div class="topic-right-info ">
+<a href="/forum/topic/get/237" target="_blank" class="hint-comm-article"><span class="a">7</span><span class="b">吐槽</span></a>
+</div>
+</div>
+<div class="aw-item active" data-topic-id="">
+<a class="aw-user-name data-popover-f-u" data-placement="bottom" data-container="body" data-trigger="hover" href="/people/7033" rel="nofollow"><img target="_blank" class="img-circle" src="http://img.histarter.com/upload/2015-08-13/18/21/10/c2d503fc4e304790b52e9aa4ed390290/1439461270241/mbbmka_fixhw80" alt="鲜天不良">
+<div class="hide ">
+<div class="user-info-popover">
+<img src="http://img.histarter.com/upload/2015-08-13/18/21/10/c2d503fc4e304790b52e9aa4ed390290/1439461270241/mbbmka_fixhw80" class="img-circle">
+<h3 class="meta-heading">鲜天不良</h3>
+<h4 class="meta-subheading">
+好饿啊
+</h4>
+</div>
+</div></a>
+<div class="aw-question-content">
+<h4>
+<a href="/forum/topic/get/464" target="_blank"> 只改一下标题，阅读量从1万+到10万+
+</a>
+</h4>
+<p>
+• <a href="/people/7033" target="_blank" class="aw-user-name">鲜天不良</a> •<span class="text-color-999">其他 <span class="text-color-999 to_hide">发起的话题 •
+72 次围观 • 昨天16:33:41
+• 最后回复人： <a style="color: #999;" href="/people/288">Tony84</a>
+</span>
+</p>
+</div>
+<div class="topic-right-info ">
+<a href="/forum/topic/get/464" target="_blank" class="hint-comm-article"><span class="a">6</span><span class="b">吐槽</span></a>
+</div>
+</div>
+<div class="aw-item active" data-topic-id="">
+<a class="aw-user-name data-popover-f-u" data-placement="bottom" data-container="body" data-trigger="hover" href="/people/1015" rel="nofollow"><img target="_blank" class="img-circle" src="http://img.histarter.com/upload/2015-08-20/14/45/51/4a39f076139241049bc10c75f4c341db/1440053151130/0ca4kb_fixhw80" alt="Anastasia秋">
+<div class="hide ">
+<div class="user-info-popover">
+<img src="http://img.histarter.com/upload/2015-08-20/14/45/51/4a39f076139241049bc10c75f4c341db/1440053151130/0ca4kb_fixhw80" class="img-circle">
+<h3 class="meta-heading">Anastasia秋</h3>
+<h4 class="meta-subheading">
+头像来源于网络。
+</h4>
+</div>
+</div></a>
+<div class="aw-question-content">
+<h4>
+<a href="/forum/topic/get/478" target="_blank"> 创业10问~知乎上看到的，看着有理~可供探讨~
+</a>
+</h4>
+<p>
+• <a href="/people/1015" target="_blank" class="aw-user-name">Anastasia秋</a> •<span class="text-color-999">市场营销 <span class="text-color-999 to_hide">发起的话题 •
+45 次围观 • 昨天16:30:43
+• 最后回复人： <a style="color: #999;" href="/people/288">Tony84</a>
+</span>
+</p>
+</div>
+<div class="topic-right-info ">
+<a href="/forum/topic/get/478" target="_blank" class="hint-comm-article"><span class="a">4</span><span class="b">吐槽</span></a>
+</div>
+</div>
+<div class="aw-item active" data-topic-id="">
+<a class="aw-user-name data-popover-f-u" data-placement="bottom" data-container="body" data-trigger="hover" href="/people/725" rel="nofollow"><img target="_blank" class="img-circle" src="http://img.histarter.com/upload/2015-01-11/21/08/17/18f0b3c48f724c03888bc90340e4cc27/1420981697379/nmmrxd_fixhw80" alt="石头君">
+<div class="hide ">
+<div class="user-info-popover">
+<img src="http://img.histarter.com/upload/2015-01-11/21/08/17/18f0b3c48f724c03888bc90340e4cc27/1420981697379/nmmrxd_fixhw80" class="img-circle">
+<h3 class="meta-heading">石头君</h3>
+<h4 class="meta-subheading">
+只做有爱的设计，只识有爱的团队。联系方式：QQ 492814184
+</h4>
+</div>
+</div></a>
+<div class="aw-question-content">
+<h4>
+<a href="/forum/topic/get/476" target="_blank"> 真爱都是约出来的吗？
+</a>
+</h4>
+<p>
+• <a href="/people/725" target="_blank" class="aw-user-name">石头君</a> •<span class="text-color-999">合伙人 <span class="text-color-999 to_hide">发起的话题 •
+42 次围观 • 昨天13:59:48
+• 最后回复人： <a style="color: #999;" href="/people/12">撸撸子</a>
+</span>
+</p>
+</div>
+<div class="topic-right-info ">
+<a href="/forum/topic/get/476" target="_blank" class="hint-comm-article"><span class="a">4</span><span class="b">吐槽</span></a>
+</div>
+</div>
+<div class="aw-item active" data-topic-id="">
+<a class="aw-user-name data-popover-f-u" data-placement="bottom" data-container="body" data-trigger="hover" href="/people/288" rel="nofollow"><img target="_blank" class="img-circle" src="http://img.histarter.com/upload/2014-12-22/23/18/00/a0d2b2d625b1403995106a985dd86470/1419261480623/IMG_05360.jpg_fixhw80" alt="Tony84">
+<div class="hide ">
+<div class="user-info-popover">
+<img src="http://img.histarter.com/upload/2014-12-22/23/18/00/a0d2b2d625b1403995106a985dd86470/1419261480623/IMG_05360.jpg_fixhw80" class="img-circle">
+<h3 class="meta-heading">Tony84</h3>
+<h4 class="meta-subheading">
+创业=创新+商业
+</h4>
+</div>
+</div></a>
+<div class="aw-question-content">
+<h4>
+<a href="/forum/topic/get/402" target="_blank"> 我觉得我越来越不会说话了，你呢？
+</a>
+</h4>
+<p>
+• <a href="/people/288" target="_blank" class="aw-user-name">Tony84</a> •<span class="text-color-999">合伙人 <span class="text-color-999 to_hide">发起的话题 •
+140 次围观 • 前天17:17:44
+• 最后回复人： <a style="color: #999;" href="/people/288">Tony84</a>
+</span>
+</p>
+</div>
+<div class="topic-right-info ">
+<a href="/forum/topic/get/402" target="_blank" class="hint-comm-article"><span class="a">9</span><span class="b">吐槽</span></a>
+</div>
+</div>
+<div class="aw-item active" data-topic-id="">
+<a class="aw-user-name data-popover-f-u" data-placement="bottom" data-container="body" data-trigger="hover" href="/people/7033" rel="nofollow"><img target="_blank" class="img-circle" src="http://img.histarter.com/upload/2015-08-13/18/21/10/c2d503fc4e304790b52e9aa4ed390290/1439461270241/mbbmka_fixhw80" alt="鲜天不良">
+<div class="hide ">
+<div class="user-info-popover">
+<img src="http://img.histarter.com/upload/2015-08-13/18/21/10/c2d503fc4e304790b52e9aa4ed390290/1439461270241/mbbmka_fixhw80" class="img-circle">
+<h3 class="meta-heading">鲜天不良</h3>
+<h4 class="meta-subheading">
+好饿啊
+</h4>
+</div>
+</div></a>
+<div class="aw-question-content">
+<h4>
+<a href="/forum/topic/get/463" target="_blank"> 人家不懂竞品是个啥，所以就。。苏杰:到底什么是“竞品”？
+</a>
+</h4>
+<p>
+• <a href="/people/7033" target="_blank" class="aw-user-name">鲜天不良</a> •<span class="text-color-999">其他 <span class="text-color-999 to_hide">发起的话题 •
+53 次围观 • 前天16:19:06
+• 最后回复人： <a style="color: #999;" href="/people/1015">Anastasia秋</a>
+</span>
+</p>
+</div>
+<div class="topic-right-info ">
+<a href="/forum/topic/get/463" target="_blank" class="hint-comm-article"><span class="a">5</span><span class="b">吐槽</span></a>
+</div>
+</div>
+<div class="aw-item active" data-topic-id="">
+<a class="aw-user-name data-popover-f-u" data-placement="bottom" data-container="body" data-trigger="hover" href="/people/6659" rel="nofollow"><img target="_blank" class="img-circle" src="http://img.histarter.com/upload/2015-07-29/16/30/51/6ceefc62f4064f18bff8fde20d9d4fda/1438158651256/matecg_fixhw80" alt="白开">
+<div class="hide ">
+<div class="user-info-popover">
+<img src="http://img.histarter.com/upload/2015-07-29/16/30/51/6ceefc62f4064f18bff8fde20d9d4fda/1438158651256/matecg_fixhw80" class="img-circle">
+<h3 class="meta-heading">白开</h3>
+<h4 class="meta-subheading">
+自己创业过。希望有互联网+人力资源，或新闻资讯类的创业团队。
+</h4>
+</div>
+</div></a>
+<div class="aw-question-content">
+<h4>
+<a href="/forum/topic/get/473" target="_blank"> 大家来说说各自创业失败的项目 替正在路上的小伙伴“受”一记耳光
+</a>
+</h4>
+<p>
+• <a href="/people/6659" target="_blank" class="aw-user-name">白开</a> •<span class="text-color-999">运营 <span class="text-color-999 to_hide">发起的话题 •
+68 次围观 • 前天16:08:14
+• 最后回复人： <a style="color: #999;" href="/people/1015">Anastasia秋</a>
+</span>
+</p>
+</div>
+<div class="topic-right-info ">
+<a href="/forum/topic/get/473" target="_blank" class="hint-comm-article"><span class="a">9</span><span class="b">吐槽</span></a>
+</div>
+</div>
+<div class="aw-item active" data-topic-id="">
+<a class="aw-user-name data-popover-f-u" data-placement="bottom" data-container="body" data-trigger="hover" href="/people/1015" rel="nofollow"><img target="_blank" class="img-circle" src="http://img.histarter.com/upload/2015-08-20/14/45/51/4a39f076139241049bc10c75f4c341db/1440053151130/0ca4kb_fixhw80" alt="Anastasia秋">
+<div class="hide ">
+<div class="user-info-popover">
+<img src="http://img.histarter.com/upload/2015-08-20/14/45/51/4a39f076139241049bc10c75f4c341db/1440053151130/0ca4kb_fixhw80" class="img-circle">
+<h3 class="meta-heading">Anastasia秋</h3>
+<h4 class="meta-subheading">
+头像来源于网络。
+</h4>
+</div>
+</div></a>
+<div class="aw-question-content">
+<h4>
+<a href="/forum/topic/get/477" target="_blank"> 我司是否也应该做个酱紫的纪念品→_→
+</a>
+</h4>
+<p>
+• <a href="/people/1015" target="_blank" class="aw-user-name">Anastasia秋</a> •<span class="text-color-999">市场营销 <span class="text-color-999 to_hide">发起的话题 •
+27 次围观 • 前天10:33:36
+• 最后回复人： <a style="color: #999;" href="/people/5572">终于可以改名了！</a>
+</span>
+</p>
+</div>
+<div class="topic-right-info ">
+<a href="/forum/topic/get/477" target="_blank" class="hint-comm-article"><span class="a">3</span><span class="b">吐槽</span></a>
+</div>
+</div>
+</div>
+</div>
+<div class="mod-footer mrg25T">
+<a class="btn btn-lg btn-default pad5T pad5B pull-right" href="/forum/list?page=2&sid=1">下一页</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-3 to_full">
+<aside class="widget-info forum-l-info">
+<h2 class="h4 title">吐槽社区</h2>
+<p>在吐槽社区聊话题，聊工作、找团队、找合伙人、认识更多朋友。</p>
+<div class="add-topic">
+<a href="/p/forum/topic_add" class="btn btn-lg btn-block btn-action btn-success pad5T pad5B">发表话题</a>
+</div>
+</aside>
+</div>
+</div>
+</div>
+ 
+<div class="pre-footer mrg15T">
+<div class="container text-center">
+<div class="row">
+ 
+<div class="col-xs-3 col-xs-6">
+<div class="pre-footer-title">星球介绍</div>
+<div class="pre-footer-item mrg10T">
+<a href="/about#about_us">关于我们
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="/about#about_service"> 服务模式
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="/about#about_partner">合作伙伴
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="/about#about_contact">联系我们
+</a>
+</div>
+</div>
+<div class="col-xs-3 col-xs-6">
+<div class="pre-footer-title">创业招聘</div>
+<div class="pre-footer-item mrg10T">
+<a href="/p/company/company_main">团队列表
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="/p/jobs/job_main">职位列表
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="/p/people/people_main">人才列表
+</a>
+<div class="pre-footer-item mrg10T">
+<a href="/30day">直招报名
+</a>
+</div>
+</div>
+</div>
+<div class="col-xs-3 col-xs-6">
+<div class="pre-footer-title">媒体报道</div>
+<div class="pre-footer-item mrg10T">
+<a href="http://www.36kr.com/p/218208.html" target="_blank">36氪
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="http://www.pingwest.com/histarter-demo" target="_blank">PingWest
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="http://cn.technode.com/post/2014-12-22/histarter" target="_blank">动点科技
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="http://tech2ipo.com/93789" target="_blank">Tech2IPO
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="http://tech.ifeng.com/a/20150120/40950840_0.shtml" target="_blank">凤凰科技
+</a>
+</div>
+</div>
+<div class="col-xs-3 col-xs-6">
+<div class="pre-footer-title">移动端下载</div>
+<div class="pre-footer-item mrg10T">
+<a href="javascript:void(0);">
+<img src="http://img.histarter.com/img/appstore.png" id="hiStarteriOSDownload" alt="hiStarter移动端下载"/>
+</a>
+</div>
+</div>
+</div>
+<hr>
+<div class="row pad15B">
+<div class="col-xs-7" style="margin-left:7%;text-align: left;">
+© 2014-2015 HISTARTER.COM・沪ICP备13032488号 上海奇麦网络科技有限公司
+</div>
+<div class="col-xs-4 text-right">
+<a class="pre-footer-social" data-animation="am-flip-x" data-trigger="click" data-placement="top" bs-popover data-html="true" data-content="<img src='http://img.histarter.com/img/histarter_qrcode.jpg' width='150' height='150'/>" href=" javascript:void(0);"><i class="fa fa-wechat"></i></a>
+<a class="pre-footer-social" href="http://www.weibo.com/histarter" target="_blank"><i class="fa fa-weibo"></i></a>
+<a class="pre-footer-social" data-animation="am-flip-x" href="javascript:void(0);" data-trigger="click" data-placement="top" bs-popover data-html="true" data-content="官方QQ吐槽群:219507775"><i class="fa fa-qq"></i></a>
+<a class="pre-footer-social" href="/cdn-cgi/l/email-protection#70071f07301819030411020415025e131f1d"><i class="fa fa-envelope"></i></a>
+</div>
+</div>
+</div>
+</div>
+<script id="tmpl-dict" type="text/x-jsrender">
+	<option value='{{>code}}' {{>selected}}>{{>value}}</option>
+</script>
+<script id="tmpl-dict-r" type="text/x-jsrender">
+	<label class="radio-inline"> <input type="radio" name=""  value="{{>code}}">{{>value}}</label>
+</script>
+<script id="select-tmpl" type="text/x-jsrender">
+    <option value='{{>value}}' {{>selected}}>{{>text}}</option>
+</script>
+<script type="text/javascript">
+
+    function a(a, b) {
+        var c = 'font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;font-size: 15px;'
+                + (a ? "font-weight: bold;" : "") + "color: " + b + ";";
+        return c;
+    }
+    console.log("%c♥ 想加入我们吗 ? %c急招JAVA工程师,发送您的简历至%c--> wow@histarter.com", a(!0,
+            "#d22"), a(!0, "#777"), a(!0, "#2b2")), window.joinUs = function() {
+        return console.log("%cWe're excited to have you! %c☃", a(!1, "#d22"),
+                a(!1, "#333")), window.location.href = "/_/_/about/careers/",
+                "";
+    };
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?1f61149eae43428c63d2907772a1e515";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>
+</body>
+</html>

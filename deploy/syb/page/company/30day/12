@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<title>指南猫 - hiStarter团队小站</title>
+<head>
+<link rel="stylesheet" href="/res/css/day30/company_get_30day.css"/>
+</head>
+<body>
+<div>
+<div class="company_header">
+<div style="text-align: center;">
+<img id="company_logo" src="http://img.histarter.com/upload/2015-06-15/16/05/39/93a724773a504b53ac1e213a95200483/1434355539885/dntpin_fixhw300">
+<h1>「指南猫」</h1>
+<h4>用自己的方式去旅行</h4>
+</div>
+</div>
+<div class="container">
+<div class="body-1">
+<div class="title-1">
+<img src="http://img.histarter.com/img/company/title_1.png"/>
+</div>
+<div style="padding-top:160px;padding-left:45px;padding-right:45px;">
+<div class="founder">
+<img src="http://img.histarter.com/img/company/company_j.png" class="cursor-left" alt=""/>
+<img class="avatar" src="http://img.histarter.com/upload/2015-06-15/16/11/22/2d0e497f29ac4009980c2b248e3371d2/1434355882664/1mnqjl_fixhw385"/>
+<div class="founder-text">
+<div class="founder-name">
+任静
+</div>
+<div class="founder-position">
+创始人
+</div>
+<div class="founder-desc">
+85后美女CEO，11年自助旅行经验。9岁开始练摊、15岁开始创业，拥有4次创业经历，因缺课太多曾多次被劝退学。6年风险投资从业，累计完成超过8亿人民币投资，其中2家企业已成功在A股上市，曾担任高能资本投资副总裁、川岳资本合伙人，后放弃百万年薪创办指南猫。
+</div>
+</div>
+</div>
+<div class="founder">
+<div class="founder-text">
+<div class="founder-name-right">
+范青轩
+</div>
+<div class="founder-position-right">
+联合创始人
+</div>
+<div class="founder-desc-right">
+谦逊、沉稳、冷幽默的85后技术宅，8年技术开发经验，2次创业经历。早期在51job从事技术研发多年，2011年从51job离职开始创业，第一个项目为地方社区网站，后项目被整体并购后进入收购方全职工作。2013年离职，加入指南猫，开始第二次创业。
+</div>
+</div>
+<img src="http://img.histarter.com/img/company/company_j_right.png" class="cursor-right" alt=""/>
+<img class="avatar" src="http://img.histarter.com/upload/2015-06-15/16/12/03/ecaac5eaa30f4bc1ad468276e1891ef8/1434355923692/a9lp2d_fixhw385"/>
+</div>
+<div class="founder">
+<img src="http://img.histarter.com/img/company/company_j.png" class="cursor-left" alt=""/>
+<img class="avatar" src="http://img.histarter.com/upload/2015-06-15/16/12/49/526fdec406094b7584004d6245acae92/1434355969037/bobj2a_fixhw385"/>
+<div class="founder-text">
+<div class="founder-name">
+许佳佳
+</div>
+<div class="founder-position">
+联合创始人
+</div>
+<div class="founder-desc">
+伪90后资深腐女，上通天文下晓地理，财务管理专业毕业不务正业从了BD，5年BD从业经验，曾就职于奥美投资和全国最大的手机媒体服务商道有道。2013年加入指南猫开始创业。
+</div>
+</div>
+</div>
+<div class="founder">
+<div class="founder-text">
+<div class="founder-name-right">
+陈坎晨
+</div>
+<div class="founder-position-right">
+联合创始人
+</div>
+<div class="founder-desc-right">
+纯种80后，对探索未知事物充满兴趣。印尼达人，曾学习生活放逐在印度尼西亚数月，练得一口小语种。投身在线旅游行业5年有余，曾就职于携程和在路上，具有丰富的市场营销&品牌管理经验。
+</div>
+</div>
+<img src="http://img.histarter.com/img/company/company_j_right.png" class="cursor-right" alt=""/>
+<img class="avatar" src="http://img.histarter.com/upload/2015-06-15/16/13/25/76291e6ed8674efcaa745670595a66f6/1434356005202/aa6k0g_fixhw385"/>
+</div>
+</div>
+</div>
+<div class="body-2">
+<img src="http://img.histarter.com/img/company/iphone.png" class="product-ios" alt=""/>
+<img src="http://img.histarter.com/img/company/android.png" class="product-android" alt=""/>
+<img src="http://img.histarter.com/img/company/mac.png" class="product-web" alt=""/>
+<img class="product-img-ios" src="http://img.histarter.com/upload/2015-06-15/16/07/29/80adc6bc4a0e42cd8b721510e0eaed4c/1434355649514/jjsz0c_fixw350"/>
+<img class="product-img-android" src="http://img.histarter.com/upload/2015-06-15/16/07/34/fa287ad0614944d79807cd4e61cd647a/1434355654569/uuv8bi_fixw350"/>
+<img class="product-img-web" src="http://img.histarter.com/upload/2015-06-15/16/09/18/65170805ca4a406abe78c306cb4df697/1434355758716/j8kzug_fixw350"/>
+<div class="product-desc">
+指南猫是一个伪文艺、具有娱乐精神的旅行设计平台，创造了一种全新的旅行方式——达人定制自由行，开启了旅行3.0时代，基于分享经济借助PGC提供旅行定制O2O服务，是年轻人的轻奢旅行之选。不跟团、不自助、没有固定线路，结合定制游的省心和自助游的自在，由当地旅行经验丰富的旅行设计师，完全根据你的需求量身定制行程方案，拿着你的专属路线方案，就可以轻松出行。
+</div>
+</div>
+<div class="body-3">
+<div class="team-title">团队风采</div>
+<div class="team-desc"></div>
+<div class="team-img-list">
+<img class="team-img" src="http://img.histarter.com/upload/2015-06-15/18/01/56/a43671d1c7ab4b89946cb418d304d238/1434362516644/cpecyh_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-06-15/18/02/05/a17647838eef4526aec7d46c24ee8c22/1434362525716/5bry2g_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-06-15/18/02/18/4f9da2593ef84da88ce0eeac8825a0a7/1434362538195/fwbsme_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-06-15/18/02/34/ca0a61e85b8a45c09a06850464d2b80d/1434362554496/94i8o6_fixhw220" alt=""/>
+</div>
+</div>
+<div class="body-4">
+<div class="job-list">
+<span class="job">PHP工程师，社会化营销专员，前端开发工程师</span>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

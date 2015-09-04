@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<link href="/res/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="/res/css/style_1.css?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321" rel="stylesheet">
+<link href="/res/css/style_2.css?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321" rel="stylesheet">
+<meta name="fragment" content="!"/>
+ 
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+<script type="text/javascript" src="/res/js/src/lib/require.js"></script>
+<script type="text/javascript" src="/res/js/src/main.js?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321"></script>
+<script type="text/javascript" src="/res/js/bin/starter.js?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script id="common-loading-tmpl" type="text/x-jsrender">
+	<span ><i class="fa fa-spinner fa-spin"></i> {{:data}}</span>
+</script>
+<script id="common-loading-mini-tmpl" type="text/x-jsrender">
+	<span ><i class="fa fa-spinner fa-spin"></i> {{:data}}</span>
+</script>
+<script type="text/javascript">
+    var path = '';
+    var ctxRoot = '';
+    var ISLOGIN = 'false';
+    var ISACTIVE = 'true';
+    var ISPERFECT = 'true';
+    var ISCOMPANY = 'false'
+    var appId = 'page/user-log-reg';
+</script>
+<title>hiStarter | 靠谱的创业团队都在这儿
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<style type="text/css">@media screen and (max-width: 720px) {.log_logo{margin:0 auto!important;}}.log_logo{width:150px;margin:0 20px;}</style>
+</head>
+<body class="login-body" style="min-width: 320px">
+<ul id="notyfy_container_top" class="notyfy_container i-am-new" style="position: fixed"></ul>
+<div class="log_logo">
+<img src="/res/img/hiStarter_log.png">
+</div>
+<div>
+<div class="pannel">
+<div class="inner">
+<form method="post" action="#" class="basic-form form-signin" id="pageLoginForm" style="display: none">
+<div class="form-signin-heading text-center">
+<h1 class="sign-title">开始漫游 HISTARTER</h1>
+</div>
+<div class="input-icon ">
+<div class="input-group">
+<div class="input-group-addon" style="border-radius: 3px 0px 0px 0px">
+<i class=" fa fa-envelope" style="font-size: 17px;"></i>
+</div>
+<input class="form-control" name="loginName" placeholder="请输入邮箱" popover-position="top" require="require" require-message="邮箱不能为空" email="email" maxlength="50" type="text" style="border-radius: 0px 3px 0px 0px !important">
+</div>
+</div>
+<div class="input-icon ">
+<div class="input-group">
+<div class="input-group-addon" style="border-radius: 0px 0px 0px 3px">
+<i class="fa fa-lock" style="font-size: 23px;"></i>
+</div>
+<input class="form-control" name="password" placeholder="输入登录密码" popover-position="top" require="require" require-message="请输入您的密码" maxlength="16" pwd="pwd" type="password" style="border-radius: 0px 0px 3px 0px !important">
+</div>
+</div>
+<button class="btn btn-lg btn-success btn-block pageLoginBtn top_distance" type="button">
+登 录
+</button>
+<div class="mrg5T text-center"><a type="button" class="btn btn-primary " href="/weibo/login"><i class="fa fa-weibo"></i>&nbsp;微博登陆</a>&nbsp;<a type="button" class="btn btn-danger " href="/qq/login"><i class="fa fa-qq"></i>&nbsp;QQ登陆</a>
+</div>
+<div class="registration">
+<span class="pull-left"> 还没有账号? <a class="pageToRegBtn" href="javascript:void(0);"> 注册 </a></span><span class="pull-right">
+<a class="pageToForgetPwdBtn" href="javascript:void(0)">忘记密码</a>
+</span>
+</div>
+</form>
+<form method="post" action="#" class="basic-form form-signin" id="pageRegForm" style="display: none">
+<div class="form-signin-heading text-center">
+<h1 class="sign-title">注册 HISTARTER 漫游账号</h1>
+</div>
+<div class="input-icon">
+<div class="input-group">
+<div class="input-group-addon">
+<i class=" fa fa-envelope" style="font-size: 17px;"></i>
+</div>
+<input class="form-control" name="loginName" placeholder="请输入您的邮箱地址" popover-position="top" require="require" email="email" require-message="邮箱地址不能为空" maxlength="35" type="text" style="border-radius: 0px 3px 0px 0px !important;">
+</div>
+</div>
+<div class="input-icon ">
+<div class="input-group">
+<div class="input-group-addon">
+<i class=" fa fa-user"></i>
+</div>
+<input class="form-control" name="nickname" placeholder="请输入您的个人昵称（非团队名称）" popover-position="top" require="require" require-message="请输入您的个人账号昵称" maxlength="20" type="text">
+</div>
+</div>
+<div class="input-icon ">
+<div class="input-group">
+<div class="input-group-addon">
+<i class="fa fa-lock"></i>
+</div>
+<input class="form-control" name="password" placeholder="输入登录密码" popover-position="top" require="require" require-message="请输入您的密码" maxlength="16" pwd="pwd" compare="input[name='replypassword']" compare-message="您输入的两次登录密码不一致,请重新输入" type="password">
+</div>
+</div>
+<div class="input-icon">
+<div class="input-group">
+<div class="input-group-addon" style="border-radius: 0px 0px 0px 3px;">
+<i class="fa fa-check" style="font-size: 17px;"></i>
+</div>
+<input class="form-control" name="replypassword" placeholder="再次输入您的密码" require="require" require-message="请再次输入您的密码" popover-position="top" maxlength="16" pwd="pwd" type="password" style="border-radius: 0px 0px 3px 0px !important;">
+</div>
+</div>
+<button class="btn btn-lg btn-success btn-block pageRegisterBtn top_distance" type="button" style="border-radius: 3px;">
+注 册 </i>
+</button>
+<div class="registration">
+已有账号? <a class="pageToLoginBtn" href="javascript:void(0)"> 登录
+</a>
+</div>
+</form>
+<form method="post" action="" class="basic-form form-signin" id="pageForgetPwdForm" style="display: none" onsubmit="return false;">
+<div class="form-signin-heading text-center">
+<h1 class="sign-title">
+找回 <span style="color: #2abc68">hiStarter</span> 密码
+</h1>
+</div>
+<div class="input-icon ">
+<div class="input-group">
+<div class="input-group-addon">
+<i class="fa fa-envelope" style="font-size: 17px;"></i>
+</div>
+<input class="form-control" name="loginName" placeholder="请输入登录邮箱" popover-position="top" require="require" email="email" require-message="登录邮箱不能为空" maxlength="40" type="text">
+</div>
+</div>
+<button class="btn btn-lg btn-success btn-block pageForgetPwdBtn top_distance" type="button" style="border-radius: 3px;">找回密码
+</button>
+<div class="registration pull-right">
+<a href="javascript:void(0)" class="pageToLoginBtn">登录</a> <a class="pageToRegBtn" href="javascript:void(0)"> 注册 </a>
+</div>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>

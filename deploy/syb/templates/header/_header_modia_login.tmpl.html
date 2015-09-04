@@ -1,0 +1,121 @@
+<div id="modal-login-reg" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="min-height: 250px; border-top: 3px solid #6c3;padding:25px;">
+            <div class="modal-header" style="border-bottom: 1px solid #fff;position: absolute;top:5px;right:10px;z-index: 100000;">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body pad5T ">
+                <div id="modal-login">
+                    <div class="row">
+                        <div class="col-xs-7 skill-rb to_full pad25R">
+                            <div class="title-info  pad10A mrg5A">
+                                登录<span>LOGIN</span>
+                            </div>
+                            <div class="text-center pad10L ">
+                                <form id="modal-login-form" role="form">
+                                    <div class="input-icon mrg25T">
+                                        <i class="fa fa-envelope text-info"></i> <input class="form-control input-lg" type="text" style="padding-left: 40px" placeholder="请输入登录邮箱" name="loginName" popover-position="top" require="require" require-message="登录邮箱不能为空" maxlength="35">
+                                    </div>
+                                    <div class="input-icon mrg25T">
+                                        <i class="fa fa-lock text-info" style="font-size: 23px; margin-left: 12px;"></i> <input style="padding-left: 40px" class="form-control input-lg" type="password" name="password" placeholder="请输入密码" popover-position="top" require="require" require-message="请输入您的密码" pwd="pwd" maxlength="16">
+                                    </div>
+                                    <div class="input-icon mrg25T" id="checkNoteInput" style="display: none">
+                                        <i class="fa fa-lock text-info" style="font-size: 23px; margin-left: 12px;"></i> <input name="noteCheck" style="padding-left: 40px;" class="form-control input-lg" type="text" placeholder="请输入短信验证码" popover-position="top" maxlength="16">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="cb mrg25T"></div>
+                            <div class="pull-left mrg10L">
+                                <span class="">没有账号?<a href="javascript:void(0)" class="toRegBtn">点击注册</a></span>
+                            </div>
+                            <div class="pull-right " style="">
+                                <a href="/login/page#forget">忘记密码</a>
+                            </div>
+                            <div class="cb "></div>
+                            <div class="text-center mrg25T">
+                                <button class="btn btn btn-lg  btn-success loginBtn  " style="width: 200px;">登 录
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-xs-5 text-center">
+                            <div class="mrg15T">
+                                <span class="text-c9 ftz-16">微信扫一扫登陆</span>
+                                <div id="wechat_qr_login"></div>
+                            </div>
+                            <div style="margin-top: 12px;">
+                                <a href="/weibo/login" class="btn btn-danger"><span class="fa fa-weibo"></span> 微博登陆</a>
+                                <a href="/qq/login" class="btn btn-primary"><span class="fa fa-qq"></span> QQ登陆</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="modal-reg" style="display: none">
+                    <div class="row">
+                        <div class="col-xs-7 skill-rb pad45R to_full">
+                            <div class="title-info  pad10A mrg5A">
+                                注册<span>REGISTER</span>
+                            </div>
+                            <div class="text-center pad10L ">
+                                <form id="modal-reg-form" role="form">
+                                    <div class="input-icon mrg25T">
+                                        <i class="fa fa-envelope text-info"></i> <input class="form-control input-lg" type="text" style="padding-left: 40px" placeholder="请输入登录邮箱" name="loginName" popover-position="top" require="require" require-message="登录邮箱不能为空" email="email" maxlength="35">
+                                    </div>
+                                    <div class="input-icon mrg25T">
+                                        <i class=" fa fa-user"></i> <input class="form-control input-lg" name="nickname" placeholder="请输入您的昵称" popover-position="top" require="require" require-message="请输入您的昵称" maxlength="20" type="text">
+                                    </div>
+                                    <div class="input-icon mrg25T">
+                                        <i class="fa fa-lock text-info" style="font-size: 23px; margin-left: 12px;"></i> <input style="padding-left: 40px" class="form-control input-lg" type="password" name="password" placeholder="请输入密码" popover-position="top" require="require" require-message="请输入您的密码" compare="input[name='replypassword']" compare-message="您输入的两次登录密码不一致,请重新输入" pwd="pwd" maxlength="16">
+                                    </div>
+                                    <div class="input-icon mrg25T">
+                                        <i class="fa fa-lock text-info" style="font-size: 23px; margin-left: 12px;"></i> <input style="padding-left: 40px" class="form-control input-lg" type="password" name="replypassword" placeholder="再次输入您的密码" require="require" require-message="请再次输入您的密码" popover-position="top" maxlength="16" pwd="pwd" type="password">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="cb mrg25T"></div>
+                            <div class="pull-left mrg10L" style="">
+                                <span class="">已有账号?<a href="javascript:void(0)" class="toLogBtn">点击登录</a></span>
+                            </div>
+                            <div class="pull-right " style="">
+                                <a href="/login/page#forget">忘记密码</a>
+                            </div>
+                            <div class="cb "></div>
+                            <div class="text-center mrg25T">
+                                <button class="btn btn btn-lg  btn-success doRegBtn  " style="width: 200px;">注 册</button>
+                            </div>
+                        </div>
+                        <div class="col-xs-5 text-center ">
+                            <div style="margin-top:35px;">
+                                <span class="text-c9 ftz-16">微信扫一扫登陆</span>
+                                <div id="wechat_qr"></div>
+                            </div>
+                            <div style="margin-top: 98px;">
+                                <a href="/weibo/login" class="btn btn-danger"><span class="fa fa-weibo"></span> 微博注册</a>
+                                <a href="/qq/login" class="btn btn-primary"><span class="fa fa-qq"></span> QQ注册</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    new WxLogin({
+        id:"wechat_qr_login",
+        appid: "wxd9fc6032a1ae656f",
+        scope: "snsapi_login",
+        redirect_uri: "http://www.histarter.com/wechat/login/callback",
+        state: "",
+        style: "white",
+        href: "https://file-histarter.b0.upaiyun.com/js/wechat_qr.css"
+    });
+    new WxLogin({
+        id:"wechat_qr",
+        appid: "wxd9fc6032a1ae656f",
+        scope: "snsapi_login",
+        redirect_uri: "http://www.histarter.com/wechat/login/callback",
+        state: "",
+        style: "white",
+        href: "https://file-histarter.b0.upaiyun.com/js/wechat_qr.css"
+    });
+</script>

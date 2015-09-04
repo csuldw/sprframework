@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<title>十年后 - hiStarter团队小站</title>
+<head>
+<link rel="stylesheet" href="/res/css/day30/company_get_30day.css"/>
+</head>
+<body>
+<div>
+<div class="company_header">
+<div style="text-align: center;">
+<img id="company_logo" src="http://img.histarter.com/upload/2015-05-21/16/42/47/b5095c3c773f4bee991db33085b5f73f/1432197767510/hfkns8_fixhw300">
+<h1>「十年后」</h1>
+<h4>一个关于未来的社交网络</h4>
+</div>
+</div>
+<div class="container">
+<div class="body-1">
+<div class="title-1">
+<img src="http://img.histarter.com/img/company/title_1.png"/>
+</div>
+<div style="padding-top:160px;padding-left:45px;padding-right:45px;">
+<div class="founder">
+<img src="http://img.histarter.com/img/company/company_j.png" class="cursor-left" alt=""/>
+<img class="avatar" src="http://img.histarter.com/upload/2015-05-21/16/52/05/4a9cfb10d8e543568faf229c8880a219/1432198325100/yngjwk_fixhw385"/>
+<div class="founder-text">
+<div class="founder-name">
+笪兴
+</div>
+<div class="founder-position">
+创始人
+</div>
+<div class="founder-desc">
+复旦大学管理学院毕业，在校期间，曾发起复旦青年领袖峰会项目。毕业后供职于500强企业，从事商业和政策分析工作。离职后创立“十年后”社交网络并担任其 CEO。希望用基于未来与梦想的社交网络颠覆现有互联网的琐碎和低价值体系
+</div>
+</div>
+</div>
+<div class="founder">
+<div class="founder-text">
+<div class="founder-name-right">
+Caroline
+</div>
+<div class="founder-position-right">
+联合创始人
+</div>
+<div class="founder-desc-right">
+美国加州伯克利大学MATH & CS本科。在校期间，曾多次创业，不愿意被传统和思维定势束缚，想做有价值、有意思的产品 。希望“十年后”成为理想和追求的象征，成为年轻人的人生价值导向。
+</div>
+</div>
+<img src="http://img.histarter.com/img/company/company_j_right.png" class="cursor-right" alt=""/>
+<img class="avatar" src="http://img.histarter.com/upload/2015-05-21/16/53/48/9ea1ad9da1c444ca9ad4b7265f61a314/1432198428910/njbo6h_fixhw385"/>
+</div>
+</div>
+</div>
+<div class="body-2">
+<img src="http://img.histarter.com/img/company/iphone.png" class="product-ios" alt=""/>
+<img src="http://img.histarter.com/img/company/android.png" class="product-android" alt=""/>
+<img src="http://img.histarter.com/img/company/mac.png" class="product-web" alt=""/>
+<img class="product-img-ios" src="http://img.histarter.com/upload/2015-05-21/16/46/53/7fcaf3585e054cdda896dfef92ed9367/1432198013091/xjelob_fixw350"/>
+<img class="product-img-android" src="http://img.histarter.com/upload/2015-05-21/16/47/15/ac1de1797b70436db08f36940abc9b4a/1432198035967/lqmxbf_fixw350"/>
+<img class="product-img-web" src="http://img.histarter.com/upload/2015-05-22/16/58/49/bc66ef007b1e4536ab10c71631ac5dd3/1432285129488/gdyoo3_fixw350"/>
+<div class="product-desc">
+「十年后」是一个基于“未来时间轴”的匿名社交网络,让用户可以在不考虑社交压力
+和熟人压力的情况下思考并分享自己对于未来的思考
+</div>
+</div>
+<div class="body-3">
+<div class="team-title">团队风采</div>
+<div class="team-desc"></div>
+<div class="team-img-list">
+<img class="team-img" src="http://img.histarter.com/upload/2015-05-21/16/47/23/02e0a1b1374844168984b426d4ab1c12/1432198043825/jwjhnn_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-05-21/16/50/19/707dc6b9b2c94e3b8ffbefaa19b9be83/1432198219114/iek6nf_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-05-21/16/51/20/6672ab3900b346c58c54247ea2fe31f7/1432198280548/ocltny_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-05-21/16/47/37/2e5728de5a8441bd8ade19bf3f3d13ea/1432198057377/ng8qkr_fixhw220" alt=""/>
+</div>
+</div>
+<div class="body-4">
+<div class="job-list">
+<span class="job">Android工程师</span>
+<span class="job">IOS工程师</span>
+<span class="job">交互设计师</span>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

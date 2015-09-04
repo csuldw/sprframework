@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="互联网招聘,融资,合伙人,创业团队,大学生创业">
+<meta name="description" content="在Histarter发现有趣靠谱的创业团队，汇聚中国最优质的创业团队资源">
+<link href="/res/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="/res/css/style_1.css?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321" rel="stylesheet">
+<link href="/res/css/style_2.css?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321" rel="stylesheet">
+<meta name="fragment" content="!"/>
+ 
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+<script type="text/javascript" src="/res/js/src/lib/require.js"></script>
+<script type="text/javascript" src="/res/js/src/main.js?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321"></script>
+<script type="text/javascript" src="/res/js/bin/starter.js?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script id="common-loading-tmpl" type="text/x-jsrender">
+	<span ><i class="fa fa-spinner fa-spin"></i> {{:data}}</span>
+</script>
+<script id="common-loading-mini-tmpl" type="text/x-jsrender">
+	<span ><i class="fa fa-spinner fa-spin"></i> {{:data}}</span>
+</script>
+<script type="text/javascript">
+    var path = '';
+    var ctxRoot = '';
+    var ISLOGIN = 'false';
+    var ISACTIVE = 'true';
+    var ISPERFECT = 'true';
+    var ISCOMPANY = 'false'
+    var appId = 'company/company_main';
+</script>
+<title>发现有趣靠谱的创业团队&nbsp;-&nbsp;hiStarter | 靠谱的创业团队都在这儿
+</title>
+<style type="text/css"></style>
+</head>
+<body>
+<ul id="notyfy_container_top" class="notyfy_container navbar-fixed-top i-am-new"></ul>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" id="top-nav" ng-controller="headerCtrl">
+<div class="progress top-progress" style="display: none">
+<div class="progress-bar progress-bar-success" id="top-progress-div" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+</div>
+<div class="container relative_pos">
+<div class="container header_to_re">
+<div id="wrap" style="display: none">
+<label id='sideMenuControl' for='sideToggle'>=</label>
+</div>
+<div class="navbar-header ">
+<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+</button>
+<img class="hide" src="http://img.histarter.com/index/new_logo.png_fixhw300"/>
+<a class="navbar-brand navbar-brand-jobmain" href="/">
+<img style="width: auto; height: 60px;" src="http://img.histarter.com/index/new_logo.png"/></a>
+</div>
+<div class="navbar-to-hide navbar-to-hider">
+<ul class="nav navbar-nav navbar-title">
+<li style="display: none;"><a href="/page/company/list/1">团队列表</a>
+<a href="/page/people/list">团队列表</a> <a href="/page/jobs/list">职位列表</a></li>
+<li class="now"><a href="/" title="首页">首页</a></li>
+<li><a href="/p/company/company_main" title="团队">团队</a></li>
+<li><a href="/p/people/people_main" class="btn-action" title="人才">人才</a></li>
+<li><a href="/p/jobs/job_main" title="职位">职位</a></li>
+<li><a class="text-primary" href="/forum/list">社区</a> <span class="community_new" style="position: absolute; top: 10px; right: 0px;"><img src="http://img.histarter.com/index/NEW.png"> </span></li>
+<li class="dropdown mrg25R"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">更多 <span class="caret"></span>
+</a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="/event/list" title="活动">活动</a></li>
+</ul></li>
+<li class="input-icon search-icon no_border"><i class="fa fa-search"></i> <input class="form-control form-searchkey" name="searchkey" data-toggle="dropdown" aria-expanded="false" popover-postion="left" maxlength="20" type="text" data-type="1" placeholder="搜索职位">
+<ul class="dropdown-menu" role="menu" style="border: none;">
+<li data-v="1" style="display: none;"><a class="btn ">切换职位搜索</a></li>
+<li data-v="2"><a class="btn ">切换公司搜索</a></li>
+<li data-v="3"><a class="btn ">切换人才搜索</a></li>
+</ul></li>
+</ul>
+<ul class="nav navbar-nav navbar-right header-btns">
+<li><a href="javascript:void(0)" style="padding-top: 15px; padding-bottom: 1px; background-color: #fff;"><button type="button" class="btn btn-default openRegModal">注册</button></a></li>
+<li><a href="javascript:void(0)" style="padding-top: 15px; padding-bottom: 1px; background-color: #fff;"><button type="button" class="btn btn-success  openLogModal" ng-click="openLogin()">登录</button></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<script type="text/x-jsrender" id="temp-search-div">
+<div class="btn btn-neeed cb" data-s-v="{{>code}}">{{>value}}</div>
+</script>
+<input id='sessionUID' value='5DC8A2613A6F475359AC8C6BA67DEA6F' type="hidden"/>
+<input type='checkbox' id='sideToggle' style="display: none;">
+<aside style="display: none" class="slide_left" id="asider">
+<div class=" list-group">
+<ul class="list-group-1 tabs">
+<li class="list-group-item "><a href="#zyg" class="company_zyg " data-ajaxlink="zyg">正在找员工</a></li>
+<li class="list-group-item "><a href="#zhhr" class="company_zhhr " data-ajaxlink="zhhr">正在找合伙人</a></li>
+<li class="list-group-item "><a data-ajaxlink="find" href="#find">所有</a></li>
+<li class="list-group-item btn-action"><a href="#follow" class="company_follow " data-ajaxlink="follow">我关注的</a></li>
+</ul>
+</div>
+</aside>
+<div class="header-m">
+<div class="header-m-h1">
+<img src="http://img.histarter.com/index/chuangyetuandui.gif"/>
+</div>
+<div class="header-m-h2">发现有趣靠谱的创业团队</div>
+<div>
+<button type="button" class="btn btn-success btn-lg  btn-action">创建团队</button>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-xs-3 company_hide3">
+<div class=" list-group">
+<ul class="list-group-1 tabs">
+<li class="list-group-item "><a href="#zyg" class="company_zyg " data-ajaxlink="zyg">正在找员工</a></li>
+<li class="list-group-item "><a href="#zhhr" class="company_zhhr " data-ajaxlink="zhhr">正在找合伙人</a></li>
+<li class="list-group-item "><a data-ajaxlink="find" href="#find">所有</a></li>
+<li class="list-group-item btn-action"><a href="#follow" class="company_follow " data-ajaxlink="follow">我关注的</a>
+</li>
+</ul>
+</div>
+<div>
+<a href="http://weibo.com/histarter" class="btn btn-danger  " target="_blank"><i class="fa fa-weibo fa-2x"></i>
+<div class="mrg5T">&nbsp;新浪微博&nbsp;</div>
+</a>&nbsp;
+<a data-animation="am-flip-x" data-trigger="hover" class="btn btn-primary " data-placement="bottom" bs-popover data-html="true" data-content="<img src='http://img.histarter.com/img/histarter_qrcode.jpg' width='150' height='150'/>" href=" javascript:void(0);"> <i class="fa fa-wechat fa-2x"></i>
+<div class="mrg5T">微信公众号</div>
+</a>
+</div>
+</div>
+<div class="col-xs-9 company_full">
+<div class="" id="content-liquid-full">
+<div id="header_search" data-init="false">
+<div class="top_wrapper">
+<div id="header_search-top" class="row">
+<i class="fa fa-search"></i>
+<div id="bt-lists" class="col-xs-10">
+<input class="tagsinput" data-role="tagsinput" value="" style="display: none"/>
+</div>
+<div class="col-xs-2 distance">
+<button type="button" class="btn btn-gray btn-search" href="#">搜索</button>
+</div>
+</div>
+<div id="header_search-filters" class="row marginclear">
+<div id="filters">
+<div class="clearfix">
+<div class="dropdown-filter">
+<label class="text-center label1">地区 ▾</label>
+<div class="dropdown-box " data-menu="locations" style="display: none; width: 263px;">
+<select name="area" class="form-control area-sel" area="search" data-s-type="area" placeholder="搜索城市或省份" popover-position="bottom">
+</select>
+<div class="cb"></div>
+<div class="dropdown-filter-header">热门城市</div>
+<div>
+<div class="location-box" data-s-type="city">
+<div class="btn btn-neeed " data-s-v="1001291000">北京市</div>
+<div class="btn btn-neeed " data-s-v="1001321000">上海市</div>
+<div class="btn btn-neeed " data-s-v="1001111000">广州市</div>
+<div class="btn btn-neeed " data-s-v="1001111001">深圳市</div>
+</div>
+<div class="location-box" data-s-type="city">
+<div class="btn btn-neeed " data-s-v="1001031000">杭州市</div>
+<div class="btn btn-neeed " data-s-v="1001021000">南京市</div>
+<div class="btn btn-neeed " data-s-v="1001251000">成都市</div>
+<div class="btn btn-neeed " data-s-v="1001081000">武汉市</div>
+</div>
+<div class="location-box" data-s-type="city">
+<div class="btn btn-neeed " data-s-v="1001361000">重庆市</div>
+<div class="btn btn-neeed " data-s-v="1001151001">厦门市</div>
+<div class="btn btn-neeed " data-s-v="1001021004">苏州市</div>
+<div class="btn btn-neeed " data-s-v="1001391001">旧金山</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dropdown-filter">
+<label class="text-center">融资 ▾</label>
+<div class="dropdown-box " data-menu="locations" style="display: none">
+<div search-dict="FUNDING_TYPE" data-s-type="funding"></div>
+</div>
+</div>
+<div class="dropdown-filter">
+<label class="text-center">规模 ▾</label>
+<div class="dropdown-box " data-menu="locations" style="display: none">
+<div search-dict="COMPANY_SIZE" data-sole="1" data-s-type="companySize"></div>
+</div>
+</div>
+<div class="dropdown-filter">
+<label class="text-center">所属行业 ▾</label>
+<div class="dropdown-box " data-menu="locations " style="display: none; width: 135px;">
+<div search-dict="INDUSTRY" class="industry-div" data-sole="0" data-s-type="industry"></div>
+</div>
+</div>
+<div class="dropdown-filter">
+<label class="text-center">招聘状态 ▾</label>
+<div class="dropdown-box " data-menu="locations" style="display: none">
+<div data-sole="1" data-s-type="recruitStatus">
+<div class="btn btn-neeed " data-s-v="">所有</div>
+<div class="btn btn-neeed " data-s-v="y">招聘中</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-content" id="mainContain"></div>
+</div>
+</div>
+</div>
+</div>
+ 
+<div class="pre-footer mrg15T">
+<div class="container text-center">
+<div class="row">
+ 
+<div class="col-xs-3 col-xs-6">
+<div class="pre-footer-title">星球介绍</div>
+<div class="pre-footer-item mrg10T">
+<a href="/about#about_us">关于我们
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="/about#about_service"> 服务模式
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="/about#about_partner">合作伙伴
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="/about#about_contact">联系我们
+</a>
+</div>
+</div>
+<div class="col-xs-3 col-xs-6">
+<div class="pre-footer-title">创业招聘</div>
+<div class="pre-footer-item mrg10T">
+<a href="/p/company/company_main">团队列表
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="/p/jobs/job_main">职位列表
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="/p/people/people_main">人才列表
+</a>
+<div class="pre-footer-item mrg10T">
+<a href="/30day">直招报名
+</a>
+</div>
+</div>
+</div>
+<div class="col-xs-3 col-xs-6">
+<div class="pre-footer-title">媒体报道</div>
+<div class="pre-footer-item mrg10T">
+<a href="http://www.36kr.com/p/218208.html" target="_blank">36氪
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="http://www.pingwest.com/histarter-demo" target="_blank">PingWest
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="http://cn.technode.com/post/2014-12-22/histarter" target="_blank">动点科技
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="http://tech2ipo.com/93789" target="_blank">Tech2IPO
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="http://tech.ifeng.com/a/20150120/40950840_0.shtml" target="_blank">凤凰科技
+</a>
+</div>
+</div>
+<div class="col-xs-3 col-xs-6">
+<div class="pre-footer-title">移动端下载</div>
+<div class="pre-footer-item mrg10T">
+<a href="javascript:void(0);">
+<img src="http://img.histarter.com/img/appstore.png" id="hiStarteriOSDownload" alt="hiStarter移动端下载"/>
+</a>
+</div>
+</div>
+</div>
+<hr>
+<div class="row pad15B">
+<div class="col-xs-7" style="margin-left:7%;text-align: left;">
+© 2014-2015 HISTARTER.COM・沪ICP备13032488号 上海奇麦网络科技有限公司
+</div>
+<div class="col-xs-4 text-right">
+<a class="pre-footer-social" data-animation="am-flip-x" data-trigger="click" data-placement="top" bs-popover data-html="true" data-content="<img src='http://img.histarter.com/img/histarter_qrcode.jpg' width='150' height='150'/>" href=" javascript:void(0);"><i class="fa fa-wechat"></i></a>
+<a class="pre-footer-social" href="http://www.weibo.com/histarter" target="_blank"><i class="fa fa-weibo"></i></a>
+<a class="pre-footer-social" data-animation="am-flip-x" href="javascript:void(0);" data-trigger="click" data-placement="top" bs-popover data-html="true" data-content="官方QQ吐槽群:219507775"><i class="fa fa-qq"></i></a>
+<a class="pre-footer-social" href="/cdn-cgi/l/email-protection#8afde5fdcae2e3f9feebf8feeff8a4e9e5e7"><i class="fa fa-envelope"></i></a>
+</div>
+</div>
+</div>
+</div>
+<script id="tmpl-dict" type="text/x-jsrender">
+	<option value='{{>code}}' {{>selected}}>{{>value}}</option>
+</script>
+<script id="tmpl-dict-r" type="text/x-jsrender">
+	<label class="radio-inline"> <input type="radio" name=""  value="{{>code}}">{{>value}}</label>
+</script>
+<script id="select-tmpl" type="text/x-jsrender">
+    <option value='{{>value}}' {{>selected}}>{{>text}}</option>
+</script>
+<script type="text/javascript">
+
+    function a(a, b) {
+        var c = 'font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;font-size: 15px;'
+                + (a ? "font-weight: bold;" : "") + "color: " + b + ";";
+        return c;
+    }
+    console.log("%c♥ 想加入我们吗 ? %c急招JAVA工程师,发送您的简历至%c--> wow@histarter.com", a(!0,
+            "#d22"), a(!0, "#777"), a(!0, "#2b2")), window.joinUs = function() {
+        return console.log("%cWe're excited to have you! %c☃", a(!1, "#d22"),
+                a(!1, "#333")), window.location.href = "/_/_/about/careers/",
+                "";
+    };
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?1f61149eae43428c63d2907772a1e515";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<title>蜂蜜笔记 - hiStarter团队小站</title>
+<head>
+<link rel="stylesheet" href="/res/css/day30/company_get_30day.css"/>
+</head>
+<body>
+<div>
+<div class="company_header">
+<div style="text-align: center;">
+<img id="company_logo" src="http://img.histarter.com/upload/2015-05-21/16/25/38/31f5325d80564cef9592b9c2e65aa8c8/1432196738170/f3uhmw_fixhw300">
+<h1>「蜂蜜笔记」</h1>
+<h4>基于知识性笔记的生产力工具</h4>
+</div>
+</div>
+<div class="container">
+<div class="body-1">
+<div class="title-1">
+<img src="http://img.histarter.com/img/company/title_1.png"/>
+</div>
+<div style="padding-top:160px;padding-left:45px;padding-right:45px;">
+<div class="founder">
+<img src="http://img.histarter.com/img/company/company_j.png" class="cursor-left" alt=""/>
+<img class="avatar" src="http://img.histarter.com/upload/2015-05-21/16/34/08/2474c249a1b14f1daaa52d858841e088/1432197248440/c9k9d6_fixhw385"/>
+<div class="founder-text">
+<div class="founder-name">
+肖逸凡
+</div>
+<div class="founder-position">
+创始人
+</div>
+<div class="founder-desc">
+资深多面手，曾当过英语讲师、摄像、视频编辑、后期特效、3D动画、工业设计、游戏编程、网站开发、平面设计、编辑、文案策划、品牌战略咨询，并创立设计公司
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="body-2">
+<img src="http://img.histarter.com/img/company/iphone.png" class="product-ios" alt=""/>
+<img src="http://img.histarter.com/img/company/android.png" class="product-android" alt=""/>
+<img src="http://img.histarter.com/img/company/mac.png" class="product-web" alt=""/>
+<img class="product-img-ios" src="http://img.histarter.com/upload/2015-05-21/16/28/08/7f64336a2fa24a669c46cfbdf2d0cdef/1432196888741/bgxsag_fixw350"/>
+<img class="product-img-android" src="http://img.histarter.com/upload/2015-05-21/16/27/59/4789e2865da345aa923e7da294eac9dc/1432196879665/i4pvfs_fixw350"/>
+<img class="product-img-web" src="http://img.histarter.com/upload/2015-05-22/16/35/10/95854890f670416f95d0ed9a3848c519/1432283710592/pvjeix_fixw350"/>
+<div class="product-desc">
+「蜂蜜笔记」鼓励人们通过摘录、批注主动获取知识，重新建构个人的知识体系，并随时将知识精华分享给朋友们。
+</div>
+</div>
+<div class="body-3">
+<div class="team-title">团队风采</div>
+<div class="team-desc"></div>
+<div class="team-img-list">
+<img class="team-img" src="http://img.histarter.com/upload/2015-05-21/16/31/42/123553bd48744f4c8292c361fc170e96/1432197102163/gdlkv5_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-05-21/16/37/16/69f9ec5131c64fe69ccb5f57f4aae764/1432197436334/jzpa0i_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-05-21/16/31/47/3ba5bb057627424a90a1444aa6252867/1432197107303/o4ayw9_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-05-21/16/29/00/08764c1ee4e749cc855022f50e43747e/1432196940421/t5plz9_fixhw220" alt=""/>
+</div>
+</div>
+<div class="body-4">
+<div class="job-list">
+<span class="job">高级IOS工程师</span>
+<span class="job">Android开发工程师</span>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<title>友社 - hiStarter团队小站</title>
+<head>
+<link rel="stylesheet" href="/res/css/day30/company_get_30day.css"/>
+</head>
+<body>
+<div>
+<div class="company_header">
+<div style="text-align: center;">
+<img id="company_logo" src="http://img.histarter.com/upload/2015-05-21/17/57/55/ffa570998f5d4ce7b8dd8347f88ef4c5/1432202275158/xkbfni_fixhw300">
+<h1>「友社」</h1>
+<h4>集住宿、社交、智能化生活服务的住宿新模式</h4>
+</div>
+</div>
+<div class="container">
+<div class="body-1">
+<div class="title-1">
+<img src="http://img.histarter.com/img/company/title_1.png"/>
+</div>
+<div style="padding-top:160px;padding-left:45px;padding-right:45px;">
+<div class="founder">
+<img src="http://img.histarter.com/img/company/company_j.png" class="cursor-left" alt=""/>
+<img class="avatar" src="http://img.histarter.com/upload/2015-05-21/18/03/51/2a088795f2d34f24bfa3e441b58147d9/1432202631641/ms0tqi_fixhw385"/>
+<div class="founder-text">
+<div class="founder-name">
+王超伟
+</div>
+<div class="founder-position">
+创始人
+</div>
+<div class="founder-desc">
+毕业于上海外国语大学工商管理专业 曾任聚乐文化CEO、AIESEC中国大陆区副主席 17国游历游学经历,拥有长时间跨文化工作经验,擅长 跨文化商务运营与精准群体营销 曾在多个创业企业担任核心高管
+</div>
+</div>
+</div>
+<div class="founder">
+<div class="founder-text">
+<div class="founder-name-right">
+丁野
+</div>
+<div class="founder-position-right">
+联合创始人
+</div>
+<div class="founder-desc-right">
+毕业于Vejle Business College(丹麦) 数据分析专业 曾任优达空间CEO,创业前担任易印客COO 此前,有两次创业经历,期间成功打造了一方水土 文化传播有限公司,并服务NOKIA、海尔、永乐 家电等多家大型企业。 有丰富企业运营及管理经验
+</div>
+</div>
+<img src="http://img.histarter.com/img/company/company_j_right.png" class="cursor-right" alt=""/>
+<img class="avatar" src="http://img.histarter.com/upload/2015-05-21/18/04/03/f7f60c8d106f4849a3437e7bd37acb06/1432202643747/zqy3lh_fixhw385"/>
+</div>
+</div>
+</div>
+<div class="body-2">
+<img src="http://img.histarter.com/img/company/iphone.png" class="product-ios" alt=""/>
+<img src="http://img.histarter.com/img/company/android.png" class="product-android" alt=""/>
+<img src="http://img.histarter.com/img/company/mac.png" class="product-web" alt=""/>
+<img class="product-img-ios" src="http://img.histarter.com/upload/2015-05-22/17/10/32/8e5658d59b8e40338b510d1db0799e28/1432285832777/my0cvj_fixw350"/>
+<img class="product-img-android" src="http://img.histarter.com/upload/2015-05-22/17/11/05/38534f5647f84117917cbe9f289adf92/1432285865052/p49gmd_fixw350"/>
+<img class="product-img-web" src="http://img.histarter.com/upload/2015-05-21/18/39/24/40f54624d838433eae1002d9385a8dc7/1432204764398/2gu70z_fixw350"/>
+<div class="product-desc">
+友社为来自国内外的年轻人提供“一站式”租房服务，旨在帮年轻人在陌生的城市，找到满意的家，开启幸福快乐的新生活。每个住客都不是一个人在奋斗，让社交回归真实，在社区偶遇另一个“他，她，他”，每天在社区里上演属于自己的“老友记”。
+</div>
+</div>
+<div class="body-3">
+<div class="team-title">团队风采</div>
+<div class="team-desc"></div>
+<div class="team-img-list">
+<img class="team-img" src="http://img.histarter.com/upload/2015-05-21/18/01/56/9b8dfdf7317641a8a8bbb7e34ab0a995/1432202516147/hwko2l_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-05-21/18/02/00/513f7e3134e2482fb8816e81769118ee/1432202520064/nenban_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-05-21/18/02/10/d0e74310d4694bcabe89d828b02c6659/1432202530564/xkw1pd_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-05-21/18/02/17/039dd649fb7c4d4896e9a54b9403ba3b/1432202537192/zyg3o1_fixhw220" alt=""/>
+</div>
+</div>
+<div class="body-4">
+<div class="job-list">
+<span class="job">社区合伙人</span>
+<span class="job">社区经理</span>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

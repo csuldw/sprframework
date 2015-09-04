@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<title>八音盒 - hiStarter团队小站</title>
+<head>
+<link rel="stylesheet" href="/res/css/day30/company_get_30day.css"/>
+</head>
+<body>
+<div>
+<div class="company_header">
+<div style="text-align: center;">
+<img id="company_logo" src="http://img.histarter.com/upload/2015-05-21/10/41/18/b0791ec45d184a06bccac44c2fc5888d/1432176078289/blb4fb_fixhw300">
+<h1>「八音盒」</h1>
+<h4>手机讲故事最好的工具</h4>
+</div>
+</div>
+<div class="container">
+<div class="body-1">
+<div class="title-1">
+<img src="http://img.histarter.com/img/company/title_1.png"/>
+</div>
+<div style="padding-top:160px;padding-left:45px;padding-right:45px;">
+<div class="founder">
+<img src="http://img.histarter.com/img/company/company_j.png" class="cursor-left" alt=""/>
+<img class="avatar" src="http://img.histarter.com/upload/2015-05-21/10/50/54/abe1f12a234a4cc7a6ccdbfd1b354db3/1432176654800/s0rl1l_fixhw385"/>
+<div class="founder-text">
+<div class="founder-name">
+丁鑫栋
+</div>
+<div class="founder-position">
+创始人
+</div>
+<div class="founder-desc">
+复旦大学计算机本科毕业，后赴法国巴黎高科攻读运筹学硕士。曾就职于微软工程院和Amadeus法国研发中心。回国后曾在高端餐饮服务平台美位网担任CTO
+</div>
+</div>
+</div>
+<div class="founder">
+<div class="founder-text">
+<div class="founder-name-right">
+李博
+</div>
+<div class="founder-position-right">
+联合创始人
+</div>
+<div class="founder-desc-right">
+华东理工大学计算机科学本科毕业，后赴美国伊利诺伊大学芝加哥分校取得计算机硕士学位，在数据可视化，数据产品和移动互联网方面有多年研究和工作经验。曾FACEBOOK担任商业智能顾问。回国后曾在时趣科技和中国平安从事大数据方面的工作。
+</div>
+</div>
+<img src="http://img.histarter.com/img/company/company_j_right.png" class="cursor-right" alt=""/>
+<img class="avatar" src="http://img.histarter.com/upload/2015-06-09/15/17/01/7ee7fa10364243209583eda23847ef0b/1433834221416/5zprgb_fixhw385"/>
+</div>
+</div>
+</div>
+<div class="body-2">
+<img src="http://img.histarter.com/img/company/iphone.png" class="product-ios" alt=""/>
+<img src="http://img.histarter.com/img/company/android.png" class="product-android" alt=""/>
+<img src="http://img.histarter.com/img/company/mac.png" class="product-web" alt=""/>
+<img class="product-img-ios" src="http://img.histarter.com/upload/2015-05-21/11/25/12/8102399c67c34b649dd1987ca8743292/1432178712913/xltfe6_fixw350"/>
+<img class="product-img-android" src="http://img.histarter.com/upload/2015-05-21/11/25/18/6f4c72d6a6134a72a4fcfe7fe187c62d/1432178718890/4nnm6p_fixw350"/>
+<img class="product-img-web" src="http://img.histarter.com/upload/2015-05-21/10/42/51/c6698d7bb2a54ad0a433dca00fd1b151/1432176171357/3i7xrg_fixw350"/>
+<div class="product-desc">
+一款面向个人用户，以移动端HTML5网页为载体，针对节日，纪念日以及通用的情感场景，通过预设故事版中的图文引导让用户能自主制作情感故事或者纪念日邀请函的应用，其特性符合目前流行的移动互联网和鼓励用户自主创造内容等趋势，可以在各种移动应用中快速传播。你可以把他作为一个特殊节日的邀请函，一个送个亲朋好友的礼物，甚至是一个回忆一段感情的故事。
+</div>
+</div>
+<div class="body-3">
+<div class="team-title">团队风采</div>
+<div class="team-desc"></div>
+<div class="team-img-list">
+<img class="team-img" src="http://img.histarter.com/upload/2015-05-21/11/23/17/8417fd20e2654a77a79ca3ac39ecae11/1432178597789/glfp8x_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-05-21/10/44/16/eb6e8a41306f4ec78e3ebeb015e4f328/1432176256622/migbep_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-05-21/16/18/32/3ec8000b390d43ecb5a69d31acc233cc/1432196312898/m30cgd_fixhw220" alt=""/>
+<img class="team-img" src="http://img.histarter.com/upload/2015-05-21/10/44/44/41718f0bb41d434b844731660c914da3/1432176284967/xdlfxw_fixhw220" alt=""/>
+</div>
+</div>
+<div class="body-4">
+<div class="job-list">
+<span class="job">网页开发工程师</span>
+<span class="job">android工程师</span>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

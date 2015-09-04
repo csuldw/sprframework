@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="运维工程师 ,创业团队,合伙人,技术合伙人,人才库,ios招聘,安卓招聘">
+<meta name="description" content="保障系统稳定：包括网络、基础服务和线上产品的正常运行
+
+快速定位解决系统线上问题
+
+推动运维自动化，利用工具和代码减少重复性劳动，提高团队的工作效率
+
+|hiStarter">
+<link href="/res/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="/res/css/style_1.css?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321" rel="stylesheet">
+<link href="/res/css/style_2.css?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321" rel="stylesheet">
+<meta name="fragment" content="!"/>
+ 
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+<script type="text/javascript" src="/res/js/src/lib/require.js"></script>
+<script type="text/javascript" src="/res/js/src/main.js?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321"></script>
+<script type="text/javascript" src="/res/js/bin/starter.js?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script id="common-loading-tmpl" type="text/x-jsrender">
+	<span ><i class="fa fa-spinner fa-spin"></i> {{:data}}</span>
+</script>
+<script id="common-loading-mini-tmpl" type="text/x-jsrender">
+	<span ><i class="fa fa-spinner fa-spin"></i> {{:data}}</span>
+</script>
+<script type="text/javascript">
+    var path = '';
+    var ctxRoot = '';
+    var ISLOGIN = 'false';
+    var ISACTIVE = 'true';
+    var ISPERFECT = 'true';
+    var ISCOMPANY = 'false'
+    var appId = 'jobs/job_get';
+</script>
+<title>运维工程师 -hiStarter | 靠谱的创业团队都在这儿
+</title>
+<style type="text/css"></style>
+</head>
+<body>
+<ul id="notyfy_container_top" class="notyfy_container navbar-fixed-top i-am-new"></ul>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" id="top-nav" ng-controller="headerCtrl">
+<div class="progress top-progress" style="display: none">
+<div class="progress-bar progress-bar-success" id="top-progress-div" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+</div>
+<div class="container relative_pos">
+<div class="container header_to_re">
+<div id="wrap" style="display: none">
+<label id='sideMenuControl' for='sideToggle'>=</label>
+</div>
+<div class="navbar-header ">
+<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+</button>
+<img class="hide" src="http://img.histarter.com/index/new_logo.png_fixhw300"/>
+<a class="navbar-brand navbar-brand-jobmain" href="/">
+<img style="width: auto; height: 60px;" src="http://img.histarter.com/index/new_logo.png"/></a>
+</div>
+<div class="navbar-to-hide navbar-to-hider">
+<ul class="nav navbar-nav navbar-title">
+<li style="display: none;"><a href="/page/company/list/1">团队列表</a>
+<a href="/page/people/list">团队列表</a> <a href="/page/jobs/list">职位列表</a></li>
+<li class="now"><a href="/" title="首页">首页</a></li>
+<li><a href="/p/company/company_main" title="团队">团队</a></li>
+<li><a href="/p/people/people_main" class="btn-action" title="人才">人才</a></li>
+<li><a href="/p/jobs/job_main" title="职位">职位</a></li>
+<li><a class="text-primary" href="/forum/list">社区</a> <span class="community_new" style="position: absolute; top: 10px; right: 0px;"><img src="http://img.histarter.com/index/NEW.png"> </span></li>
+<li class="dropdown mrg25R"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">更多 <span class="caret"></span>
+</a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="/event/list" title="活动">活动</a></li>
+</ul></li>
+<li class="input-icon search-icon no_border"><i class="fa fa-search"></i> <input class="form-control form-searchkey" name="searchkey" data-toggle="dropdown" aria-expanded="false" popover-postion="left" maxlength="20" type="text" data-type="1" placeholder="搜索职位">
+<ul class="dropdown-menu" role="menu" style="border: none;">
+<li data-v="1" style="display: none;"><a class="btn ">切换职位搜索</a></li>
+<li data-v="2"><a class="btn ">切换公司搜索</a></li>
+<li data-v="3"><a class="btn ">切换人才搜索</a></li>
+</ul></li>
+</ul>
+<ul class="nav navbar-nav navbar-right header-btns">
+<li><a href="javascript:void(0)" style="padding-top: 15px; padding-bottom: 1px; background-color: #fff;"><button type="button" class="btn btn-default openRegModal">注册</button></a></li>
+<li><a href="javascript:void(0)" style="padding-top: 15px; padding-bottom: 1px; background-color: #fff;"><button type="button" class="btn btn-success  openLogModal" ng-click="openLogin()">登录</button></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<script type="text/x-jsrender" id="temp-search-div">
+<div class="btn btn-neeed cb" data-s-v="{{>code}}">{{>value}}</div>
+</script>
+<input id='sessionUID' value='5DC8A2613A6F475359AC8C6BA67DEA6F' type="hidden"/>
+<div ng-controller="job_get">
+<div class="header-m-1 header-bg-job ">
+<div class="header_h1">
+<div class="logo ">
+<img alt="" id="img-logo" src="http://img.histarter.com/upload/2014-12-19/20/05/35/7dca1feb1fdb4e28a208f22e6dc9d9cd/1418990735252/logo-circle-medium.png_fixhw80" class="img-circle clear-abs margAuto">
+</div>
+<h1 class="join-title g-title2 light g-helvetica_ultra">运维工程师
+(全职)</h1>
+<h3 class="high_concept high_concept_showcase light g-helvetica_ultra">
+<p>
+<i class="fa fa-cny"></i> 10K-30K
+&nbsp;<i class="fa fa-location-arrow"></i> 上海市 -
+上海市&nbsp;
+<i class="fa fa-times"></i>
+无股份
+</p>
+</h3>
+<div class="btn-action" ng-cloak>
+<button ng-cloak ng-init="jobFollow={about:false,state:'加入收藏'}" class="btn p-follow-btn  btn-lg btn-follow-job " ng-class="{'p-follow-has':jobFollow.about}" ng-click="EditJobFollow($event,jobFollow)">
+<i class="fa fa-star-o" ng-if="!jobFollow.about"></i> <i class="fa fa-star" ng-if="jobFollow.about"></i><span ng-bind="jobFollow.state"></span>
+</button>
+<button class="btn btn-info btn-lg send-resume" ng-click="openSendResume()">我要申请</button>
+</div>
+</div>
+</div>
+<div class="container job-container ">
+<div class="row">
+<input type="hidden" id="pId" value="27"/>
+<div class="col-xs-8 to_full">
+<div class="title-info ">
+职位详情<span>JOB DETAIL</span>
+</div>
+<div class="box-title edit-job-info mh500">
+<div class="box-title-bar" style="padding-left: 15px;" ng-init="edit.about=false">
+职位信息
+</div>
+<div class="preview-job-more" ng-if="edit.about == false">
+<div class="box-title-content">
+<div class="job-more">
+<div class="row">
+<div class="col-xs-3 to_full">
+<img class="margAuto block-show" src="http://img.histarter.com/upload/2014-12-19/20/05/35/7dca1feb1fdb4e28a208f22e6dc9d9cd/1418990735252/logo-circle-medium.png_fixhw120" style="width: 120px; height: 120px;"/>
+</div>
+<div class="col-xs-9 to_full marg0" style="margin-left: -40px;">
+<h4 class="txt-align" style="margin-top: 3px;">运维工程师 </h4>
+<h5 class="width-40 h5-size">
+<span>工作地点 <span class="job-more-value" ng-bind="jobMore.cityView"></span></span><span>工作性质<span class="job-more-value" ng-bind="jobMore.jobTypeView"></span>
+</span><span>月薪范围 <span class="job-more-value"><span ng-bind="jobMore.salaryLowView"></span>K-<span ng-bind="jobMore.salaryHighView"></span>K</span></span>
+<h5 class="width-40 h5-size">
+<span>期权股份 <span class="job-more-value"><span ng-if="jobMore.stock==1">有</span><span ng-if="jobMore.stock==0">无</span></span></span><span>招聘人数
+<span class="job-more-value"><span ng-bind="jobMore.inviteCount"></span>人</span>
+</span><span>最低学历&nbsp;<span class="job-more-value" ng-bind="jobMore.lowEducationView"></span></span>
+</h5>
+<div class="cb"></div>
+<span class="labels">
+<div style="margin-left: 30px;">
+<span class="label label-default" ng-repeat="widthdata in jobMore.tagsView"><span ng-bind="widthdata"></span></span>
+</div>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="box-title">
+<div class="box-title-bar">职位描述</div>
+<div class="box-title-content">
+<div class="preview">
+<div class="intro to_full" ng-bind-html="jobMore.jd|toHtml"></div>
+</div>
+</div>
+</div>
+<div class="box-title">
+<div class="box-title-bar">任职要求</div>
+<div class="box-title-content">
+<div class="preview">
+<div class="intro to_full" ng-bind-html="jobMore.requirements|toHtml"></div>
+</div>
+</div>
+</div>
+<div class="box-title">
+<div class="box-title-bar">福利待遇</div>
+<div class="box-title-content">
+<div class="preview">
+<div class="intro to_full" ng-bind-html="jobMore.benefits|toHtml"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-4 to_full">
+<div class="title-info">
+微信扫一扫<span>SCAN ME</span>
+</div>
+<div class="box-title" ng-init="edit.word = false">
+<div class="box-title-bar">
+微信扫描二维码分享职位获得简历
+</div>
+<div class="box-title-content">
+<div class="text-center mrg10B" style="height: 167px;">
+<img src="http://img.histarter.com/upload/2014-12-19/20/05/35/7dca1feb1fdb4e28a208f22e6dc9d9cd/1418990735252/logo-circle-medium.png_fixhw40" style="  position: absolute;border: 2px solid #fff;left: 45%;height: 40px;width: 40px;top: 122px;"/>
+<div id="jobQrCode"></div>
+</div>
+</div>
+</div>
+<div class="title-info">
+团队信息<span>TEAM</span>
+</div>
+<div class="box-title" bindonce="company">
+<div class="box-title-bar">团队信息</div>
+<div class="box-title-content company-info">
+<div class="box-title-list">
+<div class="box-title-list-line">
+<img alt="" ng-src="{{company.logo}}_fixhw80" style="width: 60px; height: 60px;"/> <a class="" ng-href="/{{company.domain }}" target="_blank" bo-text="company.companyName"></a>
+</div>
+<div class="box-title-list-line">
+<span class="title">融资阶段</span><span class="desk" bo-text="company.fundingStage"></span>
+</div>
+<div class="box-title-list-line">
+<span class="title">公司规模</span><span class="desk" bo-text="company.companySize"></span>
+</div>
+<div class="box-title-list-line">
+<span class="title">公司地址</span><span class="desk" bo-text="company.province"></span>
+</div>
+<div class="box-title-list-line">
+<span class="title">公司主页</span><span class="desk"><a bo-href-i="{{company.url}}" target="_blank" bo-text="company.url" bo-if="company.url"></a></span>
+</div>
+<div class="box-title-list-line">
+<span class="title">所属行业</span>
+<span class="label label-default" bo-text="company.industry	"></span>
+<span class="label label-default" bo-text="company.industry2View"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="box-title">
+<div class="box-title-bar">工作地址</div>
+<div class="box-title-content ">
+<div id="j-map" class="j-map"></div>
+<div class="cb"></div>
+<h5 class="mrg20T">地址:杨浦区248hao号</h5>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=PTFOIGb43XwPH3oRHo7ugWrP"></script>
+<script type="text/javascript">
+    var map = new BMap.Map("j-map");
+    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
+    var local = new BMap.LocalSearch(map, {
+        renderOptions: {
+            map: map
+        }
+    });
+    local.search("杨浦区248hao号");
+</script>
+ 
+<div class="pre-footer mrg15T">
+<div class="container text-center">
+<div class="row">
+ 
+<div class="col-xs-3 col-xs-6">
+<div class="pre-footer-title">星球介绍</div>
+<div class="pre-footer-item mrg10T">
+<a href="/about#about_us">关于我们
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="/about#about_service"> 服务模式
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="/about#about_partner">合作伙伴
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="/about#about_contact">联系我们
+</a>
+</div>
+</div>
+<div class="col-xs-3 col-xs-6">
+<div class="pre-footer-title">创业招聘</div>
+<div class="pre-footer-item mrg10T">
+<a href="/p/company/company_main">团队列表
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="/p/jobs/job_main">职位列表
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="/p/people/people_main">人才列表
+</a>
+<div class="pre-footer-item mrg10T">
+<a href="/30day">直招报名
+</a>
+</div>
+</div>
+</div>
+<div class="col-xs-3 col-xs-6">
+<div class="pre-footer-title">媒体报道</div>
+<div class="pre-footer-item mrg10T">
+<a href="http://www.36kr.com/p/218208.html" target="_blank">36氪
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="http://www.pingwest.com/histarter-demo" target="_blank">PingWest
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="http://cn.technode.com/post/2014-12-22/histarter" target="_blank">动点科技
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="http://tech2ipo.com/93789" target="_blank">Tech2IPO
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="http://tech.ifeng.com/a/20150120/40950840_0.shtml" target="_blank">凤凰科技
+</a>
+</div>
+</div>
+<div class="col-xs-3 col-xs-6">
+<div class="pre-footer-title">移动端下载</div>
+<div class="pre-footer-item mrg10T">
+<a href="javascript:void(0);">
+<img src="http://img.histarter.com/img/appstore.png" id="hiStarteriOSDownload" alt="hiStarter移动端下载"/>
+</a>
+</div>
+</div>
+</div>
+<hr>
+<div class="row pad15B">
+<div class="col-xs-7" style="margin-left:7%;text-align: left;">
+© 2014-2015 HISTARTER.COM・沪ICP备13032488号 上海奇麦网络科技有限公司
+</div>
+<div class="col-xs-4 text-right">
+<a class="pre-footer-social" data-animation="am-flip-x" data-trigger="click" data-placement="top" bs-popover data-html="true" data-content="<img src='http://img.histarter.com/img/histarter_qrcode.jpg' width='150' height='150'/>" href=" javascript:void(0);"><i class="fa fa-wechat"></i></a>
+<a class="pre-footer-social" href="http://www.weibo.com/histarter" target="_blank"><i class="fa fa-weibo"></i></a>
+<a class="pre-footer-social" data-animation="am-flip-x" href="javascript:void(0);" data-trigger="click" data-placement="top" bs-popover data-html="true" data-content="官方QQ吐槽群:219507775"><i class="fa fa-qq"></i></a>
+<a class="pre-footer-social" href="/cdn-cgi/l/email-protection#2d5a425a6d45445e594c5f59485f034e4240"><i class="fa fa-envelope"></i></a>
+</div>
+</div>
+</div>
+</div>
+<script id="tmpl-dict" type="text/x-jsrender">
+	<option value='{{>code}}' {{>selected}}>{{>value}}</option>
+</script>
+<script id="tmpl-dict-r" type="text/x-jsrender">
+	<label class="radio-inline"> <input type="radio" name=""  value="{{>code}}">{{>value}}</label>
+</script>
+<script id="select-tmpl" type="text/x-jsrender">
+    <option value='{{>value}}' {{>selected}}>{{>text}}</option>
+</script>
+<script type="text/javascript">
+
+    function a(a, b) {
+        var c = 'font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;font-size: 15px;'
+                + (a ? "font-weight: bold;" : "") + "color: " + b + ";";
+        return c;
+    }
+    console.log("%c♥ 想加入我们吗 ? %c急招JAVA工程师,发送您的简历至%c--> wow@histarter.com", a(!0,
+            "#d22"), a(!0, "#777"), a(!0, "#2b2")), window.joinUs = function() {
+        return console.log("%cWe're excited to have you! %c☃", a(!1, "#d22"),
+                a(!1, "#333")), window.location.href = "/_/_/about/careers/",
+                "";
+    };
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?1f61149eae43428c63d2907772a1e515";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>
+</body>
+</html>
