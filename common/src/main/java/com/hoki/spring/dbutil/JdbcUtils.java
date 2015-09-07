@@ -1,7 +1,14 @@
 package com.hoki.spring.dbutil;
 
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.ArrayHandler;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
+import javax.annotation.Resource;
 import javax.sql.DataSource;
 
 
@@ -12,7 +19,7 @@ import javax.sql.DataSource;
  */
 public class JdbcUtils {
     private static DataSource ds;
-
+    private static JdbcTemplate jdbcTemplate;
     private static ThreadLocal<Connection> tl = new ThreadLocal<Connection>();  //map
 
     /**
@@ -21,6 +28,8 @@ public class JdbcUtils {
     public static void initDatasource(DataSource dataSource){
         ds = dataSource;
     }
+
+    public static void initJdbcTemplate(JdbcTemplate template ){ jdbcTemplate = template ; };
 
     public static DataSource getDataSource(){
         return ds;
@@ -86,4 +95,24 @@ public class JdbcUtils {
     public static String fixTableName(String sql , String tableName){
         return String.format(sql , tableName);
     }
+
+    /**
+     * 公共方法 start - 开始
+     */
+    /**插入*/
+    public static Object[] insert(String sql , Object ... params) throws SQLException {
+        QueryRunner runner = new QueryRunner(JdbcUtils.getDataSource());
+        Object[] update = runner.insert(sql,new ArrayHandler(), params);
+        return update;
+    }
+
+    /**查询**/
+    public static List query(String sql , RowMapper mapper , Object ... params ){
+        List query = jdbcTemplate.query(sql, params, mapper);
+        return query;
+    }
+    /**
+     * 公共方法end
+     */
+
 }

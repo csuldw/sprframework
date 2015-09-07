@@ -12,6 +12,10 @@ import java.util.List;
  * Date:2015/3/13 0013
  * Time:下午 1:09
  */
+@Deprecated
+/**
+ * 不在使用
+ */
 @Repository(value="userMapper")
 public interface UserMapper {
 

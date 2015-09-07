@@ -1,10 +1,12 @@
 define('app/header', ["app", "app/home", "app/security", "app/valid", "lib/slimscroll", "lib/jquery.lazyloadxt", "lib/headroom"],
 function(app, home, sec, v) {
-    app.controller("headerCtrl", ['$scope', '$http',
-    function($scope, $http) {}]);
+    app.controller("headerCtrl", ['$scope', '$http', function($scope, $http) {}]);
+
+    //common service start
     app.factory('commonService',
     function() {
         this.openMessageDialog = function(userId) {
+            //消息站内信?
             if ($("#modal-message-user").length <= 0) {
                 home.renderAppendTmpl("header/_header_modia_message", $("body"), {}).done(function() {
                     $(".send-message-btn").click(function() {
@@ -41,7 +43,8 @@ function(app, home, sec, v) {
             openMessageDialog: this.openMessageDialog,
             sendMessage: this.sendMessage
         }
-    });
+    });//common service end
+
     var unreadCount;;
     var isActive = false;
     var reuser = function() {
@@ -227,6 +230,7 @@ function(app, home, sec, v) {
     }
     var oepnModalLoginOrReg = function(str) {
         if ($("#modal-login-reg").length <= 0) {
+            //不存在第一次加载页面,并添加页面事件
             home.renderAppendTmpl("header/_header_modia_login", $("body"), {}).done(function() {
                 if (str == 1) {
                     $("#modal-login-reg").modal().on("shown.bs.modal",
@@ -276,7 +280,7 @@ function(app, home, sec, v) {
                 });
             });
         } else {
-            if (str == 1) {
+            if (str == 1) {//str = 1 为注册
                 $("#modal-login-reg").modal().on("shown.bs.modal",
                 function() {
                     home.mask($("#modal-login-reg").find(".modal-dialog"));
@@ -285,7 +289,7 @@ function(app, home, sec, v) {
                     home.converHtml();
                     home.unmask($("#modal-login-reg").find(".modal-dialog"));
                 }).modal("show");
-            } else {
+            } else { //str 其他为login
                 $("#modal-login-reg").modal().on("shown.bs.modal",
                 function() {
                     home.mask($("#modal-login-reg").find(".modal-dialog"));
@@ -351,7 +355,7 @@ function(app, home, sec, v) {
                     }
                 })
             }
-            if (ISACTIVE == 'false' && perfect != true) {
+            if (ISACTIVE == 'false' && perfect != true) {//ISACTIVE 是否激活
                 var ws$ = window.setInterval(function() {
                     if (isActive == true) {
                         window.clearInterval(ws$);
@@ -408,14 +412,14 @@ function(app, home, sec, v) {
                 if ($(window).scrollTop() > 10) {
                     $("#top-nav").addClass("navbar-fixed-top");
                 } else {
-                    $("#top-nav").removeClass("navbar-fixed-top");
+                    //$("#top-nav").removeClass("navbar-fixed-top");
                 };
             });
             window.setInterval(function() {
                 if ($(window).scrollTop() > 10) {
                     $("#top-nav").addClass("navbar-fixed-top");
                 } else {
-                    $("#top-nav").removeClass("navbar-fixed-top");
+                    //$("#top-nav").removeClass("navbar-fixed-top");
                 };
             },
             500);

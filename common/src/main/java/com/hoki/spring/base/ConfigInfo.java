@@ -5,6 +5,7 @@ import com.hoki.spring.dbutil.JdbcUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
@@ -32,6 +33,9 @@ public class ConfigInfo implements InitializingBean{
     @Autowired
     DataSource dataSource;
 
+    @Autowired
+    JdbcTemplate template;
+
     /**
      * 初始化数据库jdbcUtil
      * @throws Exception
@@ -39,5 +43,6 @@ public class ConfigInfo implements InitializingBean{
     @Override
     public void afterPropertiesSet() throws Exception {
         JdbcUtils.initDatasource(dataSource);
+        JdbcUtils.initJdbcTemplate(template);
     }
 }
