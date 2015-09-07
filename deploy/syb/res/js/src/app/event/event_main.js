@@ -1,0 +1,2 @@
+define(["app/home"],function(home){return{init:function(){$(".btn-hollow").click(function(){$("html,body").animate({scrollTop:$("#event_mao").offset().top
+- 70},1500);});}};});function eventClickCount(eventId){$.ajax({url:"/app/event/click/"+ eventId,type:"POST"})}

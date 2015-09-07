@@ -1,0 +1,4 @@
+define(["app","app/home","app/valid"],function(app,home,v){var id=$("#pId").val();app.controller("company_get_follow",['$scope','$http','companyService','peopleService',function($scope,$http,companyService,peopleService){id=$("#pId").val();if(!id){return;}
+var $mask=$(".follow-list");var loading=function(num){$.ajax({url:"/app/company/find/fans/list/"+ id,type:"POST",data:{page:num,rows:15}}).done(function(data){if(data.success==true&&data.responseData.records>0){home.initList($(".follow-list"),$("#follow-list-item").render(data.responseData.rows),$("#next-div"),loading,data.responseData.currPage,data.responseData.total,"到世界尽头了呢～");home.converHtml();}else{$(".follow-list").html($("#temp-no-follow-list").render({}));home.clearnext($("#next-div"),"到世界尽头了呢～");}
+home.unmask($mask);});}
+loading(1);}]);return{init:function(){}};});

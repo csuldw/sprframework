@@ -13,9 +13,157 @@
 <meta name="fragment" content="!"/>
  
 <script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
-<script type="text/javascript" src="/res/js/src/lib/require.js"></script>
+<script type="text/javascript" data2-main="/res/js/src/main.js" src="/res/js/src/lib/require.js"></script>
+
 <script type="text/javascript" src="/res/js/src/main.js?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321"></script>
-<script type="text/javascript" src="/res/js/bin/starter.js?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321"></script>
+
+<script type="text/javascript" src="/res/js/src/jqueryPlugin.js"></script>
+<script type="text/javascript" src="/res/js/src/lib/other_init.js"></script>
+
+<script type="text/javascript" src="/res/js/src/starter.js"></script>
+
+<!--
+ <script type="text/javascript" src="/res/js/src/main.js?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321"></script>
+ <script type="text/javascript" src="/res/js/bin/starter.js?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321"></script>
+单个build后的文件
+-->
+    <!-- 每个文件依赖
+        <script type="text/javascript" src="/res/js/src/lib/jquery.js"></script>
+        <script type="text/javascript" src="/res/js/src/lib/angular.js"></script>
+        <script type="text/javascript" src="/res/js/src/lib/angular-route.js"></script>
+        <script type="text/javascript" src="/res/js/src/lib/ui-utils.min.js"></script>
+        <script type="text/javascript" src="/res/js/src/lib/angular-animate.min.js"></script>
+        <script type="text/javascript" src="/res/js/src/lib/angular-strap.js"></script>
+        <script type="text/javascript" src="/res/js/src/lib/angular-strap.tpl.js"></script>
+        <script type="text/javascript" src="/res/js/src/lib/angular.sanitize.js"></script>
+        <script type="text/javascript" src="/res/js/src/lib/text.js"></script>
+        <script type="text/javascript" src="/res/js/src/lib/bootstrap.js"></script>
+        <script type="text/javascript" src="/res/js/src/lib/jsrender.min.js"></script>
+        <script type="text/javascript" src="/res/js/src/lib/angular-ui-bootstrap.js"></script>
+        <script type="text/javascript" src="/res/js/src/lib/angular-file-upload.js"></script>
+        <script type="text/javascript" src="/res/js/src/lib/bindonce.js"></script>
+
+        <script type="text/javascript" src="/res/js/src/app.js"></script>
+
+        <script type="text/javascript" src="/res/js/src/lib/blockui.min.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/bootstrap-maxlength.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/bootstrap-paginator.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/sifter.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/microplugin.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/selectize.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/slimscroll.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/jquery.lazyloadxt.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/headroom.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/qrcode.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/jquery-ui.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/input_switch.js"></script>
+
+    <script type="text/javascript" src="/res/js/src/lib/notyfy.js"></script>
+
+    <script type="text/javascript" src="/res/js/src/lib/scrollup.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/snowfall.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/to-markdown.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/sketch.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/caret.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/atwho.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/angular-promise-buttons.min.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/froala_editor.min.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/star-rating.min.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/jquery.dragsort-0.5.2.min.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/bootstrap-tags.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/magnific-popup.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/plugins/tables.min.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/plugins/urls.min.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/plugins/lists.min.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/plugins/colors.min.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/plugins/font_family.min.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/plugins/font_size.min.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/plugins/block_styles.min.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/plugins/media_manager.min.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/plugins/video.min.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/plugins/char_counter.min.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/plugins/zh_cn.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/jquery.fileupload.js"></script>
+
+    <script type="text/javascript" src="/res/js/src/app/valid.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/security.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/header.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/factory.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/service/utils.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/service.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/tpl/common.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/service/companyService.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/service/peopleService.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/service/jobService.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/service/commonService.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/common/hiDirective.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/common/areaDirective.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/common/uploadDirective.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/common/dictDirective.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/common/popoverDirective.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/common/companyDirective.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/common/qrCodeDirective.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/common/tagsDirective.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/common/common.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/event/event_main.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/page/user-log-reg.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/company/company_main.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/company/company_add.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/company/company_get_overview.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/company/company_get_follow.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/company/company_get_comment.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/company/company_get_stage.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/company/company_get.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/media/media_add.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/media/media_list.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/media/media_get.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/jobs/job_resume_send.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/jobs/job_add.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/main.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/home.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/jobs/job_find.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/jobs/job_my.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/jobs/job_get.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/jobs/job_main.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/company/company_main_find.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/forum/topic_get.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/forum/topic_add.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/forum/topic_edit.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/forum/forum_main.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/people/people_main_find.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/people/people_main.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/people/people_get_comment.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/people/people_get_overview.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/people/people_get_resume.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/people/people_get_follow.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/people/people_get_visitor.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/people/people_get_stage.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/people/people_get.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/message/message_get.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/message/message_main.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/people/people_setting_general.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/people/people_setting_modifypwd.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/people/people_setting_resume.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/people/people_setting_email.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/people/people_setting.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/notify/list.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/public/activeUser.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/public/resetpassword.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/resume/resume_received.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/resume/resume_get.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/incubator/incubator_get_overview.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/incubator/incubator_get_follow.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/incubator/incubator_get_comment.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/incubator/incubator_get.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/search/search.js"></script>
+    <script type="text/javascript" src="/res/js/src/app/people/people_info_perfect.js"></script>
+
+
+    <script type="text/javascript" src="/res/js/src/lib/wmd.js"></script>
+
+        -->
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>

@@ -1,0 +1,18 @@
+define(["app"],function(app){app.service('companyService',['$http',function(http){var url="/app/company/";var updateCompany=function(companyId,company){return http.post("/company/update/"+ companyId,$.param(company));};var getCompanyFansCount=function(companyId){return http.post(url+"get/fans/count/"+ companyId);}
+var getCompanyCommentCount=function(companyId){return http.post(url+"get/comment/count/"+ companyId);}
+var getCompanyProductImgs=function(companyId){return http.post(url+"get/product/imgs/"+ companyId);}
+var getCompanyWorkEnvImgs=function(companyId){return http.post(url+"get/workenv/imgs/"+ companyId);}
+var getCompanyFundingList=function(companyId){return http.post(url+"get/funding/list",$.param({"companyId":companyId}));}
+var delCompanyFundingById=function(id){return http.post(url+"del/funding",$.param({"fundingId":id}));};var getCompanyMilestoneList=function(companyId){return http.post(url+"get/milestone/list",$.param({"companyId":companyId}));}
+var delCompanyMilestoneById=function(id){return http.post(url+"del/milestone",$.param({"id":id}));};var getCompanyFounderList=function(companyId){return http.post(url+"get/founder/list",$.param({"companyId":companyId}));}
+var getCompanyReportList=function(companyId){return http.post(url+"get/report/list",$.param({"companyId":companyId}));}
+var delCompanyReportById=function(id){return http.post(url+"del/report",$.param({"id":id}));};var addCompanyWorkenvImg=function(companyId,imgUrl){return http.post(url+"add/img",$.param({"companyId":companyId,"url":imgUrl,typeName:"envPic",type:"10002"}));};var addCompanyProductImg=function(companyId,imgUrl){return http.post(url+"add/img",$.param({"companyId":companyId,"url":imgUrl,typeName:"productPic",type:"10001"}));};var delCompanyImg=function(imgId){return http.post(url+"del/img",$.param({"imgId":imgId}));}
+var addFounder=function(founder){return http.post(url+"add/founder",$.param(founder));}
+var updateFounder=function(founder){return http.post(url+"update/founder",$.param(founder));}
+var delFounder=function(founderId){return http.post(url+"del/founder",$.param({"founderId":founderId}));}
+var getCompanyComment=function(companyId,num,page){return http.post(url+"get/comment/list/"+ companyId,$.param({num:num,page:page}));}
+var getCompanyCommentCList=function(commentId){return http.post(url+"get/comment/c/list/"+ commentId);}
+var addCompanyComment=function(companyId,content){return http.post(url+"add/comment",$.param({"id":companyId,"content":content}));}
+var addCompanyCommentc=function(commentId,content){return http.post(url+"add/comment/c",$.param({"commentId":commentId,"content":content}));}
+var doCommentUp=function(commentId){return http.post(url+"do/comment/up",$.param({"commentId":commentId}));}
+return{updateCompany:updateCompany,getCompanyFansCount:getCompanyFansCount,getCompanyCommentCount:getCompanyCommentCount,getCompanyProductImgs:getCompanyProductImgs,getCompanyWorkEnvImgs:getCompanyWorkEnvImgs,getCompanyMilestoneList:getCompanyMilestoneList,delCompanyMilestoneById:delCompanyMilestoneById,getCompanyFundingList:getCompanyFundingList,getCompanyFounderList:getCompanyFounderList,delCompanyFundingById:delCompanyFundingById,getCompanyReportList:getCompanyReportList,delCompanyReportById:delCompanyReportById,addCompanyWorkenvImg:addCompanyWorkenvImg,addCompanyProductImg:addCompanyProductImg,delCompanyImg:delCompanyImg,addFounder:addFounder,delFounder:delFounder,updateFounder:updateFounder,getCompanyComment:getCompanyComment,getCompanyCommentCList:getCompanyCommentCList,addCompanyComment:addCompanyComment,doCommentUp:doCommentUp,addCompanyCommentc:addCompanyCommentc}}])});

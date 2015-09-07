@@ -1,0 +1,2 @@
+define(["app/home","app/valid"],function(home,v){return{init:function(){$(".btn-do-save").click(function(){var $form=$("#modifyPwdForm");if(v.doValidForm($form)){$.ajax({url:ctxRoot
++"/public/modifypwd",type:"POST",data:home.generateFormData($form)}).done(function(data){if(data.success==true){home.success(data.message);location.href="/";}else{home.error(data.message);}});}});}};});

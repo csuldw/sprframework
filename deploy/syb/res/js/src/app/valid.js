@@ -1,0 +1,24 @@
+define("app/valid",['bootstrap'],function(){return{doValidForm:function doValidForm(ob){$(ob).find(".popover").remove();var flag=true;$(ob).find("input,textarea,select:visible").each(function(){if(!flag){return flag;}
+var position=$(this).attr("popover-position");var target=$(this).attr("popover-target");if(!position){position="right";}
+if(!target){target=$(this);}
+var value=$(this).val();if($(this).attr("require")){if(value==""){var require_message=$(this).attr("require-message");$(target).focus();flag=false;$(target).popover('destroy');$(target).popover({placement:position,content:require_message,trigger:"click"}).popover('show');}}
+if(!flag){return flag;}
+if($(this).attr("number")){if(isNaN(value)){var number_message=$(this).attr("number-message");$(this).focus();flag=false;$(this).popover('destroy');$(this).popover({placement:position,content:number_message,trigger:"click"}).popover('show');}}
+if(!flag){return flag;}
+if($(this).attr("loginName")){var regexp=/^[0-9|a-z|A-Z]\w{5,19}$/g;if(!(regexp.test(value))){$(this).focus();flag=false;$(this).popover('destroy');$(this).popover({placement:position,content:"登录名长度必须是6-20之间的字母或数字!",trigger:"click"}).popover('show');}}
+if(!flag){return flag;}
+if($(this).attr("pwd")){if(!(value.length>=6&&value.length<=20)){$(this).focus();flag=false;$(this).popover('destroy');$(this).popover({placement:position,content:"密码长度必须是6~20位",trigger:"click"}).popover('show');}}
+if(!flag){return flag;}
+if($(this).attr("email")){if(value!=""){var regexp=/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i;if(!(regexp.test(value))){$(this).focus();flag=false;$(this).popover('destroy');$(this).popover({placement:position,content:"请输入正确格式的邮箱",trigger:"click"}).popover('show');}}}
+if(!flag){return flag;}
+if($(this).attr("number-min-max")){var valSplit=$(this).attr("number-min-max").split(",");var min=valSplit[0];var max=valSplit[1];var number_max_message=$(this).attr("number-min-max-message");if(parseInt(value)>parseInt(max)||parseInt(value)<parseInt(min)){$(this).focus();flag=false;$(this).popover('destroy');$(this).popover({placement:position,content:number_max_message,trigger:"click"}).popover('show');}}
+if(!flag){return flag;}
+if($(this).attr("min-number")){var min_number=$(this).attr("min-number");if(parseFloat(value)<parseFloat(min_number)){var min_number_message=$(this).attr("min-number-message");$(this).focus();flag=false;$(this).popover('destroy');$(this).popover({placement:position,content:min_number_message,trigger:"click"}).popover('show');}}
+if(!flag){return flag;}
+if($(this).attr("telnum")){var regexp=/((\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$)/;var telnum_message=$(this).attr("telnum-message");if(value!=""){if(!(regexp.test(value))){$(this).focus();flag=false;$(this).popover('destroy');$(this).popover({placement:position,content:telnum_message,trigger:"click"}).popover('show');}}}
+if(!flag){return flag;}
+if($(this).attr("compare")){var _compare=$(this).attr("compare");var _compare_value=$(_compare).val();var compare_message=$(this).attr("compare-message");if(value!=_compare_value){flag=false;$(this).focus();$(this).popover('destroy');$(this).popover({placement:position,content:compare_message,trigger:"click"}).popover('show');}}
+if(!flag){return flag;}
+if($(this).attr("require2")){var require2=$(this).attr("require2");var require2_value=$(require2).val();var require2_message=$(this).attr("require2-message");if($(this).val()==""&&require2_value==""){flag=false;$(this).focus();$(this).popover('destroy');$(this).popover({placement:position,content:require2_message,trigger:"click"}).popover('show');}}
+if(!flag){return flag;}
+if($(this).attr("url")){if(value!=""){if(!(value.substr(0,7)=="http://"||value.substr(0,8)=="https://")){var url_message=$(this).attr("url-message");$(this).focus();flag=false;$(this).popover('destroy');$(this).popover({placement:position,content:url_message,trigger:"click"}).popover('show');}}}});return flag;}};});

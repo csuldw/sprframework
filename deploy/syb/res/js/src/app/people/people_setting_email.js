@@ -1,0 +1,2 @@
+define(["app","app/home","app/valid"],function(app,home,valid){app.controller("people_setting_email",['$scope','$http','$location',function($scope,$http,$location){$http.post("/people/get/emailSubscribe").success(function(data){$scope.recvEmailNotify=data.responseData;});$scope.changeEmailStatus=function(sel){$http.post("/people/update/emailSubscribe?isEs="
++ sel);}}]);return{};});

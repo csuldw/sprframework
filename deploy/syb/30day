@@ -1,0 +1,432 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="直招,30天直招,快速加入创业团队,我要创业,hiStarter">
+<meta name="description" content="hiStarter是一个面向互联网创业团队的兴趣社交型垂直招聘平台，提供真实的创业招聘信息、免费的人才库，靠谱的团队都在这儿">
+<meta name="google-site-verification" content="mUGc4ma0gACN5ggsANW5_s7AcezE9yIk8CwjZ8BNJKg"/>
+<meta name="baidu-site-verification" content="wVc4DyAC41"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="/res/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="/res/css/style_1.css?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321" rel="stylesheet">
+<link href="/res/css/style_2.css?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321" rel="stylesheet">
+<meta name="fragment" content="!"/>
+ 
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+<script type="text/javascript" src="/res/js/src/lib/require.js"></script>
+<script type="text/javascript" src="/res/js/src/main.js?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321"></script>
+<script type="text/javascript" src="/res/js/bin/starter.js?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script id="common-loading-tmpl" type="text/x-jsrender">
+	<span ><i class="fa fa-spinner fa-spin"></i> {{:data}}</span>
+</script>
+<script id="common-loading-mini-tmpl" type="text/x-jsrender">
+	<span ><i class="fa fa-spinner fa-spin"></i> {{:data}}</span>
+</script>
+<script type="text/javascript">
+    var path = '';
+    var ctxRoot = '';
+    var ISLOGIN = 'false';
+    var ISACTIVE = 'true';
+    var ISPERFECT = 'true';
+    var ISCOMPANY = 'false'
+    var appId = 'zz/zz';
+</script>
+<link href="/res/zz/zz.css?version=90" rel="stylesheet"/>
+<link rel="stylesheet" media="screen and (max-device-width: 640px)" href="/res/wechat/css/responsive.css">
+<link rel="stylesheet" media="screen and (max-device-width: 640px)" href="/res/wechat/css/responsive_activity.css">
+<title>三十天直招计划- hiStarter | 靠谱的创业团队都在这儿
+</title>
+</head>
+<body style="background-color: transparent;" class="identity-pc-device">
+<ul id="notyfy_container_top" class="notyfy_container navbar-fixed-top i-am-new"></ul>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" id="top-nav" ng-controller="headerCtrl">
+<div class="progress top-progress" style="display: none">
+<div class="progress-bar progress-bar-success" id="top-progress-div" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+</div>
+<div class="container relative_pos">
+<div class="container header_to_re">
+<div id="wrap" style="display: none">
+<label id='sideMenuControl' for='sideToggle'>=</label>
+</div>
+<div class="navbar-header ">
+<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+</button>
+<img class="hide" src="http://img.histarter.com/index/new_logo.png_fixhw300"/>
+<a class="navbar-brand navbar-brand-jobmain" href="/">
+<img style="width: auto; height: 60px;" src="http://img.histarter.com/index/new_logo.png"/></a>
+</div>
+<div class="navbar-to-hide navbar-to-hider">
+<ul class="nav navbar-nav navbar-title">
+<li style="display: none;"><a href="/page/company/list/1">团队列表</a>
+<a href="/page/people/list">团队列表</a> <a href="/page/jobs/list">职位列表</a></li>
+<li class="now"><a href="/" title="首页">首页</a></li>
+<li><a href="/p/company/company_main" title="团队">团队</a></li>
+<li><a href="/p/people/people_main" class="btn-action" title="人才">人才</a></li>
+<li><a href="/p/jobs/job_main" title="职位">职位</a></li>
+<li><a class="text-primary" href="/forum/list">社区</a> <span class="community_new" style="position: absolute; top: 10px; right: 0px;"><img src="http://img.histarter.com/index/NEW.png"> </span></li>
+<li class="dropdown mrg25R"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">更多 <span class="caret"></span>
+</a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="/event/list" title="活动">活动</a></li>
+</ul></li>
+<li class="input-icon search-icon no_border"><i class="fa fa-search"></i> <input class="form-control form-searchkey" name="searchkey" data-toggle="dropdown" aria-expanded="false" popover-postion="left" maxlength="20" type="text" data-type="1" placeholder="搜索职位">
+<ul class="dropdown-menu" role="menu" style="border: none;">
+<li data-v="1" style="display: none;"><a class="btn ">切换职位搜索</a></li>
+<li data-v="2"><a class="btn ">切换公司搜索</a></li>
+<li data-v="3"><a class="btn ">切换人才搜索</a></li>
+</ul></li>
+</ul>
+<ul class="nav navbar-nav navbar-right header-btns">
+<li><a href="javascript:void(0)" style="padding-top: 15px; padding-bottom: 1px; background-color: #fff;"><button type="button" class="btn btn-default openRegModal">注册</button></a></li>
+<li><a href="javascript:void(0)" style="padding-top: 15px; padding-bottom: 1px; background-color: #fff;"><button type="button" class="btn btn-success  openLogModal" ng-click="openLogin()">登录</button></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<script type="text/x-jsrender" id="temp-search-div">
+<div class="btn btn-neeed cb" data-s-v="{{>code}}">{{>value}}</div>
+</script>
+<input id='sessionUID' value='5DC8A2613A6F475359AC8C6BA67DEA6F' type="hidden"/>
+<div class="zz-header bg-cover">
+<img src="http://img.histarter.com/index/index-thirtyday-watch.png" class="thiryday-bg-apple" alt="入职成功就送苹果表(AppleWatch)"/>
+<div class="rows to-full-height bg-black pad-20">
+<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center pad45T">
+<img src="http://img.histarter.com/zz/round.png"/>
+<div></div>
+<img src="http://img.histarter.com/zz/title.png" class="title-img">
+<p class="zz-green font-20">创业的快感，可能超乎你的想象</p>
+</div>
+</div>
+</div>
+<section class="section-service">
+<div class="container" style="width:100%;  padding: 0 15%;">
+<div class="row">
+<div class="col-md-12">
+<img src="http://img.histarter.com/zz/service_title.png"/>
+<p class="zz-green font-20 mrg45B" style="  margin-top: 20px;">30天加入一个靠谱的创业团队</p>
+<div class="col-md-3">
+<img src="http://img.histarter.com/zz/baoming.png"/>
+<div class="font-white service-title">网上报名</div>
+<div class="font-gray service-intro">填写您的个人信息及角色定位，等待我们联系您。</div>
+<div class="border-green"></div>
+<div class="font-white service-date">现在</div>
+</div>
+<div class="col-md-3">
+<img src="http://img.histarter.com/zz/chushi.png"/>
+<div class="font-white service-title">匹配评测</div>
+<div class="font-gray service-intro">运营专员将联系您面谈，并帮助您发觉闪光亮点。</div>
+<div class="border-green"></div>
+<div class="font-white service-date">三天内</div>
+</div>
+<div class="col-md-3">
+<img src="http://img.histarter.com/zz/mianshi.png"/>
+<div class="font-white service-title">正式面试</div>
+<div class="font-gray service-intro">您的信息将被推荐给各优质创业团队与CXO约谈。</div>
+<div class="border-green"></div>
+<div class="font-white service-date">五天内</div>
+</div>
+<div class="col-md-3">
+<img src="http://img.histarter.com/zz/ruzhi.png"/>
+<div class="font-white service-title">正式入职</div>
+<div class="font-gray service-intro">如果您成功加入创业团队，将收到一份神秘礼包。</div>
+<div class="border-green"></div>
+<div class="font-white service-date">三十天内</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="company-section">
+<img src="http://img.histarter.com/zz/title-company.png"/>
+<p class="zz-green font-20 title-slave">也许您将会成为他们中的一员</p>
+<div class="container" style="width:900px;margin-top:70px;">
+<div class="rows">
+<div class="col-md-2">
+<a href="http://www.histarter.com/page/company/30day/3" target="_blank"> <img src="http://img.histarter.com/upload/2015-05-21/10/41/18/b0791ec45d184a06bccac44c2fc5888d/1432176078289/blb4fb_fixhw80"/>
+</a>
+</div>
+<div class="col-md-2">
+<a href="http://www.histarter.com/page/company/30day/4" target="_blank"> <img src="http://img.histarter.com/upload/2015-05-21/16/25/38/31f5325d80564cef9592b9c2e65aa8c8/1432196738170/f3uhmw_fixhw80"/>
+</a>
+</div>
+<div class="col-md-2">
+<a href="http://www.histarter.com/page/company/30day/5" target="_blank"> <img src="http://img.histarter.com/upload/2015-05-21/16/42/47/b5095c3c773f4bee991db33085b5f73f/1432197767510/hfkns8_fixhw80"/>
+</a>
+</div>
+<div class="col-md-2">
+<a href="http://www.histarter.com/page/company/30day/9" target="_blank"> <img src="http://img.histarter.com/upload/2015-05-21/17/57/55/ffa570998f5d4ce7b8dd8347f88ef4c5/1432202275158/xkbfni_fixhw80"/>
+</a>
+</div>
+<div class="col-md-2">
+<a href="http://www.histarter.com/page/company/30day/10" target="_blank"> <img src="http://img.histarter.com/upload/2015-06-09/16/51/36/8986d1ce32b848c39df68bfa928a8572/1433839896712/6gremh_fixhw80"/>
+</a>
+</div>
+<div class="col-md-2">
+<a href="http://www.histarter.com/page/company/30day/11" target="_blank"> <img src="http://img.histarter.com/upload/2015-06-10/10/27/22/7567300012dc4eddb6a0219b619aa5c4/1433903242101/wt6dgd_fixhw80"/>
+</a>
+</div>
+<div class="col-md-2">
+<a href="http://www.histarter.com/page/company/30day/12" target="_blank"> <img src="http://img.histarter.com/upload/2015-06-15/16/05/39/93a724773a504b53ac1e213a95200483/1434355539885/dntpin_fixhw80"/>
+</a>
+</div>
+</div>
+</div>
+<div></div>
+<a class="more-btn-wrapper">
+<button class="more-btn" type="button">点击团队LOGO进入详情页</button>
+</a>
+</section>
+<section class="company-talent">
+<div class="talent-content">
+<img src="http://img.histarter.com/zz/title-submit.png"/>
+<p class="intro">创业团队需要哪些人才</p>
+<div class="container" style="width:100%;  padding: 0 15%;">
+<div class="row">
+<div class="col-md-12">
+<div class="md-part">
+<img src="http://img.histarter.com/zz/programmer.png"/>
+<p class="font-white company-talent-founder">程序员</p>
+<p class="font-white company-talent-intro">用万千行代码，实现产品绚丽多彩的功能和效果。</p>
+</div>
+<div class="md-part">
+<img src="http://img.histarter.com/zz/design.png"/>
+<p class="font-white company-talent-founder">设计师</p>
+<p class="font-white company-talent-intro">用灵感和双手，勾勒用户为核心的UI和交互体验。</p>
+</div>
+<div class="md-part">
+<img src="http://img.histarter.com/zz/yuny.png"/>
+<p class="font-white company-talent-founder">运营</p>
+<p class="font-white company-talent-intro">优质内容和服务的沉淀，决定了用户留存率。</p>
+</div>
+<div class="md-part">
+<img src="http://img.histarter.com/zz/market.png"/>
+<p class="font-white company-talent-founder">市场</p>
+<p class="font-white company-talent-intro">功能再强的产品也需要让你的用户听见你的声音。</p>
+</div>
+<div class="md-part">
+<img src="http://img.histarter.com/zz/product.png"/>
+<p class="font-white company-talent-founder">产品</p>
+<p class="font-white company-talent-intro">根据产品需求，评估产品机会、定义产品功能。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section-qa">
+<img src="http://img.histarter.com/zz/qa.png"/>
+<p class="brief">关于30天直招活动的疑问和回答</p>
+<img src="http://img.histarter.com/zz/tri.png"/>
+<div></div>
+<div style="text-align: center;display: inline-block;" class="mrg45T">
+<p class="font-qing text-left section-qa-q">问：30天直招目前针对哪些城市开放？</p>
+<p class="zz-green text-left section-qa-a"> 答：目前仅对上海地区的创业团队开放，对申请人士没有限制。</p>
+<br/>
+<p class="font-qing text-left section-qa-q">问：我现在还没有毕业但是对创业有兴趣，可以报名吗？</p>
+<p class="zz-green text-left section-qa-a"> 答：可以！创业团队都有强烈的实习生和应届生的需求。</p>
+<br/>
+<p class="font-qing text-left section-qa-q">问：创业团队最急需的人才种类是？</p>
+<p class="zz-green text-left section-qa-a"> 答：主要是程序员、设计师、产品运营。</p>
+<br/>
+<p class="font-qing text-left section-qa-q">问：我适合加入创业团队吗？</p>
+<p class="zz-green text-left section-qa-a"> 答：希望申请人渴望实现自我价值、有一技之长、并且有良好的学习能力。</p>
+<br/>
+<p class="font-qing text-left section-qa-q">问：主要是加入那种类型的创业团队？</p>
+<p class="zz-green text-left section-qa-a"> 答：主要是互联网方向的种子轮至A轮创业项目。</p>
+</div>
+</section>
+<section class="section-submit">
+<div class="container">
+<div>
+<div class="account">
+<img src="http://img.histarter.com/zz/jisubaomin.png">
+<p class="zz-green" style="margin-top:15px;">填写真实信息开启创业之旅</p>
+<div style="width:50%;margin:0 auto">
+<form method="post" action="#" class="form-horizontal section-submit-form">
+<div class="form-group">
+<label class="col-xs-3 control-label" for="nickname">真实姓名 <i class="zz-green">*</i></label>
+<div class="col-xs-7">
+<input type="text" name="name" class="form-control" popover-position="bottom" require="require" require-message="请输入您真实姓名" maxlength="50">
+</div>
+</div>
+<div class="form-group">
+<label class="col-xs-3 control-label" for="nickname">邮箱 <i class="zz-green">*</i></label>
+<div class="col-xs-7">
+<input type="text" name="email" class="form-control" popover-position="bottom" require="require" require-message="请输入您的邮箱" email="email" maxlength="50">
+</div>
+</div>
+<div class="form-group">
+<label class="col-xs-3 control-label" for="nickname">电话 <i class="zz-green">*</i></label>
+<div class="col-xs-7">
+<input type="text" name="tel" class="form-control" popover-position="bottom" require="require" require-message="请输入您的电话" tel="tel" maxlength="50">
+</div>
+</div>
+<div class="form-group">
+<label class="col-xs-3 control-label" for="social">社交账号</label>
+<div class="col-xs-7">
+<input type="text" name="social" class="form-control" popover-position="bottom" require-message="请输入社交账号" maxlength="100">
+</div>
+</div>
+<div class="form-group">
+<label class="col-xs-3 control-label" for="nickname">地区 <i class="zz-green">*</i></label>
+<div class="col-xs-7">
+<div class="btn-tabs">
+<input type="hidden" name="location" value="上海"/>
+<span class="btn-tab active">上海</span><span class="btn-tab" style="color: #ccc; " data-disable="true">北京</span>
+</div>
+</div>
+</div>
+<div class="form-group">
+<label class="col-xs-3 control-label" for="nickname">报名职位 <i class="zz-green">*</i></label>
+<div class="col-xs-7">
+<div class="btn-tabs">
+<input type="hidden" name="job" value="程序员"/>
+<span class="btn-tab active">程序员</span><span class="btn-tab">设计师</span><span class="btn-tab">运营</span><span class="btn-tab">市场</span><span class="btn-tab">产品</span>
+</div>
+</div>
+</div>
+<div class="form-group">
+<label class="col-xs-3 control-label" for="nickname">个人简介 <i class="zz-green">*</i></label>
+<div class="col-xs-7">
+<textarea class="form-control" popover-position="bottom" require="require" require-message="请输入您的个人简介" name="intro" cols="30" rows="10"></textarea>
+</div>
+</div>
+<button class="btn btn-hollow section-submit-btn" type="button">报名参加</button>
+</form>
+</div>
+<div class="text-right" style="color:#8f9396;">*本计划最终解释权归上海奇麦网络科技有限公司所有</div>
+</div>
+</div>
+</div>
+</section>
+ 
+<div class="pre-footer mrg15T">
+<div class="container text-center">
+<div class="row">
+ 
+<div class="col-xs-3 col-xs-6">
+<div class="pre-footer-title">星球介绍</div>
+<div class="pre-footer-item mrg10T">
+<a href="/about#about_us">关于我们
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="/about#about_service"> 服务模式
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="/about#about_partner">合作伙伴
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="/about#about_contact">联系我们
+</a>
+</div>
+</div>
+<div class="col-xs-3 col-xs-6">
+<div class="pre-footer-title">创业招聘</div>
+<div class="pre-footer-item mrg10T">
+<a href="/p/company/company_main">团队列表
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="/p/jobs/job_main">职位列表
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="/p/people/people_main">人才列表
+</a>
+<div class="pre-footer-item mrg10T">
+<a href="/30day">直招报名
+</a>
+</div>
+</div>
+</div>
+<div class="col-xs-3 col-xs-6">
+<div class="pre-footer-title">媒体报道</div>
+<div class="pre-footer-item mrg10T">
+<a href="http://www.36kr.com/p/218208.html" target="_blank">36氪
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="http://www.pingwest.com/histarter-demo" target="_blank">PingWest
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="http://cn.technode.com/post/2014-12-22/histarter" target="_blank">动点科技
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="http://tech2ipo.com/93789" target="_blank">Tech2IPO
+</a>
+</div>
+<div class="pre-footer-item mrg10T">
+<a href="http://tech.ifeng.com/a/20150120/40950840_0.shtml" target="_blank">凤凰科技
+</a>
+</div>
+</div>
+<div class="col-xs-3 col-xs-6">
+<div class="pre-footer-title">移动端下载</div>
+<div class="pre-footer-item mrg10T">
+<a href="javascript:void(0);">
+<img src="http://img.histarter.com/img/appstore.png" id="hiStarteriOSDownload" alt="hiStarter移动端下载"/>
+</a>
+</div>
+</div>
+</div>
+<hr>
+<div class="row pad15B">
+<div class="col-xs-7" style="margin-left:7%;text-align: left;">
+© 2014-2015 HISTARTER.COM・沪ICP备13032488号 上海奇麦网络科技有限公司
+</div>
+<div class="col-xs-4 text-right">
+<a class="pre-footer-social" data-animation="am-flip-x" data-trigger="click" data-placement="top" bs-popover data-html="true" data-content="<img src='http://img.histarter.com/img/histarter_qrcode.jpg' width='150' height='150'/>" href=" javascript:void(0);"><i class="fa fa-wechat"></i></a>
+<a class="pre-footer-social" href="http://www.weibo.com/histarter" target="_blank"><i class="fa fa-weibo"></i></a>
+<a class="pre-footer-social" data-animation="am-flip-x" href="javascript:void(0);" data-trigger="click" data-placement="top" bs-popover data-html="true" data-content="官方QQ吐槽群:219507775"><i class="fa fa-qq"></i></a>
+<a class="pre-footer-social" href="/cdn-cgi/l/email-protection#2f5840586f47465c5b4e5d5b4a5d014c4042"><i class="fa fa-envelope"></i></a>
+</div>
+</div>
+</div>
+</div>
+<script id="tmpl-dict" type="text/x-jsrender">
+	<option value='{{>code}}' {{>selected}}>{{>value}}</option>
+</script>
+<script id="tmpl-dict-r" type="text/x-jsrender">
+	<label class="radio-inline"> <input type="radio" name=""  value="{{>code}}">{{>value}}</label>
+</script>
+<script id="select-tmpl" type="text/x-jsrender">
+    <option value='{{>value}}' {{>selected}}>{{>text}}</option>
+</script>
+<script type="text/javascript">
+
+    function a(a, b) {
+        var c = 'font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;font-size: 15px;'
+                + (a ? "font-weight: bold;" : "") + "color: " + b + ";";
+        return c;
+    }
+    console.log("%c♥ 想加入我们吗 ? %c急招JAVA工程师,发送您的简历至%c--> wow@histarter.com", a(!0,
+            "#d22"), a(!0, "#777"), a(!0, "#2b2")), window.joinUs = function() {
+        return console.log("%cWe're excited to have you! %c☃", a(!1, "#d22"),
+                a(!1, "#333")), window.location.href = "/_/_/about/careers/",
+                "";
+    };
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?1f61149eae43428c63d2907772a1e515";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>

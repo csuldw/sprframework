@@ -1,0 +1,2 @@
+define(["app","app/home","app/valid"],function(app,home,v){app.controller("incubator_get_follow",['$scope','$location',function($scope,$location){id=$("#pId").val();if(!id){return;}
+$.ajax({url:"/company/follow/list/"+ id,type:"POST"}).done(function(data){if(data.success==true&&data.responseData.records>0){$(".follow-list").html($("#follow-list-item").render(data.responseData.rows));}else{$(".follow-list").html($("#temp-no-follow-list").render({}));}});}]);return{init:function(){}};});

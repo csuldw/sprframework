@@ -1,0 +1,1 @@
+define(["app/service/companyService","app/service/peopleService","app/service/jobService"],function(app){});

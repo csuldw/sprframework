@@ -1,0 +1,1 @@
+define(["app"],function(app){app.directive("hiTags",function(){return{scope:{"hiTags":"@"},restrict:'A',require:'ngModel',link:function(scope,element,attrs,ngModel){$(element).val(scope.hiTags);$(element).tagsinput();}}});});

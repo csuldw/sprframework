@@ -1,0 +1,2 @@
+define(["app","app/home","app/valid"],function(app){app.controller("people_get_follow",['$scope','$http','commonService','$location','peopleService',function($scope,$http,commonService,$location,peopleService){var num=1;$scope.fansList=[];var loading=function(){peopleService.getPeopleFansList($scope.userId,num,15).success(function(data){if(data.success==true){$scope.fansList=$scope.fansList.concat(data.responseData.rows);$scope.show=data.responseData.hasNextPage;num++;}});}
+$scope.getFansListByNum=function(){loading();};loading();}]);})

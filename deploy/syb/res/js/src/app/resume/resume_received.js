@@ -1,0 +1,2 @@
+define(["app/home"],function(home){return{init:function(){var md=window.location.hash;if(md!=""){md=md.replace("#","");home.menuLoad("/p/people/"+ md,"people/"+ md);}
+$('.list-people-type li').find("a[data-ajaxlink]").click(function(){var $this=$(this);var li=$this.parent();$(".list-people-type li").removeClass("active");li.addClass("active");home.menuLoad("/p/people/"+ $this.data("ajaxlink"),"people/"+ $this.data("ajaxlink"));$this.addClass("active");});}};});

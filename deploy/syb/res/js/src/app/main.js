@@ -1,0 +1,1 @@
+define(["app/home"],function(home){return{init:function(){}};});

@@ -1,0 +1,1 @@
+define(["app/home"],function(home){return{init:function(){$.ajax({url:"/notify/my/all/list",type:"POST"}).done(function(data){if(data.success==true&&data.responseData.length>0){home.renderTmpl("notify/_header_notify_list",".notifications-box",data.responseData);}else{$(".notifications-box").html("<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;暂无通知</li>");}});}};});

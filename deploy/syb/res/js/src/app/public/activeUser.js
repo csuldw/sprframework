@@ -1,0 +1,2 @@
+define(["app/home","app/header"],function(home,h){return{init:function(){$(".btn-do-active").click(function(){$.ajax({url:ctxRoot
++"/user/active/email",type:"POST"}).done(function(data){if(data.success){home.success(data.message);}else{home.error(data.message);}})});}};});

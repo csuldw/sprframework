@@ -1,0 +1,111 @@
+lib/blockui.min
+    define("lib/bootstrap-maxlength",
+    define("lib/bootstrap-paginator",
+    define("lib/bootstrap-datepicker",
+    define("lib/sifter", t) : typeof exports == "object" ? module.exports = t() : e.Sifter = t()
+    define("lib/microplugin", t) : typeof exports == "object" ? module.exports = t() : e.MicroPlugin = t()
+lib/selectize
+app/valid
+app/security
+    define("lib/slimscroll",
+    define("lib/jquery.lazyloadxt",
+    define("lib/headroom",
+app/header
+    define("lib/qrcode",
+lib/jquery-ui
+    define("lib/input_switch",
+app/factory
+    define("lib/notyfy",
+    define("lib/wmd",
+    define("lib/scrollup",
+    define("lib/snowfall",
+app/service/utils
+app/service
+app/tpl/common
+app/service/companyService
+app/service/peopleService
+app/service/jobService
+app/service/commonService
+app/common/hiDirective
+app/common/areaDirective
+app/common/uploadDirective
+app/common/dictDirective
+app/common/popoverDirective
+app/common/companyDirective
+app/common/qrCodeDirective
+app/common/tagsDirective
+app/common/common
+    define("lib/to-markdown",
+    define("lib/sketch",
+lib/caret
+lib/atwho
+    define("lib/angular-promise-buttons.min",
+lib/froala_editor.min
+    define("lib/star-rating.min",
+app/event/event_main
+    define("lib/jquery.dragsort-0.5.2.min",
+app/page/user-log-reg
+app/company/company_main
+    define("lib/bootstrap-tags",
+app/company/company_add
+    define("lib/magnific-popup",
+app/company/company_get_overview
+app/company/company_get_follow
+app/company/company_get_comment
+    define("app/company/company_get_stage",
+app/company/company_get
+app/media/media_add
+app/media/media_list
+    define("lib/plugins/tables.min",
+    define("lib/plugins/urls.min",
+    define("lib/plugins/lists.min",
+    define("lib/plugins/colors.min",
+    define("lib/plugins/font_family.min",
+    define("lib/plugins/font_size.min",
+    define("lib/plugins/block_styles.min",
+    define("lib/plugins/media_manager.min",
+    define("lib/plugins/video.min",
+    define("lib/plugins/char_counter.min",
+    define("lib/plugins/zh_cn",
+app/media/media_get
+app/jobs/job_resume_send
+lib/jquery.ui.widget
+lib/jquery.fileupload
+app/jobs/job_add
+app/main
+app/jobs/job_find
+app/jobs/job_my
+app/jobs/job_get
+app/jobs/job_main
+app/company/company_main_find
+app/forum/topic_get
+app/forum/topic_add
+app/forum/topic_edit
+app/forum/forum_main
+app/people/people_main_find
+app/people/people_main
+app/people/people_get_comment
+app/people/people_get_overview
+app/people/people_get_resume
+app/people/people_get_follow
+app/people/people_get_visitor
+app/people/people_get_stage
+app/people/people_get
+app/message/message_get
+app/message/message_main
+app/people/people_setting_general
+app/people/people_setting_modifypwd
+app/people/people_setting_resume
+app/people/people_setting_email
+app/people/people_setting
+app/notify/list
+app/public/activeUser
+app/public/resetpassword
+app/resume/resume_received
+app/resume/resume_get
+app/incubator/incubator_get_overview
+app/incubator/incubator_get_follow
+app/incubator/incubator_get_comment
+app/incubator/incubator_get
+app/search/search
+app/people/people_info_perfect

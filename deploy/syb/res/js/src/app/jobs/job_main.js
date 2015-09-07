@@ -1,0 +1,7 @@
+define(["app/home","app/jobs/job_resume_send","app/jobs/job_add","app/jobs/job_find","app/jobs/job_my","app/jobs/job_get"],function(home,add){var hasLink=false;var links=["job_find","job_follow","job_my","job_resume_send","job_resume_received"];var checkLoad=function(md){$(links).each(function(){if(md==this.toString()){hasLink=true;}});}
+return{init:function(){var md=window.location.hash.toString().replace("#","");checkLoad(md);if(!hasLink){md="job_find";}
+if(md=="job_follow"){home.menuLoad("/p/jobs/job_find","jobs/job_find");}else{home.menuLoad("/p/jobs/"+ md,"jobs/"+ md);}
+$(".tabs").find("a[data-ajaxlink='"+ md+"']").parent().addClass("active");$('.tabs').find("a[data-ajaxlink]").click(function(){var md=$(this).data("ajaxlink");$(".tabs li").removeClass("active");checkLoad(md);if(!hasLink){md="job_find";}
+if(md=="job_follow"){home.menuLoad("/p/jobs/job_find","jobs/job_find");}else{home.menuLoad("/p/jobs/"+ md,"jobs/"
++ md);}
+$(this).parent().addClass("active");});$(".btn-fb-job").click(function(){home.error("请先创建团队才可以发布职位哦!去  <a class='btn btn-success btn-xs' style='margin-top:-3px;' href='/p/company/company_add'>创建团队</a>",10000)});$(".btn-perfect").click(function(){home.error("亲爱的创业者，您需要先完善个人信息  <a class='btn btn-success btn-xs' style='margin-top:-3px;' href='/p/people/people_info_perfect'>去完善</a>",10000)});}};});

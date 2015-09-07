@@ -1,0 +1,11 @@
+define(["app","app/home","app/valid","lib/bootstrap-tags","app/jobs/job_get"],function(app,home,v){app.controller("job_get",['$scope','$http','$modal','commonService','$location','hiUtils','jobService',function($scope,$http,$modal,commonService,$location,util,jobService){$scope.id=$("#pId").val();$('#jobQrCode').qrcode({text:"http://www.histarter.com/html5/job/"+ $scope.id,width:167,height:167});jobService.getCompanyByJob($scope.id).success(function(data){$scope.company=data;})
+jobService.getJobMore($scope.id).success(function(data){$scope.jobMore=data.responseData;})
+$scope.openSendResume=function(){$scope.$modalJobEditModal=$modal({scope:$scope,contentTemplate:commonService.getTmpl("/job/_job_send_resume_modia"),show:true});}
+$scope.openEditJob=function(){jobService.getJobMore($scope.id).success(function(data){if(data.success==true){$scope.editJobMore=data.responseData;$scope.$modalJobEditModal=$modal({scope:$scope,contentTemplate:commonService.getTmpl("/job/_job_edit_info_modia"),show:true});}})}
+$scope.updateJobInfo=function($event,requestData){jobService.updateJobInfo($scope.id,requestData).success(function(data){if(data.success==true){util.success(data.message);$scope.$modalJobEditModal.hide();location.href="/jobs/"+ data.str;}else{util.error(data.message);};});};var initial=new Object();$scope.openEdit=function(edit,jobMore){edit.about=true;initial=$.extend(true,{},jobMore)}
+$scope.closeEdit=function(edit){edit.about=false;$scope.jobMore=$.extend(true,{},initial)}
+$scope.EditJobFollow=function($event,jobFollow){jobService.updateJobFollow($scope.id).success(function(data){if(data.success==true){if(data.str=="del"){jobFollow.about=false;jobFollow.state="加入收藏";}
+if(data.str=="add"){jobFollow.state="取消收藏";jobFollow.about=true;}
+util.success(data.message);}else{util.error(data.message);}})}
+$scope.sendJob=function(sendResume){jobService.addSendResume($scope.id,sendResume).success(function(data){if(data.success==true){util.success(data.message);$scope.$modalJobEditModal.hide();}else{util.error(data.message);}})}}])
+return{init:function(){}};});

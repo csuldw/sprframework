@@ -1,0 +1,1 @@
+define(["app"],function(app){app.directive("qrCode",function(){return{restrict:'AE',controller:['$scope','$http',function(scope,http){}],link:function(scope,element,attrs){$(element).qrcode({text:attrs.url,width:attrs.width,height:attrs.height});}}});});

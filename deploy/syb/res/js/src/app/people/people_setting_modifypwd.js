@@ -1,0 +1,3 @@
+define(["app","app/home","app/valid"],function(app,home,v){app.controller("people_setting_modifypwd",[function(){$(".btn-modify_pwd").click(function(){var $form=$("#modifyPwdForm");if(v.doValidForm($form)){var $b=$(this);var c=$b.html();home.lbtn($b);$.ajax({url:ctxRoot
++"/user/modifypwd",type:"POST",data:home.generateFormData($form)}).done(function(data){if(data.success==true){$form[0].reset();home.success(data.message);}else{home.error(data.message);}
+home.cbtn($b,c);});}});}]);return{init:function(){}};});
