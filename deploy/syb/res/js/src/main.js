@@ -19,7 +19,6 @@ require.config({
         'app': "app"
     },
     shim: {
-        
         '$': {
             exports: '$'
         },

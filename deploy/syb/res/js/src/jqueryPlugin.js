@@ -1,4 +1,7 @@
 require.config({
+//    paths:{
+//        'jsrender':'lib/jsrender.min'
+//    },
     shim: {
         'lib/qrcode':['$'],
         'bootstrap':['$'],
@@ -8,11 +11,13 @@ require.config({
         'lib/sketch':['$'],
         'lib/star-rating.min':['$'],
         'lib/jquery.lazyloadxt':['$'],
+        'jsrender':['$'],
         'lib/jquery.dragsort-0.5.2.min':['$'],
         'lib/froala_editor.min':['$'],
         'lib/angular-promise-buttons.min':['angular'],
         'lib/input_switch':['$'],
         'app/common/dictDirective':['angular'],
+
         'app/home':['$'],
 
         'lib/plugins/tables.min':['$','lib/froala_editor.min'],
@@ -26,6 +31,8 @@ require.config({
         'lib/plugins/video.min':['$','lib/froala_editor.min'],
         'lib/plugins/char_counter.min':['$','lib/froala_editor.min'],
         'lib/plugins/zh_cn':['$','lib/froala_editor.min']
+
+
 
     }
 });

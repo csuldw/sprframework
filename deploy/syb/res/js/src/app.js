@@ -1,4 +1,4 @@
-define(["lib/angular", 'angularRoute', 'angularUtils', 'angularSanitize', 'angularUb', 'angularUpload', 'angularStrap', 'angularStrapTpl', 'angularAnimate', 'bindonce'],
+define(["angular", 'angularRoute', 'angularUtils', 'angularSanitize', 'angularUb', 'angularUpload', 'angularStrap', 'angularStrapTpl', 'angularAnimate', 'bindonce'],
     function() {
         var moduleName = 'app';
         var app = angular.module(moduleName, ['ngRoute', 'ngSanitize', 'angularFileUpload', 'ui.utils', 'pasvaz.bindonce', 'ngAnimate', 'mgcrea.ngStrap', 'common-tpl', 'angularPromiseButtons']);
