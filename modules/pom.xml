@@ -11,10 +11,11 @@
     <artifactId>modules</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>user</module>
+        <module>syb.user</module>
         <module>record</module>
         <module>award</module>
         <module>tianwei</module>
+        <module>syb.common</module>
     </modules>
     <dependencies>
         <dependency>

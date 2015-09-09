@@ -1,4 +1,4 @@
-package com.dreamwork.spring.user.domain;
+package com.dreamwork.syb.domain.user;
 
 /**
  * Created by Hoki.

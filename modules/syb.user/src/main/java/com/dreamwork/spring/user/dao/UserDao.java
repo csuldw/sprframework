@@ -1,9 +1,7 @@
 package com.dreamwork.spring.user.dao;
 
-import com.dreamwork.spring.user.domain.User;
+import com.dreamwork.syb.domain.user.User;
 import com.hoki.spring.dbutil.JdbcUtils;
-import org.apache.commons.dbutils.QueryRunner;
-import org.apache.commons.dbutils.handlers.ArrayHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;

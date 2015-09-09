@@ -17,10 +17,21 @@
     <!-- 注解驱动 -->
     <mvc:annotation-driven>
         <mvc:message-converters register-defaults="true">
+            <bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter"/>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
+            <bean class="org.springframework.http.converter.ResourceHttpMessageConverter"/>
+            <bean class="org.springframework.http.converter.xml.SourceHttpMessageConverter"/>
+            <bean class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter"/>
+            <bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"/>
+
             <bean class="org.springframework.http.converter.StringHttpMessageConverter">
                 <constructor-arg value="UTF-8" />
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>text/html;charset=UTF-8</value>
+                    </list>
+                </property>
             </bean>
-
             <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
                 <property name="objectMapper">
                     <bean class="com.github.miemiedev.mybatis.paginator.jackson2.PageListJsonMapper" />
@@ -36,6 +47,7 @@
         <!-- 多个拦截器,顺序执行 -->
         <mvc:interceptor>
             <mvc:mapping path="/**" /><!-- 如果不配置或/*,将拦截所有的Controller -->
+
             <bean class="com.github.miemiedev.mybatis.paginator.springmvc.PageListAttrHandlerInterceptor" />
         </mvc:interceptor>
     </mvc:interceptors>
@@ -50,6 +62,55 @@
         <property name="maxUploadSize" value="83886080"></property>
         <!--<property name="uploadTempDir" value="/km/temp"></property>-->
     </bean>
+
+
+    <!-- 多输出扩展,配置视图协商的属性-->
+    <bean id="contentNegotiationManagerFactoryBean"  class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+        <!-- 设置为true以忽略对Accept Header的支持-->
+        <property name="ignoreAcceptHeader" value="true" />
+        <!-- true，开启扩展名支持，false关闭支持 -->
+        <property name="favorPathExtension" value="false" />
+        <!-- 用于开启 /userinfo/123?format=json的支持 -->
+        <property name="favorParameter" value="true" />
+
+        <!-- 在没有扩展名和参数时即: "/user/1" 时的默认展现形式   -->
+        <property name="defaultContentType" value="text/html" />
+        <!--   参数值至mimeType的映射,即/rest?format=json json是key，application/json就是value暂时只支持json和xml -->
+        <property name="mediaTypes">
+            <map>
+                <entry key="json" value="application/json" />
+                <entry key="xml" value="application/xml" />
+                <entry key="html" value="text/html" />
+
+            </map>
+        </property>
+    </bean>
+
+    <!-- 配置视图协商解析器 -->
+    <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+        <property name="order" value="0" />
+        <property name="contentNegotiationManager" ref="contentNegotiationManagerFactoryBean" />
+        <property name="viewResolvers">
+            <list>
+                <!-- 配置视图信息-->
+                <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+                    <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+                    <property name="prefix" value="/WEB-INF/web/"/>
+                    <property name="suffix" value=".jsp"/>
+                </bean>
+                <bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
+            </list>
+        </property>
+        <property name="defaultViews">
+            <list>
+                <!-- json转换-->
+                <bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView" />
+            </list>
+        </property>
+    </bean>
+
+<!--
+    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />-->
 
     <import resource="spring-jdbc.xml"/>
 
