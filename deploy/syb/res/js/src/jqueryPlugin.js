@@ -7,6 +7,8 @@ require.config({
         'bootstrap':['$'],
         'lib/notyfy':['$'],
         'lib/scrollup':['$'],
+        'lib/slimscroll':['$'],
+        'lib/bootstrap-tags':['$'],
         'lib/snowfall':['$'],
         'lib/sketch':['$'],
         'lib/star-rating.min':['$'],
@@ -17,9 +19,7 @@ require.config({
         'lib/angular-promise-buttons.min':['angular'],
         'lib/input_switch':['$'],
         'app/common/dictDirective':['angular'],
-
         'app/home':['$'],
-
         'lib/plugins/tables.min':['$','lib/froala_editor.min'],
         'lib/plugins/urls.min':['$','lib/froala_editor.min'],
         'lib/plugins/lists.min':['$','lib/froala_editor.min'],
@@ -31,8 +31,5 @@ require.config({
         'lib/plugins/video.min':['$','lib/froala_editor.min'],
         'lib/plugins/char_counter.min':['$','lib/froala_editor.min'],
         'lib/plugins/zh_cn':['$','lib/froala_editor.min']
-
-
-
-    }
+  }
 });

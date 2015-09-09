@@ -1,12 +1,11 @@
 package com.dreamwork.spring.user.controller;
 
-import com.dreamwork.syb.domain.user.User;
 import com.dreamwork.syb.domain.user.UserSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -21,13 +20,22 @@ public class IndexController {
 
     /** 定义需要在jsp中拦截的页面 */
     @RequestMapping(value = "/index")
-    public String index(){
+    public String index(ModelAndView view , HttpServletRequest req){
+        view.addObject("session" , getSession(req));
         log.info("IndexController : 进入了该方法");
         return "index";
     }
 
+    /** 退出登录 */
+    @RequestMapping(value = "/logout")
+    public String logout(HttpServletRequest req){
+        UserSession session = getSession(req);
+        session.setUser(null);
+        return "redirect:/index";
+    }
+
     /** 给当前页面添加session变量 */
-    @ModelAttribute("session")
+    //@ModelAttribute("session")
     public UserSession getSession(HttpServletRequest request ){
         HttpSession session = request.getSession();
         Object user = session.getAttribute("session");
