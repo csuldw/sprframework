@@ -41,6 +41,7 @@ public class UserDao {
     }
 
     BeanPropertyRowMapper<User> argTypes = new BeanPropertyRowMapper<User>(User.class);
+
     public User queryRecord(String username , String password){
         String s = "select * from %s where username = ? and password = ?";
 
@@ -56,5 +57,6 @@ public class UserDao {
 
         return null;
     }
+
 
 }

@@ -4,3 +4,8 @@
 1.index.html 首页文案，去掉histarter
 2.首页有sessionUID,需要替换从服务端推送，还有ISACTIVE，ISLogin, isPrefect
 3.首页，用户图片，活动图片需要替换
+
+3.people_info_perfect:home.error("请上传头像");打开
+4.area/list 返回地区js
+5.dict/types/list?dictCodes=USER_TYPE%2CUSER_ROLE 返回用户职业
+6./notify/my/new/count 返回消息数

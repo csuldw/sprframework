@@ -30,6 +30,7 @@ require.config({
         'lib/plugins/media_manager.min':['$','lib/froala_editor.min'],
         'lib/plugins/video.min':['$','lib/froala_editor.min'],
         'lib/plugins/char_counter.min':['$','lib/froala_editor.min'],
-        'lib/plugins/zh_cn':['$','lib/froala_editor.min']
+        'lib/plugins/zh_cn':['$','lib/froala_editor.min'],
+        'lib/selectize':[]
   }
 });
