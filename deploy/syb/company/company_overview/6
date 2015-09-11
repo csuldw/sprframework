@@ -1,0 +1,222 @@
+
+<div ng-controller="company_get_overview">
+<div class="title-info">
+    产品介绍<span>PRODUCT</span>
+</div>
+<div class="box-title">
+    <div>
+        <div class="box-title-bar" ng-init="edit.productPicEdit = false">
+            图片介绍
+        </div>
+        <div class="box-title-content">
+            <div class="preview" ng-if="!edit.productPicEdit">
+                <div class="img-group pro-popup">
+                    <div class="img-group-box" ng-init="select.productImg = ''">
+                        <a ng-if="productImgs.length>0" href="{{select.productImg?select.productImg:productImgs[0].attachURL}}"><img ng-src="{{select.productImg?select.productImg:productImgs[0].attachURL}}_fixh2" class="bodyImg"></a>
+                    </div>
+                </div>
+                <div class="img-wall text-center pro-popup">
+                    <ul class="product-show-pic-ul text-center">
+                        <li ng-repeat="img in productImgs">
+                            <a href="{{img.attachURL}}" ng-mouseover="select.productImg = img.attachURL">
+                                <img alt="{{img.attachName}}" class="small" ng-src="{{img.attachURL}}_fixh56">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-init="edit.intro = false">
+        <div class="box-title-bar">
+            文字介绍
+        </div>
+        <div class="box-title-content">
+            <div class="preview" data-ng-show="!edit.intro" ng-init="companyInfo.intro = '八音盒（上海风到网络科技有限公司）www.wedfairy.com ，成立于2014年，是国内领先的提供给用户基于特定节日的移动端讲故事制作工具，创始人由来自美国和法国的海龟团队组成。在短短创立的半年时间，已经拿到知名风投的投资和广大用户的喜爱。其婚礼邀请函制作工具在上线短短1个月内，已经累计了几十万用户量，同时在近期也推出了亲子，友情，宠物，个人故事等一系列场景，深的用户喜爱！我们在努力创造一种新的制作和分享模式，让更多的用户能够回归制作和分享蕴含自己爱的故事，我们视工程师为企业最重要的财富，我们需要你来加入我们一起，用科技来改变生活。
+
+如果你是八音盒忠粉，或者你对八音盒的职位感兴趣不是那么一点点，又或者你神奇的idea能为我们创造点什么：
+请速度移驾到我们百度贴吧发表你的想法（八音盒轻故事），跟八音盒的创始团队沟通起来吧！
+
+PS:这就是传说中的内推（泪奔，投八音盒的小伙伴太多，so自荐机率会更高，问答贴还有专业小编等着大家）！
+大家记得先投简历，再去贴吧敲砖~
+传送门：http://tieba.baidu.com/p/3625870260 （有问必答贴）'">
+                <div class="intro">
+                    <span ng-bind-html="companyInfo.intro | toHtml"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="title-info">
+    团队成员<span>TEAM</span>
+</div>
+<div class="box-title" data-ng-init="edit.founder = false">
+    <div class="box-title-bar">成员</div>
+    <div class="box-title-content">
+        <div ng-if="!founderList.length > 0">
+            暂无团队成员信息
+        </div>
+        <div ng-if="founderList.length > 0">
+            <ul class="founder-list box-list">
+                <li class="founder-item" ng-repeat="founder in founderList">
+                    <div class="fi-11" ng-init="editFounder.status = false">
+                        <div class="preview" ng-if="editFounder.status == false">
+                            <div class="photo">
+                                <img ng-if="founder.userId == 1" src="http://img.histarter.com/index/avatar.jpg_fixhw80"/>
+                                <img ng-if="founder.userId != 1" src="{{founder.avatar}}_fixhw80"/>
+                            </div>
+                            <div class="text">
+                                <div class="name">
+                                    <a href="/people/{{founder.userId}}" ng-if="founder.userId != 1" target="_blank" ng-bind="founder.nickname"></a>
+                                    <span ng-if="founder.userId == 1" ng-bind="founder.nickname"></span>
+                                </div>
+                                <div class="fi-title">{{founder.title}}</div>
+                                <div class="fi-intro">{{founder.intro}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="title-info">
+    工作环境<span>WORKPLACE</span>
+</div>
+<div class="box-title" data-ng-init="edit.env = false">
+    <div>
+        <div class="box-title-bar">
+            环境图片
+        </div>
+        <div class="box-title-content">
+            <div data-ng-if="!edit.env">
+                <div class="img-group env-popup" ng-init="select.workenvImg = ''">
+                    <div class="img-group-box">
+                        <a ng-if="workenvImgs.length>0" href="{{select.workenvImg?select.workenvImg:workenvImgs[0].attachURL}}"><img ng-src="{{select.workenvImg?select.workenvImg:workenvImgs[0].attachURL}}_fixh2" class="bodyImg"></a>
+                    </div>
+                </div>
+                <div class="img-wall text-center ">
+                    <ul class="env-show-pic-ul env-popup">
+                        <li ng-repeat="img in workenvImgs">
+                            <a href="{{img.attachURL}}">
+                                <img alt="{{img.attachName}}" ng-mouseover="select.workenvImg = img.attachURL" class="small" ng-src="{{img.attachURL}}_fixh56">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-ng-init="edit.workEnv = false">
+        <div class="box-title-bar">
+            文字介绍
+        </div>
+        <div class="box-title-content" ng-init="companyInfo.work_env = '从复兴soho到东海soho再到外滩soho，坐遍上海最好的办公室，期待你的到来。'">
+            <div class="preview" ng-show="!edit.workEnv">
+                <div class="intro">
+                    <span ng-if="!companyInfo.work_env.length>0">暂无文字介绍</span>
+                    <span ng-if="companyInfo.work_env.length>0" ng-bind-html="companyInfo.work_env | toHtml"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="title-info">
+    报道<span>REPORTS</span>
+</div>
+<div class="box-title" ng-init="edit.reports = false">
+    <div class="box-title-bar">
+        新闻报道
+    </div>
+    <div class="box-title-content">
+        <div class="row" ng-show="edit.reports">
+        </div>
+        <div class="company_news">
+            <div ng-if="!reportList.length > 0">暂无任何报道</div>
+            <div class="company_new" ng-repeat="report in reportList">
+                <div class="company_new_info">
+                    <i class="fa fa-circle" style="color:#66cc33;"></i>
+                    <span bo-text="report.reportDateView"></span>
+                    <span class="label label-info" bo-if="report.domainView.length>0" bo-text="report.domainView"></span>
+                    <a href="{{report.reportUrl}}" class="" target="_blank" bo-title="report.title" bo-text="'「'+report.titleView+'」'"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="title-info">
+    融资情况<span>FUNDING</span>
+</div>
+<div class="box-title height_mobile" ng-init="edit.funding = false">
+    <div class="box-title-bar">
+        融资
+    </div>
+    <div class="box-title-content">
+        <div class="edit row" ng-show="edit.funding">
+        </div>
+        <div id="form-wizard-3" class="timeline-f" ng-if="fundingList.length>0">
+            <ul class="funding-list">
+                <li class="company-funding" ng-repeat="funding in fundingList">
+                    <a href="javascript:void(0)">
+                        <label class="timeline-step"></label>
+<span class="timeline-description">{{funding.stageView}}
+<small bo-text="funding.investor"></small>
+<small><span bo-text="funding.amount"></span>万<span bo-text="funding.currency"></span>
+</small>
+<small bo-text="funding.fundingDate"></small>
+</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div ng-if="!fundingList.length>0&&!edit.funding">暂无任何融资情况</div>
+    </div>
+</div>
+<div class="title-info">
+    里程碑<span>MILESTONE</span>
+</div>
+<div class="box-title" ng-init="edit.milestone">
+    <div class="box-title-bar">
+        里程碑
+    </div>
+    <div class="box-title-content">
+        <div class="edit row" ng-show="edit.milestone">
+        </div>
+        <div class="timeline block-content-full">
+            <ul class="timeline-list timeline-hover milestone-list" ng-if="milestoneList.length>0">
+                <li ng-repeat="milestone in milestoneList" class="active company-milestone">
+                    <div bo-if="milestone.type == 10001" class="timeline-icon timeline-icon-1" data-placement="bottom" data-type="info" data-animation="am-fade-and-scale" bs-tooltip="tooltip" data-title="产品">
+                        <i class="fa fa-rocket"></i>
+                    </div>
+                    <div bo-if="milestone.type == 10002" class="timeline-icon timeline-icon-2" data-placement="bottom" data-type="info" data-animation="am-fade-and-scale" bs-tooltip="tooltip" data-title="团队">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <div bo-if="milestone.type == 10003" class="timeline-icon timeline-icon-3" data-placement="bottom" data-type="info" data-animation="am-fade-and-scale" bs-tooltip="tooltip" data-title="融资">
+                        <i class="fa fa-dollar"></i>
+                    </div>
+                    <div bo-if="milestone.type == 10004" class="timeline-icon timeline-icon-4" data-placement="bottom" data-type="info" data-animation="am-fade-and-scale" bs-tooltip="tooltip" data-title="运营">
+                        <i class="fa fa-keyboard-o"></i>
+                    </div>
+                    <div bo-if="milestone.type == 10005" class="timeline-icon timeline-icon-5" data-placement="bottom" data-type="info" data-animation="am-fade-and-scale" bs-tooltip="tooltip" data-title="市场">
+                        <i class="fa fa-bar-chart-o"></i>
+                    </div>
+                    <div bo-if="milestone.type == 10006" class="timeline-icon timeline-icon-6" data-placement="bottom" data-type="info" data-animation="am-fade-and-scale" bs-tooltip="tooltip" data-title="媒体">
+                        <i class="fa fa-newspaper-o"></i>
+                    </div>
+                    <div bo-if="milestone.type == 10007" class="timeline-icon timeline-icon-7" data-placement="bottom" data-type="info" data-animation="am-fade-and-scale" bs-tooltip="tooltip" data-title="其他">
+                        <i class="fa fa-random"></i>
+                    </div>
+                    <div class="timeline-time" bo-text="milestone.date | date:'yy-MM-d'"></div>
+                    <div class="timeline-content">
+                        <p class="push-bit">
+                            <strong bo-text="milestone.title"></strong>
+                        </p>
+                        <span bo-text="milestone.content"></span>
+                    </div>
+                </li>
+            </ul>
+            <span ng-if="!milestoneList.length>0">暂无任何里程碑信息</span>
+        </div>
+    </div>
+</div>
+</div>

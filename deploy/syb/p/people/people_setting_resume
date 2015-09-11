@@ -1,0 +1,356 @@
+
+<link rel="stylesheet" href="/res/css/src/datepicker3.css"/>
+<div class="box-title" ng-controller="people_setting_resume">
+    <div class="box-title-bar">隐私设置</div>
+    <div class="box-title-content">
+        <form method="post" action="#" class="form-horizontal" id="">
+            <div class="form-group">
+                <label class="col-xs-3 control-label" for="isShowResume">是否公开简历</label>
+                <div class="col-xs-7">
+                    <input type="checkbox" data-on-text="公开" data-off-text="需申请" id="switch-isshow" data-on-label="on" data-off-label="off" checked>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="">
+    <form method="post" action="#" class="form-horizontal" id="resumeForm">
+    </form>
+    <div class="save-bottom-wrapper">
+        <div class="save-bottom-inner">
+            <button class="btn btn-success pull-right btn-save btn-lg pad45L pad45R" type="button">保存</button><span class="save-bottom-saying">保存简历,快速得到创业公司的青睐</span>
+        </div>
+    </div>
+</div>
+<script id="willing-temp" type="text/x-jsrender">
+<div class="box-title">
+	<div class="box-title-bar">期望工作</div>
+	<div class="box-title-content">
+		<div class="inner row">
+			<div class="form-group">
+				<label class="col-xs-3 control-label" for="willingPosition">期望职位</label>
+				<input type="hidden" id="resumeIsShow" name="isShowResume" value="{{if isShowResume}}{{>isShowResume}}{{else}}10001{{/if}}"  />
+
+				<div class="col-xs-7" CHECKBOXS="{{>willingPosition}}">
+					<label class="checkbox-inline"> <input type="checkbox"
+						name="willingPosition" value="10001"> 产品经理
+					</label> <label class="checkbox-inline"> <input type="checkbox"
+						name="willingPosition" value="10002"> 前端工程师
+					</label> <label class="checkbox-inline"> <input type="checkbox"
+						name="willingPosition" value="10003"> 后端工程师
+					</label> <label class="checkbox-inline"> <input type="checkbox"
+						name="willingPosition" value="10004">iOS工程师
+					</label> <label class="checkbox-inline"> <input type="checkbox"
+						name="willingPosition" value="10005"> 安卓工程师
+					</label> <label class="checkbox-inline"> <input type="checkbox"
+						name="willingPosition" value="10006"> 设计师
+					</label> <label class="checkbox-inline"> <input type="checkbox"
+						name="willingPosition" value="10007"> 市场营销
+					</label> <label class="checkbox-inline"> <input type="checkbox"
+						name="willingPosition" value="10008"> 其他
+					</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-xs-3 control-label" for="willingType">工作性质</label>
+				<div class="col-xs-7" CHECKBOXS="{{>willingType}}">
+					<label class="checkbox-inline"> <input type="checkbox"
+						name="willingType" value="0">全职
+					</label> <label class="checkbox-inline"> <input type="checkbox"
+						name="willingType" value="1">兼职
+					</label> <label class="checkbox-inline"> <input type="checkbox"
+						name="willingType" value="2"> 实习
+					</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-xs-3 control-label" for="salaryLow">月薪范围</label>
+				<div class="col-xs-7">
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-icon">
+								<i class="fa fa-cny"></i> <input type="text" name="salaryLow"
+									class="form-control" id="salaryLow" maxlength="10"
+									popover-position="bottom" number="number"
+									value="{{>salaryLow}}" number-message="薪资必须为数字"
+									require="require" require-message="最低薪资不能为空">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-icon">
+								<i class="fa fa-cny"></i> <input type="text" name="salaryHigh"
+									class="form-control" id="salaryHigh" maxlength="10"
+									popover-position="bottom" number="number"
+									value="{{>salaryHigh}}" number-message="薪资必须为数字"
+									require="require" require-message="最高薪资不能为空">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-xs-3 control-label" for="willingLocation">工作地点</label>
+				<div class="col-xs-7">
+					<div class="row">
+						<div class="col-xs-6">
+							<select name="province" class="form-control" province="user"
+								v="{{>province}}" require="require" require-message="请选择工作省份"
+								popover-position="bottom">
+							</select>
+						</div>
+						<div class="col-xs-6">
+							<select name="city" class="form-control" city="user"
+								v="{{>city}}" require="require" require-message="请选择工作城市"
+								popover-position="bottom">
+								<option>- 请选择 -</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-xs-3 control-label" for="stock">有无股份</label>
+				<div class="col-xs-7">
+					<select name="stock" class="form-control" v="{{>stock}}"
+						require="require" DICT="HAS_STOCK" require-message="请选择有无股份"
+						popover-position="bottom">
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-xs-3 control-label" for="curStatus">目前状态</label>
+				<div class="col-xs-7">
+					<select name="curStatus" class="form-control" v="{{>curStatus}}"
+						require="require" DICT="RESUME_STATUS" require-message="请选择目前状态"
+						popover-position="bottom">
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="box-title">
+	<div class="box-title-bar">教育背景</div>
+	<div class="box-title-content">
+		<div class="inner row">
+			<div class="school-list"></div>
+			<div class="text-center">
+				<button type="button" class="btn btn-success btn-add-school">&nbsp;&nbsp;&nbsp;点击增加教育背景&nbsp;&nbsp;&nbsp;</button>
+			</div>
+		</div>
+	</div>
+
+</div>
+<div class="box-title">
+	<div class="box-title-bar">工作经历</div>
+	<div class="box-title-content">
+		<div class="inner row">
+			<div class="work-list"></div>
+			<div class="text-center">
+				<button type="button" class="btn btn-success btn-add-work">&nbsp;&nbsp;&nbsp;点击增加工作经历&nbsp;&nbsp;&nbsp;</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="box-title">
+	<div class="box-title-bar">项目经验</div>
+	<div class="box-title-content">
+		<div class="inner row">
+			<div class="project-list"></div>
+			<div class="text-center">
+				<button type="button" class="btn btn-success btn-add-project">&nbsp;&nbsp;&nbsp;点击增加项目经验&nbsp;&nbsp;&nbsp;</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="box-title">
+	<div class="box-title-bar">自我介绍</div>
+	<div class="box-title-content">
+		<div class="row">
+			<div class="form-group">
+				<label class="col-xs-3 control-label" for="intro">自我介绍</label>
+				<div class="col-xs-7">
+					<textarea name="intro" id="intro" placeholder=""
+						popover-position="bottom" require="require"
+						require-message="请输入自我介绍" class="form-control" rows="8"
+						maxlength="1000">{{>intro}}</textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</script>
+<script id="school-temp" type="text/x-jsrender">
+<div class="border-bottom-list">
+	<div class="pull-right margin5">
+		<button type="button" class="btn btn-default btn-sm btn-del">删除</button>
+		<input type="hidden" name="schoolId" value="{{>id}}" />
+	</div>
+	<div class="form-group">
+		<label class="col-xs-3 control-label" for="schoolName">学校名称</label>
+		<div class="col-xs-7">
+			<input type="text" name="schoolName" class="form-control"
+				popover-position="bottom" require="require" value="{{>schoolName}}"
+				require-message="请输入学校名称" maxlength="50">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-xs-3 control-label" for="schoolMajor">专业学历</label>
+		<div class="col-xs-7">
+			<div class="row">
+				<div class="col-xs-6">
+					<input type="text" name="schoolMajor" class="form-control"
+						popover-position="bottom" require="require"
+						value="{{>schoolMajor}}" require-message="请输入专业" maxlength="50">
+				</div>
+				<div class="col-xs-6">
+					<select name="schoolEducation" class="form-control"
+						DICT="EDUCATION_JOB" v="{{>schoolEducation}}">
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-xs-3 control-label" for="schoolDateStart">学习时间</label>
+		<div class="col-xs-7">
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="input-icon">
+						<i class="fa fa-calendar"></i> <input type="text"
+							name="schoolDateStart" cat class="form-control"
+							popover-position="bottom" value="{{>schoolDateStartView}}"
+							require="require" require-message="请选择入学时间" placeholder="开始时间">
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="input-icon">
+						<i class="fa fa-calendar"></i> <input type="text"
+							name="schoolDateEnd" cat class="form-control"
+							popover-position="bottom" value="{{>schoolDateEndView}}"
+							 data-disable="true" placeholder="结束时间"  {{if !schoolDateEndView&&schoolDateStartView}} readonly="readonly"{{/if}}  >
+							<label class="checkbox-inline"> <input type="checkbox" class="date-zj" {{if !schoolDateEndView&&schoolDateStartView}} checked="checked"{{/if}}>至今
+							</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</script>
+<script id="work-temp" type="text/x-jsrender">
+<div class="border-bottom-list">
+	<div class="pull-right margin5">
+		<button type="button" class="btn btn-default btn-sm btn-del">删除</button>
+		<input type="hidden" name="workId" value="{{>id}}" />
+	</div>
+	<div class="form-group">
+		<label class="col-xs-3 control-label" for="workCompany">公司名称</label>
+		<div class="col-xs-7">
+			<input type="text" name="workCompany" class="form-control"
+				popover-position="bottom" require="require" value="{{>workCompany}}"
+				require-message="请输入公司名称" maxlength="50">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-xs-3 control-label" for="workTitle">职位名称</label>
+		<div class="col-xs-7">
+			<input type="text" name="workTitle" class="form-control"
+				popover-position="bottom" require="require" value="{{>workTitle}}"
+				require-message="请输入职位名称" maxlength="50">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-xs-3 control-label" for="workDateStart">工作时间</label>
+		<div class="col-xs-7">
+			<div class="row">
+
+				<div class="col-xs-6">
+					<div class="input-icon">
+						<i class="fa fa-calendar"></i> <input type="text"
+							name="workDateStart" cat class="form-control"
+							popover-position="bottom" require="require"
+							require-message="请选择入职时间" value="{{>workDateStartView}}">
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="input-icon">
+						<i class="fa fa-calendar"></i> <input type="text"
+							name="workDateEnd" cat class="form-control"
+							popover-position="bottom"  data-disable="true" value="{{>workDateEndView}}"  {{if !workDateEndView&&workDateStartView}} readonly="readonly"{{/if}}>
+							<label class="checkbox-inline"> <input type="checkbox" class="date-zj" {{if !workDateEndView&&workDateStartView}} checked="checked"{{/if}}>至今
+							</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-xs-3 control-label" for="workIntro">工作简介</label>
+		<div class="col-xs-7">
+			<textarea name="workIntro" placeholder="" popover-position="bottom"
+				require="require" require-message="请输入工作简介" class="form-control"
+				rows="4" maxlength="250">{{>workIntro}}</textarea>
+		</div>
+	</div>
+</div>
+</script>
+<script id="project-temp" type="text/x-jsrender">
+<div class="border-bottom-list">
+	<div class="pull-right margin5">
+		<button type="button" class="btn btn-default btn-sm btn-del">删除</button>
+		<input type="hidden" name="projectId" value="{{>id}}" />
+	</div>
+	<div class="form-group">
+		<label class="col-xs-3 control-label" for="projectName">项目名称</label>
+		<div class="col-xs-7">
+			<input type="text" name="projectName" class="form-control"
+				popover-position="bottom" require="require"
+				require-message="请输入项目名称" maxlength="50" value="{{>projectName}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-xs-3 control-label" for="projectPosition">项目职务</label>
+		<div class="col-xs-7">
+			<input type="text" name="projectPosition" class="form-control"
+				popover-position="bottom" require="require"
+				require-message="请输入项目职务" maxlength="50"
+				value="{{>projectPosition}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-xs-3 control-label" for="projectDateStart">项目时间</label>
+		<div class="col-xs-7">
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="input-icon">
+						<i class="fa fa-calendar"></i> <input type="text"
+							name="projectDateStart" cat class="form-control"
+							popover-position="bottom" require="require"
+							require-message="请选择项目开始时间" value="{{>projectDateStartView}}">
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="input-icon">
+						<i class="fa fa-calendar"></i> <input type="text"
+							name="projectDateEnd" cat class="form-control"
+							popover-position="bottom"   data-disable="true" value="{{>projectDateEndView}}"   {{if !projectDateEndView&&projectDateStartView}} readonly="readonly"{{/if}}>
+							<label class="checkbox-inline"> <input type="checkbox" class="date-zj" {{if !projectDateEndView&&projectDateStartView}} checked="checked"{{/if}}>至今
+							</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-xs-3 control-label" for="projectIntro">项目简介</label>
+		<div class="col-xs-7">
+			<textarea name="projectIntro" id="projectIntro" placeholder=""
+				popover-position="bottom" require="require"
+				require-message="请输入项目简介" class="form-control" rows="4"
+				maxlength="250">{{>projectIntro}}</textarea>
+		</div>
+	</div>
+</div>
+</script>

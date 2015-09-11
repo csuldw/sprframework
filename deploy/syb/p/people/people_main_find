@@ -1,0 +1,70 @@
+
+
+<div class="people_list"></div>
+<div class="next-n" id="next-div" style="display: none">
+    <a>到世界尽头了呢～</a>
+</div>
+<script id="temp-people-list" type="text/x-jsrender">
+<div class="widget-body people-d pad20B">
+	{{if resume > 0}}
+	<div class="ribbon-wrapper">
+		<div class="ribbon primary">简历</div>
+	</div>
+	{{/if}}
+	<div class="media">
+		<div class="innerAll user-avator">
+			<a href="/people/{{>userId}}" target="_blank">
+			<img src="{{>avatar}}_fixhw80" alt="" class="img-circle clear-abs">
+			</a>
+		</div>
+		<div class="media-body">
+			<div class="j_title">
+				<a href="/people/{{>userId}}" target="_blank" class="tobi">{{>nickname}}</a>
+				{{if tel}} <i class="fa fa-mobile text-success"
+					data-toggle="tooltip" title="已绑定手机"></i> {{/if}} {{if isHigh > 0}}
+				<i class="fa fa-star text-success" data-toggle="tooltip" title="靠谱"></i>
+				{{/if}} {{if isOl === 1}} <i class="fa fa-cloud text-success"
+					data-toggle="tooltip" title="在线"></i> {{/if}} {{if role}} <strong
+					class="tobi tocenter2">&nbsp;&nbsp;［{{>roleView}} {{if
+					city}} / {{>cityView}} {{/if}} {{if hxlView>0}}/
+					回信率：{{:hxlView}}%{{/if}}］ </strong> {{/if}}
+			</div>
+			<div class="clearfix mrg5B"></div>
+			{{if signature}}
+			<p class="mrg0A pad0A mrg15B">{{>signature}}&nbsp;</p>
+			<div class="clearfix"></div>
+			{{/if}}
+			<div class="tags mrg0A pad20B pad5T">
+				{{for skillTagsView}} <span class="label label-default">{{:#data}}</span>
+				{{/for}} &nbsp;
+			</div>
+			{{if brief}}
+			<div class="label label-success mrg5T mrg5B" style="margin-top:-5px;">个人简介</div>
+			<p  class="people_d_row ">{{toHtml:brief}}&nbsp;</p>
+			<div class="clearfix"></div>
+			{{/if}}
+			{{if education && workBrief }}
+			<div class=" mrg0B">
+				{{if education}}
+				<div class="mrg10T">
+				<div class="label label-success  mrg5B">教育经历</div>
+				<p class="people_d_row">{{toHtml:education}}&nbsp;</p>
+				</div>
+				{{/if}}
+				{{if workBrief}}
+				<div class="mrg10T">
+				<div class="label label-success mrg15T mrg5B">工作经历</div>
+				<p class="people_d_row">{{toHtml:workBrief}}&nbsp;</p>
+				</div>
+				{{/if}}
+			</div>
+			{{/if}}
+			<div class="cb"></div>
+		</div>
+	</div>
+	<div class="cb"></div>
+</div>
+</script>
+<script id="temp-no-people-list" type="text/x-jsrender">
+	<div class="box-title"><h4>没有搜索到相关人才</h4></div>
+</script>

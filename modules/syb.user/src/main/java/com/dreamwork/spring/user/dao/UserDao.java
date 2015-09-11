@@ -24,7 +24,7 @@ public class UserDao {
      * insert 用dbutil ,方便返回自增id
      */
     public User insertRecord(User r){
-        String s = "insert into %s( username , password ,email) values(?,?)";
+        String s = "insert into %s( username , password ,email) values(?,? , ?)";
         String sql = JdbcUtils.fixTableName(s, TABLE_NAME);
 
         Object[]ids = new Object[0];
@@ -43,7 +43,7 @@ public class UserDao {
     BeanPropertyRowMapper<User> argTypes = new BeanPropertyRowMapper<User>(User.class);
 
     public User queryRecord(String username , String password){
-        String s = "select * from %s where username = ? and password = ?";
+        String s = "select * from %s where email = ? and password = ?";
 
         List<User> query = JdbcUtils.query(JdbcUtils.fixTableName(s, TABLE_NAME),
                 argTypes, username, password

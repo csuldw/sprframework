@@ -1,0 +1,60 @@
+
+<div class="result_list">
+    <ul id="result_list_ul">
+    </ul>
+</div>
+<div class="next-n" id="next-div" style="display: none">
+    <a>到世界尽头了呢～</a>
+</div>
+<script id="temp-company-list" type="text/x-jsrender">
+<li class="pos ">
+	<div class="c-ch-item">
+		<div class="c-ch-info bg-white">
+			<a href="/people/{{:userId}}"><img src="{{:avatar}}_fixhw80" /></a>
+			<p class="mrg0A">
+				<a href="/people/{{:userId}}">{{:nickname}}</a>
+			</p>
+		</div>
+		<div class="c-ch-thumb">
+			<img alt="{{>companyName}}" src="{{>logo}}_fixhw80">
+		</div>
+	</div>
+	<div class="vp-right">
+		<a href="/{{>domain}}#comment"><i class="fa fa-comments"></i>
+			{{>cCount}}</a>&nbsp;&nbsp;&nbsp;<a href="/{{>domain}}#follow"><i
+			class="fa fa-heart"></i> {{>fCount}}</a>
+	</div>
+	<div class="intro">
+		<h3>
+			<a href="/{{>domain}}" target="_blank">{{>companyName}} </a>{{if
+			newTop === 1}} <img src="http://img.histarter.com/img/new.png"
+				style="width: 25px; float: none; height: 20px; margin-top: -3px;"
+				data-toggle="tooltip" title="新入驻团队"> {{/if}} {{if tel}} <i
+				class="fa fa-mobile text-success" data-toggle="tooltip"
+				title="已绑定手机,发送站内信或投递简历可直接联系到负责人"></i> {{/if}} {{if jobCount>0}}
+			<div class="ribbon-wrapper">
+				<div class="ribbon primary">正在招募</div>
+			</div>
+			{{/if}}
+
+			<strong
+				style="font-weight: 100; color: #999; font-size: 14px;position: absolute;margin-top:2px;">
+				［靠谱度:{{>kpd}}% {{if hxlView >0 }} / 回信率:{{>hxlView}}%{{/if}} ］ </strong>
+
+		</h3>
+		<div class="aWord">{{>brief}}</div>
+		<div class="cb"></div>
+		<div class="tag-row toTop">
+			<span class="tag"> <span class="fa fa-location-arrow"></span>&nbsp;<strong>{{>cityView}}</strong>
+			</span> <span class="tag"> <span class="fa fa-line-chart"></span>&nbsp;<strong>{{>fundingStageView}}</strong>
+			</span> <span class="tag"> <span class="fa fa-group"></span>&nbsp;<strong>{{>companySizeView}}</strong>
+			</span> <span class="tag"> <span class="fa fa-tags"></span>&nbsp;<strong>{{>industryView}}</strong>{{if
+				industry2}}<strong>,{{>industry2View}}</strong>{{/if}}
+			</span>
+		</div>
+	</div>
+</li>
+</script>
+<script id="temp-no-company-list" type="text/x-jsrender">
+	<div class="box-title"><h4>没有搜索到相关公司</h4></div>
+</script>

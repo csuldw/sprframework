@@ -1,0 +1,252 @@
+
+<div id="header_search">
+    <div class="top_wrapper">
+        <div id="header_search-top" class="row">
+            <i class="fa fa-search"></i>
+            <div id="bt-lists" class="col-xs-10 jobFind_7">
+                <input class="tagsinput" data-role="tagsinput" value="" style="display: none"/>
+            </div>
+            <div class="col-xs-2 distance jobFind_5">
+                <button type="button" class="btn btn-gray btn-search" href="#">搜索</button>
+            </div>
+            <input type="hidden" id="s_jobPosition"/> <input type="hidden" id="s_workProvince"/> <input type="hidden" id="s_jobType"/> <input type="hidden" id="s_salaryLow"/> <input type="hidden" id="s_salaryHigh"/>
+        </div>
+        <div id="header_search-filters" class="row marginclear">
+            <div id="filters">
+                <div class="clearfix">
+                    <div class="dropdown dropdown-filter">
+                        <label class="text-right label0" data-center="center">职位 ▾</label>
+                        <div class=" dropdown-box location-box" data-menu="locations" role="menu" style="display: none">
+                            <div class="cb"></div>
+                            <div search-dict="JOB_POSITION" data-s-type="jobPosition"></div>
+                        </div>
+                    </div>
+                    <div class="dropdown-filter">
+                        <label class="text-center label1">地区 ▾</label>
+                        <div class="dropdown-box " data-menu="locations" style="display: none; width: 263px;">
+                            <select name="area" class="form-control area-sel" area="search" data-s-type="area" placeholder="搜索城市或省份" popover-position="bottom">
+                            </select>
+                            <div class="cb"></div>
+                            <div class="dropdown-filter-header">热门城市</div>
+                            <div>
+                                <div class="location-box" data-s-type="city">
+                                    <div class="btn btn-neeed " data-s-v="1001291000">北京市</div>
+                                    <div class="btn btn-neeed " data-s-v="1001321000">上海市</div>
+                                    <div class="btn btn-neeed " data-s-v="1001111000">广州市</div>
+                                    <div class="btn btn-neeed " data-s-v="1001111001">深圳市</div>
+                                </div>
+                                <div class="location-box" data-s-type="city">
+                                    <div class="btn btn-neeed " data-s-v="1001031000">杭州市</div>
+                                    <div class="btn btn-neeed " data-s-v="1001021000">南京市</div>
+                                    <div class="btn btn-neeed " data-s-v="1001251000">成都市</div>
+                                    <div class="btn btn-neeed " data-s-v="1001081000">武汉市</div>
+                                </div>
+                                <div class="location-box" data-s-type="city">
+                                    <div class="btn btn-neeed " data-s-v="1001361000">重庆市</div>
+                                    <div class="btn btn-neeed " data-s-v="1001151001">厦门市</div>
+                                    <div class="btn btn-neeed " data-s-v="1001021004">苏州市</div>
+                                    <div class="btn btn-neeed " data-s-v="1001391001">旧金山</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-filter">
+                        <label class="text-center label2">性质 ▾</label>
+                        <div class="dropdown-box " data-menu="locations" style="display: none">
+                            <div class="cb"></div>
+                            <div search-dict="JOB_TYPE" data-s-type="jobType"></div>
+                        </div>
+                    </div>
+                    <div class="dropdown-filter">
+                        <label class="text-center">待遇 ▾</label>
+                        <div class="dropdown-box " data-menu="locations" style="display: none">
+                            <strong>有无股权</strong>
+                            <div class="cb "></div>
+                            <div search-dict="HAS_STOCK" data-s-type="stock"></div>
+                            <hr/>
+                            <strong class="">薪资 </strong><span id="search_amount" class="pull-right">￥1K - ￥50K</span>
+                            <div class="cb"></div>
+                            <div class="search-slider">
+                                <div id="slider-range"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-filter">
+                        <label class="text-center">融资 ▾</label>
+                        <div class="dropdown-box " data-menu="locations" style="display: none">
+                            <div search-dict="FUNDING_TYPE" data-s-type="funding"></div>
+                        </div>
+                    </div>
+                    <div class="dropdown-filter">
+                        <label class="text-center">规模 ▾</label>
+                        <div class="dropdown-box " data-menu="locations" style="display: none">
+                            <div search-dict="COMPANY_SIZE" data-sole="1" data-s-type="companySize"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="job_list"></div>
+<div class="cb"></div>
+<div class="next-n" id="next-job" style="display: none">
+<a>到世界尽头了呢～</a>
+</div>
+<script id="temp-jobs-list" type="text/x-jsrender">
+<div class="job_row section" data-job_id="{{>jobId}}">
+	<div class="t_bar t_bar-{{>jobId}}">
+		<button class="btn p-follow-btn btn-action btn-follow-job"
+			type="button" data-id="{{>jobId}}" data-loading="no">
+			<i class="fa fa-star-o"></i> 加入收藏
+		</button>
+	</div>
+	<div class="cb"></div>
+	<div class="header-info" data-width="to100">
+		<div class="j_title">
+			<a href="/jobs/{{>jobId}}" target="_blank" class=""
+				data-job-id="{{>jobId}}">{{>jobTitle}}</a><strong
+				class=" tocenter2">&nbsp&nbsp&nbsp［{{>jobTypeView}}］</strong>
+		</div>
+		<div class="not-interested-icon">
+			<span class="fontello-cancel-circle fontello-icon"></span> <span
+				class="not-interested-label"></span>
+		</div>
+		<div class="cb-handheld"></div>
+		<div class="cb"></div>
+		<div class="job_line">
+			<div class="tag togray">
+				<span class="fa fa-yen"></span> <strong>{{>salaryLowView}}K
+					- {{>salaryHighView}}K</strong>
+			</div>
+			<div class="tag togray">
+				<span class="fa fa-location-arrow"></span>&nbsp;<strong>{{>cityView}}&nbsp;</strong>
+			</div>
+			<div class="tag togray">
+				{{if stock==='1'}}<span class="fa fa-check-circle"></span>{{else
+				stock==='0'}}<span class="fa fa-close"></span>{{/if}}<strong>&nbsp;股份期权</strong>
+			</div>
+		</div>
+	<div class="cb"></div>
+		<div>
+			<ul class="companyTags">
+				{{for tagsView}}
+				<li>{{:#data}}</li> {{/for}}
+			</ul>
+			<div></div>
+		</div>
+	</div>
+	<div class="company_list">
+		<div class="company_list_title">
+			<a href="/{{>companyDomain}}" target="_blank" class="tobi">{{>companyName}}</a>
+			<span class="tobi">&nbsp-&nbsp</span> <span class="tocenter tobi">{{>industryView}}</span>
+		</div>
+		<div class="cb"></div>
+		<div class="company_info">
+			<i class="fa fa-money"></i> <span class="right_margin">{{>fundingStageView}}</span>
+			<i class="fa fa-users"></i> <span>{{>companySizeView}}</span>
+		</div>
+		<div class="company_sayings">
+			<span>「&nbsp</span><span>{{>companyBrief}}</span><span>&nbsp」</span>
+		</div>
+	</div>
+	<div class="pic">
+		<a href="/company/{{>companyId}}" class="startup-link" title="attune"><img
+			alt=" at attune" class="angel_image" src="{{>logo}}_fixhw80"></a>
+	</div>
+	<div class="cb"></div>
+	<div class="details details-{{>jobId}}"></div>
+</div>
+</script>
+<script id="temp-job-more" type="text/x-jsrender">
+<div class="details-row">
+			<div class="head">
+				<span>产品介绍</span>
+			</div>
+			<div class="content">
+				<div class="description">{{>companyIntroView}}</div>
+				<div class="screen pro-popup">
+					{{for productImgs}}<div class="screen-img"><img href="{{:attachURL}}" src="{{:attachURL}}_fixhw80" class="mfp-img"/></div>{{/for}}
+				</div>
+			</div>
+		</div>
+		<div class="details-row">
+			<div class="head">
+				<span>工作环境</span>
+			</div>
+			<div class="content">
+				<div class="description">{{>envWorkView}}</div>
+				<div class="screen env-popup">
+					{{for envImgs}}<div class="screen-img"><img href="{{:attachURL}}" src="{{:attachURL}}_fixhw80"/></div>{{/for}}
+				</div>
+			</div>
+		</div>
+		<div class="details-row">
+			<div class="head">
+				<span>团队成员</span>
+			</div>
+			<div class="content">
+				<div class="description">
+					{{for founders}}
+					<div class="founder">
+						<div class="founder-pic">
+{{if userId === 1}}
+<img src="http://img.histarter.com/index/avatar.jpg_fixhw40" style="width:40px;height:40px;"/>
+{{else}}
+<img src="{{:avatar}}_fixhw40" style="width:40px;height:40px;"/>
+{{/if}}
+</div>
+						<div class="info">
+								<div class="name">
+{{if userId === 1}}
+									{{:nickname}}
+{{else}}
+									<a href="/people/{{:userId}}">{{:nickname}}</a>
+{{/if}}
+									<span class="title"> ·{{>title}} </span></div>
+						</div>
+						<div class="fdi">
+							{{>intro}}
+						</div>
+					</div>
+					{{/for}}
+				</div>
+			</div>
+		</div>
+<div class="details-row" >
+			<div class="head">
+				<span>详细地址</span>
+			</div>
+			<div class="content">
+				<div class="description">{{toHtml:address}}</div>
+			</div>
+		</div>
+		<div class="details-row">
+			<div class="head">
+				<span>职位描述</span>
+			</div>
+			<div class="content">
+				<div class="description">{{toHtml:jd}}</div>
+			</div>
+		</div>
+		<div class="details-row">
+			<div class="head">
+				<span>职位要求</span>
+			</div>
+			<div class="content">
+				<div class="person">{{toHtml:requirements}}</div>
+			</div>
+		</div>
+		<div class="details-row">
+			<div class="head">
+				<span>福利待遇</span>
+			</div>
+			<div class="content">
+				<div class="person">{{toHtml:benefits}}</div>
+			</div>
+		</div>
+</script>
+<script id="temp-no-jobs-list" type="text/x-jsrender">
+	<div class="box-title"><h4>没有相关职位</h4></div>
+</script>

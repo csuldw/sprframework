@@ -339,8 +339,10 @@ function(app, home, sec, v) {
                 reuser();
             }
             if (ISLOGIN) {
-                $('#nav-username').html(gg_username);//首页其他名字
-                $('#id-username').html(gg_username);//首页icon的图标的名字
+
+                    $('#nav-username').html(gg_username);//首页其他名字
+                    $('#id-username').html(gg_username);//首页icon的图标的名字
+
                 $(".header-clear-notify").click(function() {
                     if (confirm("确定要清空所有通知吗?")) {
                         $.ajax({

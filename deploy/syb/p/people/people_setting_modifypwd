@@ -1,0 +1,31 @@
+
+<div class="" ng-controller="people_setting_modifypwd">
+
+    <div class=" boxed">
+        <div class="inner row">
+            <form method="post" action="#" class="form-horizontal" id="modifyPwdForm">
+                <div class="form-group">
+                    <label class="col-xs-3 control-label" for="oldpassword">请输入旧密码</label>
+                    <div class="col-xs-7">
+                        <input type="password" name="oldpassword" class="form-control" popover-position="bottom" require="require" require-message="请输入旧密码" maxlength="50">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-3 control-label" for="password">请输入新密码</label>
+                    <div class="col-xs-7">
+                        <input type="password" name="password" class="form-control" popover-position="bottom" require="require" require-message="请输入新密码" maxlength="50" pwd="pwd" compare="input[name='replypassword']" compare-message="您输入的两次登录密码不一致,请重新输入">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-3 control-label" for="replypassword">再次输入新密码</label>
+                    <div class="col-xs-7">
+                        <input type="password" name="replypassword" class="form-control" popover-position="bottom" require="require" require-message="再次输入新密码" maxlength="50" pwd="pwd">
+                    </div>
+                </div>
+            </form>
+            <div class="text-center">
+                <button type="button" class="btn btn-success btn-modify_pwd">确认修改</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,476 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta name="keywords" content="八音盒,创业,互联网招聘,融资,找合伙人,大学生创业,我们创造一种爱的语言，让你与这个世界聊天,社交网络,移动互联网,O2O,">
+    <meta name="description" content="我们创造一种爱的语言，让你与这个世界聊天|八音盒（上海风到网络科技有限公司）www.wedfairy.com ，成立于2014年，是国内领先的提供给用户基于特定节日的移动端讲故事制作工具，创始人由来自美国和法国的海龟团队组成。在短短创立的半年时间，已经拿到知名风投的投资和广大用户的喜爱。其婚礼邀请函制作工具在上线短短1个月内，已经累计了几十万用户量，同时在近期也推出了亲子，友情，宠物，个人故事等一系列场景，深的用户喜爱！我们在努力创造一种新的制作和分享模式，让更多的用户能够回归制作和分享蕴含自己爱的故事，我们视工程师为企业最重要的财富，我们需要你来加入我们一起，用科技来改变生活。
+
+如果你是八音盒忠粉，或者你对八音盒的职位感兴趣不是那么一点点，又或者你神奇的idea能为我们创造点什么：
+请速度移驾到我们百度贴吧发表你的想法（八音盒轻故事），跟八音盒的创始团队沟通起来吧！
+
+PS:这就是传说中的内推（泪奔，投八音盒的小伙伴太多，so自荐机率会更高，问答贴还有专业小编等着大家）！
+大家记得先投简历，再去贴吧敲砖~
+传送门：http://tieba.baidu.com/p/3625870260 （有问必答贴）hiStarter最靠谱的创业团队都在这">
+    <meta charset="utf-8">
+    <link href="/res/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/res/css/style_1.css?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321" rel="stylesheet">
+    <link href="/res/css/style_2.css?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321" rel="stylesheet">
+    <meta name="fragment" content="!"/>
+
+    <script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+    <script type="text/javascript" src="/res/js/src/lib/require.js"></script>
+    <script type="text/javascript" src="/res/js/src/main.js?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321"></script>
+    <script type="text/javascript" src="/res/js/bin/starter.js?891b7fjkhdjld4fsfjldcvdsd2174ae34c21321"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script id="common-loading-tmpl" type="text/x-jsrender">
+	<span ><i class="fa fa-spinner fa-spin"></i> {{:data}}</span>
+</script>
+    <script id="common-loading-mini-tmpl" type="text/x-jsrender">
+	<span ><i class="fa fa-spinner fa-spin"></i> {{:data}}</span>
+</script>
+    <script type="text/javascript">
+        var path = '';
+        var ctxRoot = '';
+        var ISLOGIN = 'true';
+        var ISACTIVE = 'true';
+        var ISPERFECT = 'true';
+        var ISCOMPANY = 'false'
+        var appId = 'company/company_get';
+    </script>
+    <title>八音盒 - hiStarter | 靠谱的创业团队都在这儿
+    </title>
+</head>
+<body>
+<ul id="notyfy_container_top" class="notyfy_container navbar-fixed-top i-am-new"></ul>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" id="top-nav" ng-controller="headerCtrl">
+    <div class="progress top-progress" style="display: none">
+        <div class="progress-bar progress-bar-success" id="top-progress-div" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+    </div>
+    <div class="container relative_pos">
+        <div class="container header_to_re">
+            <div id="wrap" style="display: none">
+                <label id='sideMenuControl' for='sideToggle'>=</label>
+            </div>
+            <div class="navbar-header ">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                </button>
+                <img class="hide" src="http://img.histarter.com/index/new_logo.png_fixhw300"/>
+                <a class="navbar-brand navbar-brand-jobmain" href="/">
+                    <img style="width: auto; height: 60px;" src="http://img.histarter.com/index/new_logo.png"/></a>
+                <img style="display: none; width: 24px; height: 24px; margin-top: -2px; margin-bottom: 2px;" class="img-circle" src="http://img.histarter.com/upload/2015-09-11/13/25/41/3acd7eb77b874a929330c53fc56d6938/1441949141417/wib0ng_fixhw28"/>
+            </div>
+            <div class="navbar-to-hide navbar-to-hider">
+                <ul class="nav navbar-nav navbar-title">
+                    <li style="display: none;"><a href="/page/company/list/1">团队列表</a>
+                        <a href="/page/people/list">团队列表</a> <a href="/page/jobs/list">职位列表</a></li>
+                    <li class="now"><a href="/" title="首页">首页</a></li>
+                    <li><a href="/p/company/company_main" title="团队">团队</a></li>
+                    <li><a href="/p/people/people_main" class="btn-action" title="人才">人才</a></li>
+                    <li><a href="/p/jobs/job_main" title="职位">职位</a></li>
+                    <li><a class="text-primary" href="/forum/list">社区</a> <span class="community_new" style="position: absolute; top: 10px; right: 0px;"><img src="http://img.histarter.com/index/NEW.png"> </span></li>
+                    <li class="dropdown mrg25R"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">更多 <span class="caret"></span>
+                    </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/event/list" title="活动">活动</a></li>
+                        </ul></li>
+                    <li class="input-icon search-icon no_border"><i class="fa fa-search"></i> <input class="form-control form-searchkey" name="searchkey" data-toggle="dropdown" aria-expanded="false" popover-postion="left" maxlength="20" type="text" data-type="1" placeholder="搜索职位">
+                        <ul class="dropdown-menu" role="menu" style="border: none;">
+                            <li data-v="1" style="display: none;"><a class="btn ">切换职位搜索</a></li>
+                            <li data-v="2"><a class="btn ">切换公司搜索</a></li>
+                            <li data-v="3"><a class="btn ">切换人才搜索</a></li>
+                        </ul></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right pull-right pull-right-pad pull-right-res" data-right="right">
+                    <li class="dropdown bullhorn"><a href="javascript:void(0)" class="dropdown-toggle show-notify" aria-expanded="true" data-toggle="dropdown"><i class="fa fa-bullhorn"><span class="new-c-span new-notify-c" style="display: none"></span></i></a>
+                        <div class="dropdown-menu box-md float-right">
+                            <div class="popover-title display-block clearfix pad10A">
+                                通知 <a class="text-transform-cap font-primary font-normal  pull-right header-clear-notify" href="javascript:void(0)" title="清空通知">清空</a>
+                            </div>
+                            <ul class="no-border notifications-box head-notifications-box">
+                            </ul>
+                            <div class="pad10A button-pane button-pane-alt text-center">
+                                <a href="/p/notify/list" class="btn btn-sm btn-success" title="View all notifications"> 查 看 所 有 </a>
+                            </div>
+                        </div></li>
+                    <li class="envelope"><a href="/p/message/message_main" class=""><i class="fa fa-envelope"><span class="new-c-span new-message-c" style="display: none"></span></i></a></li>
+                    <li class="dropdown "><a href="javascript:void(0);" class="dropdown-toggle " style="padding-bottom: 21px;" aria-expanded="true" data-toggle="dropdown"> <img style="width: 24px; height: 24px; margin-top: -2px; margin-bottom: 2px;" class="img-circle" src="http://img.histarter.com/upload/2015-09-11/13/25/41/3acd7eb77b874a929330c53fc56d6938/1441949141417/wib0ng_fixhw28"/> IOS性感美女应用支持
+                        <span id="header-email" style="display: none"></span>
+                        <b class="caret"></b></a>
+                        <div class="dropdown-menu box-sm float-right">
+                            <div class="box-sm">
+                                <div class="login-box clearfix">
+                                    <div class="user-img">
+                                        <a href="/p/people/people_setting?#general" title="" class="change-img">修改头像</a> <img src="http://img.histarter.com/upload/2015-09-11/13/25/41/3acd7eb77b874a929330c53fc56d6938/1441949141417/wib0ng_fixhw80" alt="">
+                                    </div>
+                                    <div class="user-info">
+<span> <span id="nav-username">IOS性感美女应用支持</span>
+<i>产品经理&nbsp;</i>
+</span> <a href="/people/7191" class="" title="Edit profile">个人主页</a>
+                                    </div>
+                                </div>
+                                <div class="divider"></div>
+                                <ul class="reset-ul mrg5B">
+                                    <li><span style="margin-left: 15px; margin-right: 25px;">我的团队</span>
+                                        <a class="text-success btn-action" href="/p/company/company_add">创建我的团队 <i class="fa float-right fa-caret-right"></i>
+                                        </a> </li>
+                                </ul>
+                                <div class="divider"></div>
+                                <ul class="reset-ul mrg5B">
+                                    <li><span style="margin-left: 15px; margin-right: 25px;">我的信息</span>
+                                        <a style="color: #8da0aa;" href="/p/people/people_setting?xg#general" title="View notifications">修改资料</a> <a style="color: #8da0aa;" href="/p/people/people_setting?tx#resume" title="View notifications">填写简历</a></li>
+                                </ul>
+                                <div class="divider"></div>
+                                <ul class="reset-ul mrg5B">
+                                    <li><span style="margin-left: 15px; margin-right: 25px;">快速漫游</span>
+                                        <a style="color: #8da0aa;" href="/p/jobs/job_main?y#job_resume_send" title="View notifications">已投简历</a> </li>
+                                </ul>
+                                <div class="divider"></div>
+                                <div class="pad5A button-pane button-pane-alt text-center">
+                                    <a href="/logout" class="btn btn-block font-normal btn-danger"> <i class="fa fa-power-off"></i> 退出登录
+                                    </a>
+                                </div>
+                            </div>
+                        </div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/x-jsrender" id="temp-search-div">
+<div class="btn btn-neeed cb" data-s-v="{{>code}}">{{>value}}</div>
+</script>
+<input id='sessionUID' value='734FD99C90C097776682A3D6A85FD687' type="hidden"/>
+<div bindonce class="container" ng-controller="company_get" ng-init="isCreator='false'">
+<div class="mobile_header" ng-init="companyId=6" style="display: none">
+    <a class="mobile_logo" id="mobile_logo" href="http://www.histarter.com"><img ng-src="/res/images/logo.png"></a>
+</div>
+<div class="clear_mobile"></div>
+<section class="panel">
+    <div class="panel-heading cdh ">
+        <div class="controls">
+            <div class="edit_controls_container">
+                <div class=" dsss17 startups-show-sections fes1 edit_controls _a _jm" data-_tn="startups/show/sections/edit_controls">
+                    <button class="btn btn-default btn-white btn-action" ng-click="openMessageDialog(40)" style="display: inline-block;">
+                        <i class="fa fa-envelope-o"></i> 私信
+                    </button>
+                    <br/>
+                    <button type="button" class="btn btns2 btn-danger btn-action" ng-click="doFollow($event)" ng-init="isFollow = false">
+                        <span ng-show="isFollow == false"><i class="fa fa-heart-o"></i> 关注</span>
+                        <span ng-cloak ng-show="isFollow == true"><i class="fa fa-heart"></i> 已关注</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="edit_div">
+            <input type="hidden" id="pId" value="6" data-create=""/>
+            <div class="preview">
+                <div class="pull-left">
+                    <img id="company-logo" src="http://img.histarter.com/upload/2015-08-10/16/07/49/31d670c2bdeb4f0eaeaae93e32a34da9/1439194069436/03xp96_fixhw300" alt=""/>
+                    <div class="pad15L mrg10T" data-toggle="tooltip" title="根据团队资料完善度，包括产品图文介绍、团队成员、工作环境图文介绍、媒体报道、融资、里程碑填写完整度进行评级。资料越填写完整排名更靠前！">
+                        <span>靠谱度: </span>100%
+                    </div>
+                </div>
+                <div class="detail_head_info">
+                    <h1 class="hspan1 text-black">八音盒
+                    </h1>
+<span class="hspan2">「&nbsp;上海市 -
+上海市 · 15人以下&nbsp;」</span>
+                    <p>我们创造一种爱的语言，让你与这个世界聊天</p>
+                    <div class="tags">
+                        <span class="label label-default">社交网络</span>
+                        <span class="label label-default">移动互联网</span>
+                        <span class="label label-default">O2O</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="links">
+<span class="link"> <a href="http://www.wedfairy.com" class="company_url omit" rel="nofollow" target="_blank">http://www.wedfairy.com</a>
+</span>
+            </div>
+            <div class="links">
+<span class="link"> <a href="javascript:void(0)" class="" rel="nofollow" target="_blank"> <span class="social-fa social-wechat"> <i data-animation="am-flip-x" data-trigger="manual" data-placement="bottom" hoverable-popover data-html="true" data-content="<img src='http://img.histarter.com/upload/2015-05-23/16/26/48/a8eb93b685d444ccb0dade19003a6ac4/1432369608591/drbfcy_fixhw120' />" class="fa fa-wechat social-fa-wechat"></i>
+</span></a>
+</span>
+            </div>
+            <div class="links">
+<span class="link"> <a href="http://www.weibo.com/u/5224024448" class="" rel="nofollow" target="_blank"><span class="social-fa"><i class="fa fa-weibo social-fa-weibo"></i></span>
+</a>
+</span>
+            </div>
+            <div class="tabs" id="tabs">
+                <span><a href="#/overview" ng-class="{'active' : selectedRouteName == '/overview'}" class="tab">团队小站</a></span><span><a href="#/follow" ng-class="{'active' : selectedRouteName == '/follow'}" class="tab fundraising" data-name="fundraising">关注者
+                <span ng-cloak ng-if="fansCount>0">({{fansCount}})</span></a></span><span><a href="#/comment" ng-class="{'active' : selectedRouteName == '/comment'}" class="tab intros" data-name="intros">讨论区<span ng-if="commentCount>0" ng-cloak>({{commentCount}})</span></a></span>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</section>
+<div class="row">
+    <div class="col-xs-8">
+        <div id="content-liquid-full">
+            <div class="tab-content" id="mainContain">
+                <div ng-cloak ng-include="selectedRoute.templateurl">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-4">
+        <div class="title-info">
+            粉丝互动<span>SCAN ME</span>
+        </div>
+        <div class="box-title" ng-init="edit.word = false">
+            <div class="box-title-bar">
+                微信扫描二维码查看团队小站手机版
+            </div>
+            <div class="box-title-content">
+                <div class="text-center mrg10B" style="height: 167px;">
+                    <img src="http://img.histarter.com/upload/2015-08-10/16/07/49/31d670c2bdeb4f0eaeaae93e32a34da9/1439194069436/03xp96_fixhw40" style="  position: absolute;border: 2px solid #fff;left: 45%;height: 40px;width: 40px;top: 122px;"/>
+                    <div id="companyqrCode"></div>
+                </div>
+                <div class="preview" ng-show="!edit.word" ng-init="companyInfo.word = '坐标上海为数不多的有趣的创业公司，希望找到那些身在上海却拥有一些创业情怀的同类小伙伴。在八音盒，技术，创意和设计永远是我们最宝贵的价值！'">
+                    <div class="intro intro-word">
+                        <span ng-if="!companyInfo.word.length>0">未填写</span>
+                        <span ng-if="companyInfo.word.length>0" ng-bind-html="companyInfo.word | toHtml"></span>
+                    </div>
+                </div>
+                <div class="edit" ng-cloak ng-show="edit.word">
+                    <textarea rows="4" class="form-control" ng-model="companyInfo.tempWord"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="title-info">
+            下载<span>DOWNLOAD</span>
+        </div>
+        <div class="box-title">
+            <div class="box-title-bar">
+                产品下载
+            </div>
+            <div class="box-title-content">
+                <div class="pro-downloads">
+                    <div>
+                        <a href="http://wedfairy.com/" target="_blank" class="pro-download"> <i class="fa fa-apple"></i>&nbsp;
+                            Apple iOS 应用
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://wedfairy.com/" class="pro-download" target="_blank"> <i class="fa fa-android"></i>&nbsp;
+                            Android 应用
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://wedfairy.com/" class="pro-download" target="_blank"> <i class="fa fa-windows"></i>&nbsp;
+                            Windows Phone 应用
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="title-info">
+            职位<span>JOBS</span>
+        </div>
+        <div class="box-title">
+            <div class="box-title-bar">
+                热招职位
+            </div>
+            <div class="box-title-content">
+                <div ng-if="!jobsList.length>0">暂无职位信息</div>
+                <div class="f-job" ng-repeat="job in jobsList">
+                    <div class="f-job-tile">
+                        <a href="/jobs/{{job.id}}" target="_blank" ng-bind="job.jobTitle"></a>
+                        <div class="btn-group dropup " style="position: absolute; right: 10px;">
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/jobs/{{job.id}}" target="_blank" class="btn">编辑</a></li>
+                                <li><a class="btn" ng-click="delJob(job.id)">删除</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="f-job-intro">
+                        <div class="info">
+                            <i class="fa fa-location-arrow"></i> <span ng-bind="job.cityView"></span> <i class="fa fa-jpy" style="margin-left: 10px"></i> <span>{{job.salaryLowView}}K
+- {{job.salaryHighView}}K</span> <span ng-if="job.stock == 1" class="fa fa-check-circle"></span> <span ng-if="job.stock == 0" style="margin-left: 10px" class="fa fa-times-circle"></span>&nbsp;股份期权
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="title-info">
+            关注者<span>FOLLOWER</span>
+        </div>
+        <div class="box-title">
+            <div class="box-title-bar">
+                关注列表
+                <div class="pull-right right-link">
+                    <a href="#/follow" class="pull-right">查看所有</a>
+                </div>
+            </div>
+            <div class="box-title-content">
+                <div class="f-u-list">
+                    <div ng-repeat="user in fansList">
+                        <div data-animation="am-flip-x" data-trigger="manual" data-placement="bottom" hoverable-popover data-content-template="tpl/user.hover.tpl.html">
+                            <a href="/people/{{user.id}}" target="_blank">
+                                <img ng-src="{{user.avatar}}_fixhw28" class="img-circle"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="title-info">
+            热门讨论<span>DISCUSSION</span>
+        </div>
+        <div class="box-title">
+            <div class="box-title-bar">
+                讨论
+                <div class="pull-right right-link">
+                    <a href="#/comment" class="pull-right to-all-comment">查看所有</a>
+                </div>
+            </div>
+            <div class="box-title-content">
+                <ul class="hot-comment">
+                    <li ng-repeat="user in commentList" class="mrg20B">
+                        <a href="/people/{{user.userId}}" data-animation="am-flip-x" data-trigger="manual" data-placement="bottom" hoverable-popover data-content-template="tpl/user.hover.tpl.html"><img bo-src-i="{{user.avatar}}_fixhw40" class="avatar"></a>
+                        <div class="hot-comment-message">
+                            <span class="arrow"></span><span class="body" bo-text="user.content">
+</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="pre-footer mrg15T">
+    <div class="container text-center">
+        <div class="row">
+
+            <div class="col-xs-3 col-xs-6">
+                <div class="pre-footer-title">星球介绍</div>
+                <div class="pre-footer-item mrg10T">
+                    <a href="/about#about_us">关于我们
+                    </a>
+                </div>
+                <div class="pre-footer-item mrg10T">
+                    <a href="/about#about_service"> 服务模式
+                    </a>
+                </div>
+                <div class="pre-footer-item mrg10T">
+                    <a href="/about#about_partner">合作伙伴
+                    </a>
+                </div>
+                <div class="pre-footer-item mrg10T">
+                    <a href="/about#about_contact">联系我们
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-3 col-xs-6">
+                <div class="pre-footer-title">创业招聘</div>
+                <div class="pre-footer-item mrg10T">
+                    <a href="/p/company/company_main">团队列表
+                    </a>
+                </div>
+                <div class="pre-footer-item mrg10T">
+                    <a href="/p/jobs/job_main">职位列表
+                    </a>
+                </div>
+                <div class="pre-footer-item mrg10T">
+                    <a href="/p/people/people_main">人才列表
+                    </a>
+                    <div class="pre-footer-item mrg10T">
+                        <a href="/30day">直招报名
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3 col-xs-6">
+                <div class="pre-footer-title">媒体报道</div>
+                <div class="pre-footer-item mrg10T">
+                    <a href="http://www.36kr.com/p/218208.html" target="_blank">36氪
+                    </a>
+                </div>
+                <div class="pre-footer-item mrg10T">
+                    <a href="http://www.pingwest.com/histarter-demo" target="_blank">PingWest
+                    </a>
+                </div>
+                <div class="pre-footer-item mrg10T">
+                    <a href="http://cn.technode.com/post/2014-12-22/histarter" target="_blank">动点科技
+                    </a>
+                </div>
+                <div class="pre-footer-item mrg10T">
+                    <a href="http://tech2ipo.com/93789" target="_blank">Tech2IPO
+                    </a>
+                </div>
+                <div class="pre-footer-item mrg10T">
+                    <a href="http://tech.ifeng.com/a/20150120/40950840_0.shtml" target="_blank">凤凰科技
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-3 col-xs-6">
+                <div class="pre-footer-title">移动端下载</div>
+                <div class="pre-footer-item mrg10T">
+                    <a href="javascript:void(0);">
+                        <img src="http://img.histarter.com/img/appstore.png" id="hiStarteriOSDownload" alt="hiStarter移动端下载"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row pad15B">
+            <div class="col-xs-7" style="margin-left:7%;text-align: left;">
+                © 2014-2015 HISTARTER.COM・沪ICP备13032488号 上海奇麦网络科技有限公司
+            </div>
+            <div class="col-xs-4 text-right">
+                <a class="pre-footer-social" data-animation="am-flip-x" data-trigger="click" data-placement="top" bs-popover data-html="true" data-content="<img src='http://img.histarter.com/img/histarter_qrcode.jpg' width='150' height='150'/>" href=" javascript:void(0);"><i class="fa fa-wechat"></i></a>
+                <a class="pre-footer-social" href="http://www.weibo.com/histarter" target="_blank"><i class="fa fa-weibo"></i></a>
+                <a class="pre-footer-social" data-animation="am-flip-x" href="javascript:void(0);" data-trigger="click" data-placement="top" bs-popover data-html="true" data-content="官方QQ吐槽群:219507775"><i class="fa fa-qq"></i></a>
+                <a class="pre-footer-social" href="/cdn-cgi/l/email-protection#0b7c647c4b6362787f6a797f6e7925686466"><i class="fa fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<script id="tmpl-dict" type="text/x-jsrender">
+	<option value='{{>code}}' {{>selected}}>{{>value}}</option>
+</script>
+<script id="tmpl-dict-r" type="text/x-jsrender">
+	<label class="radio-inline"> <input type="radio" name=""  value="{{>code}}">{{>value}}</label>
+</script>
+<script id="select-tmpl" type="text/x-jsrender">
+    <option value='{{>value}}' {{>selected}}>{{>text}}</option>
+</script>
+<script type="text/javascript">
+
+    function a(a, b) {
+        var c = 'font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;font-size: 15px;'
+                + (a ? "font-weight: bold;" : "") + "color: " + b + ";";
+        return c;
+    }
+    console.log("%c♥ 想加入我们吗 ? %c急招JAVA工程师,发送您的简历至%c--> wow@histarter.com", a(!0,
+            "#d22"), a(!0, "#777"), a(!0, "#2b2")), window.joinUs = function() {
+        return console.log("%cWe're excited to have you! %c☃", a(!1, "#d22"),
+                a(!1, "#333")), window.location.href = "/_/_/about/careers/",
+                "";
+    };
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?1f61149eae43428c63d2907772a1e515";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script type="text/javascript">
+    /* <![CDATA[ */
+    (function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+    /* ]]> */
+</script>
+</body>
+</html>

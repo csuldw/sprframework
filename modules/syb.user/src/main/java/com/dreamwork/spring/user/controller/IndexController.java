@@ -38,6 +38,7 @@ public class IndexController {
     @RequestMapping(value = "/logout")
     public String logout(HttpServletRequest req){
         UserSession session = getSession(req);
+        if(session != null)
         session.setUser(null);
         return "redirect:/index";
     }

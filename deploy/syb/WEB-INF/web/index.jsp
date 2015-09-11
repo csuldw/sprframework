@@ -60,6 +60,8 @@
         if( '${session.ISLOGIN}' ) ISLOGIN = '${session.ISLOGIN}';
         console.log('islogin = ' + ISLOGIN);
 
+//        ISPERFECT = 'false';
+
     </script>
     <title>SYB | Start Your Business | 为创业者插上翅膀
     </title>
@@ -189,9 +191,13 @@
                                     <div class="divider"></div>
                                     <ul class="reset-ul mrg5B">
                                         <li><span style="margin-left: 15px; margin-right: 25px;">我的团队</span>
-                                            <a class="text-success " href="/chihuo"> 吃货联盟
+                                            <a class="text-success " href="/chihuo"> 全名创业
                                                 <i class="fa float-right fa-caret-right"></i>
-                                            </a><a style="color: #8da0aa;" class="pad5L" href="/p/jobs/job_main#job_my" title="View notifications">已发职位</a></li>
+                                            </a>
+                                            <a style="color: #8da0aa;" class="pad5L" href="/p/jobs/job_main#job_my" title="View notifications">已发职位</a></li>
+
+                                            <a style='display:none' class="text-success btn-action" href="javascript:void(0)">请先完善个人信息再创建团队 <i class="fa float-right fa-caret-right"></i>
+                                            </a>
                                     </ul>
                                     <div class="divider"></div>
                                     <ul class="reset-ul mrg5B">
@@ -642,12 +648,12 @@
     <div class="col-md-3">
         <div class="wl-company-item">
             <div class="wl-company-item-logo">
-                <a href="http://www.histarter.com/wedfairy" target="_blank">
+                <a href="/wedfairy" target="_blank">
                     <img src="http://img.histarter.com/index/bayinhe.png" alt="八音盒">
                 </a>
             </div>
             <div class="wl-company-item-name">
-                <a href="http://www.histarter.com/wedfairy" target="_blank">
+                <a href="/wedfairy" target="_blank">
                     八音盒
                 </a>
             </div>
@@ -1245,6 +1251,7 @@
                 a(!1, "#333")), window.location.href = "/_/_/about/careers/",
                 "";
     };
+    /*
     var _hmt = _hmt || [];
     (function () {
         var hm = document.createElement("script");
@@ -1252,6 +1259,7 @@
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
     })();
+    */
 </script>
 
 
