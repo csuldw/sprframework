@@ -110,13 +110,13 @@
                         <a href="/page/jobs/list">职位列表</a></li>
 
                     <li class="now"><a href="/" title="首页">首页</a></li>
-                    <li><a href="/p/company/company_main" title="找公司">找公司</a></li>
+                    <li><a href="/p/company/company_main" title="创业团队 ">创业团队</a></li>
                     <li><a href="/p/people/people_main" class="btn-action" title="找合伙人">找合伙人</a></li>
-                    <!--<li><a href="/p/jobs/job_main" title="职位">职位</a></li>-->
+                    <li><a href="/p/jobs/job_main" title="创业帮助">创业帮助</a></li>
                     <li><a class="text-primary" href="/forum/list">社区</a>
-        <span class="community_new" style="position: absolute; top: 10px; right: 0px;">
-        <img src="http://img.histarter.com/index/NEW.png">
-        </span>
+                <span class="community_new" style="position: absolute; top: 10px; right: 0px;">
+                 <img src="http://img.histarter.com/index/NEW.png">
+                </span>
                     </li>
                     <li class="dropdown mrg25R">
                         <a href="javascript:void(0);" class="dropdown-toggle"
