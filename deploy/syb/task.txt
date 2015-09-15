@@ -49,5 +49,14 @@
 #/notify/my/all/list
 {"success":true,"message":"读取成功","str":null,"responseData":[],"flag":null}
 
+#/people/2
+用户页面
+/p/people/people_get_overview
+/app/people/get/fans/count/7555
+/app/people/get/comment/count/7555
+/app/people/get/follow/list/7555
+
+#http://localhost:8080/wedfairy
+商家界面有多个需求
 
 #后台管理需要什么功能？
