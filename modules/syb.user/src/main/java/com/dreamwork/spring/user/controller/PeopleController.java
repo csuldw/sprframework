@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * Created by apple on 15/9/11.
  */
 @Controller
-public class PeopleUpdateInfoController {
+public class PeopleController {
 
     @ResponseBody
     @RequestMapping("/people/updateInfo")
@@ -45,6 +45,15 @@ public class PeopleUpdateInfoController {
         return rsp;
     }
 
+    /**
+     * 用户页面
+     * @param pid
+     * @return
+     */
+    @RequestMapping("/people/{pid}")
+    public String peopleInfo(Long pid){
+        return "people/people";
+    }
 
 
 }
