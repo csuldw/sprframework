@@ -49,4 +49,43 @@
             <ref bean="dataSource" />
         </property>
     </bean>
+
+
+    <bean class="com.dreamwork.spring.util.SpringContextHolder" lazy-init="false" />
+
+    <!--加密使用-->
+    <bean id="propertyConfig" class="com.dreamwork.spring.security.PropertyDecipher">
+        <property name="locations">
+            <list>
+                <value>classpath:DBConfig.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <!--ms后台配置库数据源-->
+    <bean id="db_service" class="org.apache.commons.dbcp.BasicDataSource"
+          destroy-method="close">
+        <property name="driverClassName" value="${service.DataSource.jdbc.driverClassName}"></property>
+        <property name="url" value="${service.DataSource.jdbc.url}"></property>
+        <property name="username" value="${service.DataSource.jdbc.username}"></property>
+        <property name="password" value="${service.DataSource.jdbc.password}"></property>
+        <!--连接池初始化值 -->
+        <property name="initialSize" value="1"></property>
+        <!--连接池最大值 -->
+        <property name="maxActive" value="500"></property>
+        <!--最大空闲值，当经过一高峰期，慢慢释放连接，直到达到maxIdle -->
+        <property name="maxIdle" value="2"></property>
+        <!--最小空闲值，当空闲连接少于阀值时，连接池会预申请一些连接 -->
+        <property name="minIdle" value="2"></property>
+    </bean>
+
+    <!--动态数据源 -->
+    <bean id="dynamicDataSource" class="com.dreamwork.spring.db.datasource.DynamicDataSource">
+        <property name="targetDataSources">
+            <map>
+                <entry key="db_service" value-ref="db_service" />
+            </map>
+        </property>
+        <property name="defaultTargetDataSource" ref="db_service" />
+    </bean>
 </beans>
