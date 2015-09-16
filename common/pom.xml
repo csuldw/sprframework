@@ -12,7 +12,12 @@
     <packaging>jar</packaging>
 
     <dependencies>
-
+        <!-- redis -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.5.2</version>
+        </dependency>
     </dependencies>
 
 </project>
