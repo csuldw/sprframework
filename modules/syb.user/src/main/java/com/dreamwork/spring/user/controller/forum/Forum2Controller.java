@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * Created by apple on 15/9/15.
  */
 @Controller
-public class ForumController {
+public class Forum2Controller {
 
     @ResponseBody
     @RequestMapping(value="/forum/topic/add" )
