@@ -25,7 +25,7 @@ create table t_topic (
 	  user_id integer comment 'user id ',
     stype varchar (1),
 	  title varchar (100),
-    topicContent text,
+    topic_content text,
     PRIMARY KEY (id)
 ) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
