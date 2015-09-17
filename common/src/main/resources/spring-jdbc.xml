@@ -92,8 +92,20 @@
         <property name="defaultTargetDataSource" ref="db_service" />
     </bean>
 
-    <jpa:repositories base-package="com.dreamwork.spring" >
 
+    <!-- jpa start
+    <jpa:repositories base-package="com.dreamwork.spring" >
     </jpa:repositories>
+
+    <bean id="entityManagerFactory" class=
+            "org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+    </bean>
+    <bean id="transactionManager"
+          class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+ -->
+    <!-- jpa end -->
+
 
 </beans>
