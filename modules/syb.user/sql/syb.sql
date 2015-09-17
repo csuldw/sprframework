@@ -26,6 +26,7 @@ create table t_topic (
     stype varchar (1),
 	  title varchar (100),
     topic_content text,
+    delete_status char(1) default '1',
     PRIMARY KEY (id)
 ) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
