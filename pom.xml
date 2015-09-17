@@ -15,7 +15,7 @@
         <module>deploy</module>
     </modules>
     <properties>
-        <org.springframework.version>4.2.1-RELEASE</org.springframework.version>
+        <org.springframework.version>4.2.1.RELEASE</org.springframework.version>
         <netty.version>4.0.23.Final</netty.version>
         <org.slf4j.version>1.6.1</org.slf4j.version>
         <org.aspectj.version>1.6.9</org.aspectj.version>
