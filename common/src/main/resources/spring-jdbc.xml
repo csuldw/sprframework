@@ -2,8 +2,11 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+         http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+        ">
 
 
     <bean id="dataSource" class="com.jolbox.bonecp.BoneCPDataSource" destroy-method="close">
@@ -88,4 +91,9 @@
         </property>
         <property name="defaultTargetDataSource" ref="db_service" />
     </bean>
+
+    <jpa:repositories base-package="com.dreamwork.spring.*.*Repository" >
+
+    </jpa:repositories>
+
 </beans>

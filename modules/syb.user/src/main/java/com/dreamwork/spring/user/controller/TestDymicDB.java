@@ -25,7 +25,7 @@ import java.util.List;
 public class TestDymicDB {
 
     @ResponseBody
-    @RequestMapping("login")
+//    @RequestMapping("login")
     public SybResponse login(String loginName , String password , String noteCheck, HttpServletRequest req){
         SybResponse rsp = new SybResponse();
         User user = null;
