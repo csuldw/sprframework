@@ -1,6 +1,5 @@
 package com.dreamwork.spring.user.controller;
 
-import com.dreamwork.spring.user.controller.user.UserRepository;
 import com.dreamwork.spring.user.dao.UserDao;
 import com.dreamwork.syb.domain.user.User;
 import com.dreamwork.syb.domain.user.UserSession;
@@ -12,8 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
-
 /**
  * Created by apple on 15/9/7.
  */
@@ -25,21 +22,21 @@ public class UserController {
     @Autowired
     UserDao dao;
 
-    @Autowired
-    UserRepository userRepository;
+    //@Autowired
+    //UserRepository userRepository;
 
     public void registe(){
 
     }
 
     @ResponseBody
-    @RequestMapping("login")
+    @RequestMapping("/login")
     public SybResponse login(String loginName , String password , String noteCheck, HttpServletRequest req){
         SybResponse rsp = new SybResponse();
         User user = null;
         try {
-//            user = dao.queryRecord(loginName, password);
-            user = queryRecord(loginName, password);
+            user = dao.queryRecord(loginName, password);
+//            user = queryRecord(loginName, password);
             loginSuccess(user , req);
         }catch (Exception e ){
             log.error("UserController查询user失败" , e);
@@ -51,13 +48,14 @@ public class UserController {
         return rsp;
     }
 
+    /*
     public User queryRecord(String loginName , String password){
         List<User> list = userRepository.findByEmailAndPassword(loginName, password);
         if(list != null ) {
             return list.get(0) ;
         }
         return null;
-    }
+    }*/
 
     /**
      * 登录成功,设置session
