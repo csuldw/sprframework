@@ -92,7 +92,7 @@
         <property name="defaultTargetDataSource" ref="db_service" />
     </bean>
 
-    <jpa:repositories base-package="com.dreamwork.spring.*.*Repository" >
+    <jpa:repositories base-package="com.dreamwork.spring" >
 
     </jpa:repositories>
 
