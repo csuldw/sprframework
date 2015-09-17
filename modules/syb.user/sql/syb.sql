@@ -18,3 +18,14 @@ create table t_syb_user (
     email varchar(100) ,
     PRIMARY KEY (id)
 ) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+#create the t_topic
+create table t_topic (
+	  id integer AUTO_INCREMENT,
+	  user_id integer comment 'user id ',
+    stype varchar (1),
+	  title varchar (100),
+    topicContent text,
+    PRIMARY KEY (id)
+) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
