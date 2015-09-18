@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<configuration debug="false">
+<configuration debug="true">
     <property name="LOG_HOME" value="/app/logs"/>
     <property name="PRO_NAME" value="app"/>
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50}
+            <pattern>%d{MM-dd HH:mm:ss} %-5level %logger{50}
                 -%msg%n
             </pattern>
         </encoder>

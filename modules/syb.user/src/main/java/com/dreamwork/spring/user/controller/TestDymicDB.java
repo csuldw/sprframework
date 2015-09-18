@@ -24,7 +24,7 @@ import java.util.List;
 @ChooseDataSource(mainType = "db_", bizType = "service")
 public class TestDymicDB {
 
-    @ResponseBody
+//    @ResponseBody
 //    @RequestMapping("login")
     public SybResponse login(String loginName , String password , String noteCheck, HttpServletRequest req){
         SybResponse rsp = new SybResponse();

@@ -1,11 +1,15 @@
 package com.dreamwork.spring.user.controller.forum;
 
+import com.dreamwork.spring.db.annotation.PrimaryKey;
+
 /**
  * Created by apple on 15/9/16.
  */
 public class Topic {
 
+    @PrimaryKey
     Integer id ;
+
     int userId;
     int stype;
     String title;

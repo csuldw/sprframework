@@ -153,7 +153,7 @@
             <version>1.2.15</version>
         </dependency>
 
-        <!--  JSR 303 with Hibernate Validator -->
+        <!--  JSR 303 with Hibernate Validator
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
@@ -163,7 +163,7 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
             <version>${org.hibernate.validator.version}</version>
-        </dependency>
+        </dependency> -->
 
         <!-- Servlet -->
         <dependency>
