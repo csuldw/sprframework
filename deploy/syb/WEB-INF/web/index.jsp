@@ -3,9 +3,19 @@
 
 <!-- 首页用到的box-->
 
-<body style="background-color: #fff;" class="index_body wl"><!-- style="background-color: #fff;" class="index_body wl" -->
-<%@ include file="header.jsp" %>
 
+<%@ include file="header.jsp" %>
+<body style="background-color: #fff;" class="index_body wl"><!-- style="background-color: #fff;" class="index_body wl" -->
+
+<style>.box {
+    padding: 50px;
+    width: 400px;
+    text-align: center;
+    font-size: 35px;
+    border-top: 1px solid #66cc33;
+    margin: 7px 0px 100px 0px;
+}</style>
+<link rel="stylesheet" href="/res/css/welcome.css"/>
 
 
 <div id="carousel-example-generic" class="carousel slide banner" data-ride="carousel" style=" margin-top:

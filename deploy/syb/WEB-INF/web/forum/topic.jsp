@@ -1,13 +1,7 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: apple
-  Date: 15/9/18
-  Time: 上午8:01
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<jsp:include page="../header.jsp"/>
+<%@ include file="../header.jsp" %>
 
 <div class="container">
 <div class="row">

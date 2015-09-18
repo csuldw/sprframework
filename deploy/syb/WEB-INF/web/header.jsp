@@ -71,15 +71,7 @@
     </script>
     <title>SYB | Start Your Business | 为创业者插上翅膀
     </title>
-    <style>.box {
-        padding: 50px;
-        width: 400px;
-        text-align: center;
-        font-size: 35px;
-        border-top: 1px solid #66cc33;
-        margin: 7px 0px 100px 0px;
-    }</style>
-    <link rel="stylesheet" href="/res/css/welcome.css"/>
+
 </head>
 
 <body ><!-- style="background-color: #fff;" class="index_body wl" -->
@@ -159,7 +151,7 @@
                     </ul>
                 </c:if>
 
-                <c:if test="${session.ISLOGIN}" >
+                <c:if test="${session != null && session.ISLOGIN}" >
                     <!-- 登录后的界面,在此ul中-->
                     <ul class="nav navbar-nav navbar-right pull-right pull-right-pad pull-right-res" data-right="right">
                         <li class="dropdown bullhorn"><a href="javascript:void(0)" class="dropdown-toggle show-notify" aria-expanded="true" data-toggle="dropdown"><i class="fa fa-bullhorn"><span class="new-c-span new-notify-c" style="display: none"></span></i></a>
