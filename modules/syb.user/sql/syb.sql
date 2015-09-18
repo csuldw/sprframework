@@ -30,3 +30,4 @@ create table t_topic (
     PRIMARY KEY (id)
 ) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
+SET PASSWORD FOR root@"localhost" = PASSWORD('root');
