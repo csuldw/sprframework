@@ -12,13 +12,13 @@ import java.util.List;
  * Created by apple on 15/9/17.
  */
 @Repository
-public class TopicRepository extends JDBCBaseDao{
+public class TopicRepository {
 
-//    @Autowired
-//    JDBCBaseDao dao ;
+    @Autowired
+    JDBCBaseDao dao ;
 
     public Topic save(Topic topic){
-        Integer save = super.save(topic);
+        Integer save = dao.save(topic);
         topic.setId(save ) ;
 
         return topic;

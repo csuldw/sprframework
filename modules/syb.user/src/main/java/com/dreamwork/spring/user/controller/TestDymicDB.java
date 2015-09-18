@@ -20,7 +20,7 @@ import java.util.List;
  * Created by wujinyuan on 2015/9/16.
  */
 
-@Controller
+//@Controller
 @ChooseDataSource(mainType = "db_", bizType = "service")
 public class TestDymicDB {
 
