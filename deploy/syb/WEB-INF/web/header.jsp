@@ -82,7 +82,7 @@
     <link rel="stylesheet" href="/res/css/welcome.css"/>
 </head>
 
-<body style="background-color: #fff;" class="index_body wl">
+<body ><!-- style="background-color: #fff;" class="index_body wl" -->
 <ul id="notyfy_container_top" class="notyfy_container navbar-fixed-top i-am-new"></ul>
 
 <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="top-nav" ng-controller="headerCtrl">

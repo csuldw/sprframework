@@ -1,7 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+<!-- 首页用到的box-->
+
+<body style="background-color: #fff;" class="index_body wl"><!-- style="background-color: #fff;" class="index_body wl" -->
 <%@ include file="header.jsp" %>
+
+
 
 <div id="carousel-example-generic" class="carousel slide banner" data-ride="carousel" style=" margin-top:
         -40px;">
