@@ -3,7 +3,14 @@
 
 <%@ include file="../header.jsp" %>
 
-<div class="container">
+
+<script>
+    appId = 'forum/topic_get';
+
+    var gg_topic = ${topic_json};
+
+</script>
+<div class="container" ng-controller="topicController">
 <div class="row">
 <div class="col-xs-9 to_full">
 <div>
@@ -13,7 +20,8 @@
         <li><a href="#">招聘</a></li>
     </ul>
 </div>
-<div class="title-info " style="font-weight: 600;">一个传统制造业的人如何开始创业？</div>
+
+<div class="title-info " style="font-weight: 600;">{{topic.title}}</div>
 <div class="box pad15A">
     <input type="hidden" id="pId" value="166"/>
     <div class="tzinfo" style="border: 0px;">
@@ -25,15 +33,7 @@
             <i class="fa fa-clock-o"></i> 2015年03月05日
         </div>
         <div class="cb"></div>
-        <div class="topic-content"><p>对互联网垂涎已久的老青年一个。</p>
-            <p>最后悔没有学计算机专业以致于在路径依赖的效应下越来越偏离喜爱的事业。虽然曾做过校园BBS，集运营、技术和市场于一身，可惜终于敌不过现实，半途而废。</p>
-            <p>象经营一家公司一样经营自己的人生，选择了一边就业一边创业，保证现金流，才能保证不断的投资于人生。未想光阴过逝太快，节奏还是慢了一拍。</p>
-            <p>惋惜过，也遗憾过，但现在不想再错过。</p>
-            <p>面对一个充满激情和奇迹的创业圈，面对一个变奏极快、光怪陆离的世界，第一感觉是什么？——“不知道”。不知道如何迈出第一步，怎么迈。没错，虽然说起来挫了点，但这就是第一感觉——迷茫。</p>
-            <p>但如同知乎上那个经典的回答一样：“怎么走出人生低谷？” &quot;再走几步。” 第一步其实也许不需要想太多，迈开了走一步就好。尽人事，听天命，如果我能想到的都想到了，那么我没想到的东西对我而言已经不重要了。现在的计划是，3～6月将idea形成BP，同时寻组团队，接触投资人，接受反馈。8月前拿到投资完成产品雏形。8月～2016年2月完成产品的成长期，站稳市场，形成可行商业模式。达成A轮基本条件。2016年2～12月，产品成熟期，A/B轮实现。</p>
-            <p>做过项目经理，做过Team Leader，深知计划远根不上变化快，但也知道没有计划的变化将会更加不可控。更加知道多一双眼睛，多一张嘴对成功将是极有助益的事情。所以把这些写在这里，希望大家可以给点建议：</p>
-            <p>做为一个在传统行业工作了9年的人，略懂一些财务常识，一些互联网模式，一些C+，VB的人，该如何开始自己的创业之旅？</p>
-            <p>还请诸位不吝赐教～不胜感激！</p></div>
+        <div class="topic-content">${topic.topicContent}</div>
     </div>
 </div>
 <div class="box-reply">
