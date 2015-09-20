@@ -16,7 +16,7 @@ create table t_syb_user (
     username varchar(100),
     password varchar(100) comment '密码',
     email varchar(100) ,
-    delete_status char(1) default '1',
+    delete_state char(1) default '1',
     PRIMARY KEY (id)
 ) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
@@ -27,7 +27,7 @@ create table t_topic (
     stype varchar (1),
 	  title varchar (100),
     topic_content text,
-    delete_status char(1) default '1',
+    delete_state char(1) default '1',
     user_name varchar(100) comment '冗余字段',
     create_date TIMESTAMP default now() ,
     PRIMARY KEY (id)
@@ -40,7 +40,7 @@ create table t_topic_reply (
   user_id integer comment 'reply user id ',
   user_name varchar(100) comment '冗余字段',
   content text,
-  delete_status char(1) default '1',
+  delete_state char(1) default '1',
   PRIMARY KEY (id)
 ) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 

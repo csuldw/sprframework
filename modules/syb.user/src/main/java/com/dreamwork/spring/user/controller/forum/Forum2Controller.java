@@ -1,9 +1,13 @@
 package com.dreamwork.spring.user.controller.forum;
 
 import com.dreamwork.spring.db.JDBCBaseDao;
+import com.dreamwork.spring.db.pojos.PageInfo;
+import com.dreamwork.spring.db.pojos.PaginationResult;
+import com.dreamwork.spring.db.pojos.SQLCondition;
 import com.dreamwork.spring.user.controller.SybResponse;
 import com.dreamwork.spring.user.controller.forum.entity.Topic;
 import com.dreamwork.spring.user.controller.forum.entity.TopicReply;
+import com.dreamwork.spring.user.controller.forum.view.TopicView;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,6 +19,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.io.IOException;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by apple on 15/9/15.
@@ -40,19 +46,28 @@ public class Forum2Controller {
          topicContent:
          */
         SybResponse s = new SybResponse();
-        s.setStr("166");//返回成功的页面地址id
+        s.setStr(save.getId() + "");//返回成功的页面地址id
         s.setSuccess(true);
         return s;
     }
 
+    /**获取帖子**/
     @RequestMapping(value="/forum/topic/get/{id}" )
     public ModelAndView add(@PathVariable Long id , ModelAndView model) {
 
         Topic topic = jdbc.queryById(Topic.class, id);
 
+        List<SQLCondition> where = new LinkedList<SQLCondition>();
+        where.add(new SQLCondition("topicId", id ));
+        List<TopicReply> replys = jdbc.queryForPageOrderList(TopicReply.class, where, new PageInfo(0, 10), "order by id desc ");
+
+        TopicView view= new TopicView();
+        view.setTopic(topic);
+        view.setReplys(replys);
+
         try {
-            model.addObject("topic" , topic);
-            model.addObject("topic_json" , json.writeValueAsString(topic ));
+            model.addObject("view" , view);
+            model.addObject("view_json" , json.writeValueAsString(view ));
         } catch (IOException e) {
             log.error("forum add error",e);
         }
@@ -66,6 +81,7 @@ public class Forum2Controller {
     @Autowired
     ObjectMapper json;
 
+    /**添加回复,后面改redis*/
     @ResponseBody
     @RequestMapping(value="/forum/topic/reply/add/{topicId}" )
     public SybResponse addReply(@PathVariable Long topicId , TopicReply reply ){
@@ -75,14 +91,5 @@ public class Forum2Controller {
         dao.save(reply);
         return rsp;
     }
-//    166
-    /**
-     * content:<p>adsfasdf <br>
-     zx <br>
-     cv <br>
-     xz <br>
-     cv <br>
-     zx <br>
-     v
-     */
+
 }

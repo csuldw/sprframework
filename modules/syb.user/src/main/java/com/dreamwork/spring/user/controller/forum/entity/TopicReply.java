@@ -14,7 +14,6 @@ public class TopicReply {
     Integer user_id ;//integer comment 'reply user id ',
     String user_name ;//varchar(100) comment '冗余字段',
     String content ;//text,
-    Integer delete_status ;//char(1) default '1',
 
     public Integer getId() {
         return id;
@@ -54,13 +53,5 @@ public class TopicReply {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    public Integer getDelete_status() {
-        return delete_status;
-    }
-
-    public void setDelete_status(Integer delete_status) {
-        this.delete_status = delete_status;
     }
 }
