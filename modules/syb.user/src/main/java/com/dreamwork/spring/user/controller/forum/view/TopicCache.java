@@ -1,4 +1,4 @@
-package com.dreamwork.spring.user.controller.forum;
+package com.dreamwork.spring.user.controller.forum.view;
 
 import com.dreamwork.spring.cache.impl.BaseCacheDaoImpl;
 import org.springframework.stereotype.Service;

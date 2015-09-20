@@ -1,6 +1,8 @@
-package com.dreamwork.spring.user.controller.forum;
+package com.dreamwork.spring.user.controller.forum.entity;
 
 import com.dreamwork.spring.db.annotation.PrimaryKey;
+
+import java.util.Date;
 
 /**
  * Created by apple on 15/9/16.
@@ -12,6 +14,7 @@ public class Topic {
 
     int userId;
     int stype;
+    String username;        //发帖的username
     String title;
     String topicContent;
 
@@ -53,5 +56,13 @@ public class Topic {
 
     public void setTopicContent(String topicContent) {
         this.topicContent = topicContent;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }
