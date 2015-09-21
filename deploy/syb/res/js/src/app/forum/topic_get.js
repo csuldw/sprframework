@@ -5,7 +5,9 @@ define(["app","app/home", "app/valid", "lib/jquery.fileupload", "lib/bootstrap-t
             $scope.view = {title:'一个传统制造业的人如何开始创业？' , topicContent:'如何开始创业呢？'};
             $scope.view = gg_topic;
         }]);
-        var pId = gg_topic.topic.id;
+
+        var pId ;
+
         var loadReply = function(num) {
             home.mask($(".comment-list"));
             $.ajax({

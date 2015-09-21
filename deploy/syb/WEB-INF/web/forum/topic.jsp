@@ -23,7 +23,7 @@
 
 <div class="title-info " style="font-weight: 600;">{{view.topic.title}}</div>
 <div class="box pad15A">
-    <input type="hidden" id="pId" value="166"/>
+    <input type="hidden" id="pId" ng-model value="${view.topic.id}"/>
     <div class="tzinfo" style="border: 0px;">
         <a href="/people/288" target="_blank" class="av"><img src="http://img.histarter.com/upload/2014-12-22/23/18/00/a0d2b2d625b1403995106a985dd86470/1419261480623/IMG_05360.jpg_fixhw80" alt="Steam" class="lsavatar img-circle"></a>
         <div class="u-av-info">
