@@ -26,6 +26,7 @@ import java.util.List;
  * Created by apple on 15/9/15.
  */
 @Controller
+@RequestMapping("forum")
 public class Forum2Controller {
 
     @Autowired
@@ -35,7 +36,7 @@ public class Forum2Controller {
     JDBCBaseDao jdbc;
 
     @ResponseBody
-    @RequestMapping(value="/forum/topic/add" )
+    @RequestMapping(value="topic/add" )
     public SybResponse add(Topic topic){
 
         Topic save = dao.save(topic);
@@ -52,7 +53,7 @@ public class Forum2Controller {
     }
 
     /**获取帖子**/
-    @RequestMapping(value="/forum/topic/get/{id}" )
+    @RequestMapping(value="topic/get/{id}" )
     public ModelAndView add(@PathVariable Long id , ModelAndView model) {
 
         Topic topic = jdbc.queryById(Topic.class, id);
@@ -75,6 +76,20 @@ public class Forum2Controller {
         return model;
     }
 
+    @RequestMapping(value="list")
+    public ModelAndView list(Integer page , ModelAndView model){
+
+        PaginationResult<Topic> topics = jdbc.queryForPage(Topic.class, null, new PageInfo((page == null ? 0 : page * 10), 10), "order by id desc");
+        model.addObject("topics",topics);
+        try {
+            model.addObject("topics_json", json.writeValueAsString(topics));
+        } catch (IOException e) {
+            log.error("forum add error",e);
+        }
+        model.setViewName("forum/list");
+
+        return  model ;
+    }
 
     Logger log = LoggerFactory.getLogger(Forum2Controller.class);
 
@@ -83,7 +98,7 @@ public class Forum2Controller {
 
     /**添加回复,后面改redis*/
     @ResponseBody
-    @RequestMapping(value="/forum/topic/reply/add/{topicId}" )
+    @RequestMapping(value="topic/reply/add/{topicId}" )
     public SybResponse addReply(@PathVariable Long topicId , TopicReply reply ){
         SybResponse rsp = new SybResponse();
         rsp.setSuccess(true);
