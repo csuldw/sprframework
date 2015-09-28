@@ -80,7 +80,7 @@
         <h2 class="h4 title">吐槽社区</h2>
         <p>在吐槽社区聊话题，聊工作、找团队、找合伙人、认识更多朋友。</p>
         <div class="add-topic">
-            <a href="/p/forum/topic_add" class="btn btn-lg btn-block btn-action btn-success pad5T pad5B">发表话题</a>
+            <a href="/forum/topic_add" class="btn btn-lg btn-block btn-action btn-success pad5T pad5B">发表话题</a>
         </div>
     </aside>
 </div>
