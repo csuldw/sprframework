@@ -76,6 +76,13 @@ public class Forum2Controller {
         return model;
     }
 
+    /**获取帖子**/
+    @RequestMapping(value="topic_add" )
+    public ModelAndView topicAdd(ModelAndView model) {
+        model.setViewName("forum/topic_add");
+        return model;
+    }
+
     @RequestMapping(value="list")
     public ModelAndView list(Integer page , ModelAndView model){
 
