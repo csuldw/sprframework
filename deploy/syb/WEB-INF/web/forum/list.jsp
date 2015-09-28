@@ -19,12 +19,12 @@
 <div class="tab-content" id="mainContain">
 <h4 class="mrg20B" style="color: #b5b5b5; font-size: 16px">梦想是什么，梦想就是一种让你感到坚持就是幸福的东西。&nbsp;&nbsp;&nbsp;&nbsp;-《中国合伙人》</h4>
 <ul id="myTab" class="nav clearfix nav-tabs">
-    <li class="active"><a href="/forum/list">全部</a></li>
+    <li class="active"><a href="/forum/list">全部</a></li><%--
     <li class=""><a href="/forum/list?sid=1">话题讨论</a></li>
     <li class=""><a href="/forum/list?sid=2">求职区</a></li>
     <li class=""><a href="/forum/list?sid=3">组队创业</a></li>
     <li class=""><a href="/forum/list?sid=4">产品反馈/BUG</a></li>
-    <li class=""><a href="/forum/list?sid=5">其他</a></li>
+    <li class=""><a href="/forum/list?sid=5">其他</a></li>--%>
 </ul>
 <div class="aw-mod aw-explore-list bg-white">
 <div class="mod-body">
@@ -61,7 +61,7 @@
         </p>
     </div>
     <div class="topic-right-info ">
-        <a href="/forum/topic/get/${topic.id}" target="_blank" class="hint-comm-article"><span class="a">47</span><span class="b">吐槽</span></a>
+        <a href="/forum/topic/get/166" target="_blank" class="hint-comm-article"><span class="a">47</span><span class="b">吐槽</span></a>
     </div>
 </div>
 </c:forEach>

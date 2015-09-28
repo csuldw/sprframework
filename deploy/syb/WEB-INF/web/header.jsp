@@ -108,15 +108,15 @@
                         <a href="/page/jobs/list">职位列表</a></li>
 
                     <li class="now"><a href="/" title="首页">首页</a></li>
-                    <li><a href="/p/company/company_main" title="创业团队 ">创业团队</a></li>
+                    <%--<li><a href="/p/company/company_main" title="创业团队 ">创业团队</a></li>
                     <li><a href="/p/people/people_main" class="btn-action" title="找合伙人">找合伙人</a></li>
-                    <li><a href="/p/jobs/job_main" title="创业帮助">创业帮助</a></li>
+                    <li><a href="/p/jobs/job_main" title="创业帮助">创业帮助</a></li>--%>
                     <li><a class="text-primary" href="/forum/list">社区</a>
                 <span class="community_new" style="position: absolute; top: 10px; right: 0px;">
                  <img src="http://img.histarter.com/index/NEW.png">
                 </span>
                     </li>
-                    <li class="dropdown mrg25R">
+                    <%--<li class="dropdown mrg25R">
                         <a href="javascript:void(0);" class="dropdown-toggle"
                            data-toggle="dropdown" role="button" aria-expanded="false">更多 <span
                                 class="caret"></span>
@@ -124,11 +124,12 @@
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/event/list" title="活动">活动</a></li>
                         </ul>
-                    </li>
-                    <li class="input-icon search-icon no_border"><i class="fa fa-search"></i> <input
+                    </li>--%>
+                    <li class="input-icon search-icon no_border"><i class="fa fa-search"></i>
+                        <input
                             class="form-control form-searchkey" name="searchkey" data-toggle="dropdown"
                             aria-expanded="false" popover-postion="left" maxlength="20" type="text" data-type="1"
-                            placeholder="搜索职位">
+                            placeholder="搜索">
                         <ul class="dropdown-menu" role="menu" style="border: none;">
                             <li data-v="1" style="display: none;"><a class="btn ">切换职位搜索</a></li>
                             <li data-v="2"><a class="btn ">切换公司搜索</a></li>
