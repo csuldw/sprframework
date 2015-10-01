@@ -14,7 +14,7 @@ public class Topic {
 
     int userId;
     int stype;
-    String username;        //发帖的username
+    String userName;        //发帖的username
     String title;
     String topicContent;
 
@@ -58,11 +58,11 @@ public class Topic {
         this.topicContent = topicContent;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }

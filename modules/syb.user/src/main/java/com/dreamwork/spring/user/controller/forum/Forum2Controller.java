@@ -8,6 +8,7 @@ import com.dreamwork.spring.user.controller.SybResponse;
 import com.dreamwork.spring.user.controller.forum.entity.Topic;
 import com.dreamwork.spring.user.controller.forum.entity.TopicReply;
 import com.dreamwork.spring.user.controller.forum.view.TopicView;
+import com.dreamwork.spring.user.session.SybUserSession;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
@@ -35,17 +37,21 @@ public class Forum2Controller {
     @Autowired
     JDBCBaseDao jdbc;
 
+    @Autowired
+    SybUserSession session;
+
+    /**
+     * 添加话题
+     * @param topic
+     * @param req
+     * @return
+     */
     @ResponseBody
     @RequestMapping(value="topic/add" )
-    public SybResponse add(Topic topic){
-
+    public SybResponse add(Topic topic , HttpServletRequest req){
+        topic.setUserName(session.getSessionUser(req).getUser().getUsername());
         Topic save = dao.save(topic);
 
-        /**
-         stype:2
-         title:30hou nihao
-         topicContent:
-         */
         SybResponse s = new SybResponse();
         s.setStr(save.getId() + "");//返回成功的页面地址id
         s.setSuccess(true);
@@ -76,13 +82,19 @@ public class Forum2Controller {
         return model;
     }
 
-    /**获取帖子**/
+    /**添加帖子**/
     @RequestMapping(value="topic_add" )
     public ModelAndView topicAdd(ModelAndView model) {
         model.setViewName("forum/topic_add");
         return model;
     }
 
+    /**
+     * 查询forum 列表
+     * @param page
+     * @param model
+     * @return
+     */
     @RequestMapping(value="list")
     public ModelAndView list(Integer page , ModelAndView model){
 
@@ -106,10 +118,11 @@ public class Forum2Controller {
     /**添加回复,后面改redis*/
     @ResponseBody
     @RequestMapping(value="topic/reply/add/{topicId}" )
-    public SybResponse addReply(@PathVariable Long topicId , TopicReply reply ){
+    public SybResponse addReply(@PathVariable Long topicId , TopicReply reply , HttpServletRequest req){
         SybResponse rsp = new SybResponse();
         rsp.setSuccess(true);
         reply.setTopic_id( topicId.intValue() );
+        reply.setUser_name(session.getSessionUser(req).getUser().getUsername());
         dao.save(reply);
         return rsp;
     }
