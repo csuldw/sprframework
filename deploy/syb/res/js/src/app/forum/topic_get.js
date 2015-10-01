@@ -107,7 +107,7 @@ define(["app","app/home", "app/valid", "lib/jquery.fileupload", "lib/bootstrap-t
         }
         return {
             init: function() {
-                //pId = $("#pId").val();
+                pId = $("#pId").val();
                 if (ISLOGIN == "false") {} else {
                     if (typeof Markdown != 'undefined' && $('#wmd-input').length) {
                         var converter1 = new Markdown.Converter();
