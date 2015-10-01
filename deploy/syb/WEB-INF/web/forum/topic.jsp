@@ -25,9 +25,9 @@
 <div class="box pad15A">
     <input type="hidden" id="pId" ng-model value="${view.topic.id}"/>
     <div class="tzinfo" style="border: 0px;">
-        <a href="/people/288" target="_blank" class="av"><img src="http://img.histarter.com/upload/2014-12-22/23/18/00/a0d2b2d625b1403995106a985dd86470/1419261480623/IMG_05360.jpg_fixhw80" alt="Steam" class="lsavatar img-circle"></a>
+        <a href="/people/${view.topic.userId}" target="_blank" class="av"><img src="http://img.histarter.com/upload/2014-12-22/23/18/00/a0d2b2d625b1403995106a985dd86470/1419261480623/IMG_05360.jpg_fixhw80" alt="Steam" class="lsavatar img-circle"></a>
         <div class="u-av-info">
-            <a href="/people/288" target="_blank" class="Username phuser ">Tony84</a>
+            <a href="/people/${view.topic.userId}" target="_blank" class="Username phuser ">${view.topic.userName}</a>
             [合伙人]
             <div class="cb mrg5T"></div>
             <i class="fa fa-clock-o"></i> 2015年03月05日
@@ -38,7 +38,7 @@
 </div>
 <div class="box-reply">
     <i class="fa fa-comments oil"></i>
-    <div class="oili">回复（47）</div>
+    <div class="oili">回复（${view.counts}）</div>
 </div>
 <div class="cb"></div>
 <div class="comment-list box pad15A">
@@ -46,11 +46,11 @@
 <c:forEach items="${view.replys}" var="reply">
 <div class="tzinfo">
     <div class="pull-right">
-        <button class="btn btn-default btn-sm reply-user" data-nickname="月读锁锁美" data-id="1054">回复</button>
+        <button class="btn btn-default btn-sm reply-user" data-nickname="${reply.user_name}" data-id="1054">回复</button>
     </div>
-    <a href="/people/1446" target="_blank" class="av"><img src="http://img.histarter.com/upload/2015-01-14/10/56/58/52cc83d8d3c843a7aff2694df317c873/1421204218571/wrh69z_fixhw80" alt="Steam" class="lsavatar img-circle"></a>
+    <a href="/people/${reply.user_id}" target="_blank" class="av"><img src="http://img.histarter.com/upload/2015-01-14/10/56/58/52cc83d8d3c843a7aff2694df317c873/1421204218571/wrh69z_fixhw80" alt="Steam" class="lsavatar img-circle"></a>
     <div class="u-av-info">
-        <a href="/people/1446" target="_blank" class="Username phuser ">月读锁锁美</a>
+        <a href="/people/${reply.user_id}" target="_blank" class="Username phuser ">${reply.user_name}</a>
         [其他]
         <div class="cb mrg5T"></div>
         <i class="fa fa-clock-o"></i> 2015-03-06 11:59:24
