@@ -1,6 +1,7 @@
 package com.dreamwork.spring.user.controller;
 
 import com.dreamwork.spring.user.dao.UserDao;
+import com.dreamwork.spring.user.session.SybUserSession;
 import com.dreamwork.syb.domain.user.User;
 import com.dreamwork.syb.domain.user.UserSession;
 import org.slf4j.Logger;
@@ -22,12 +23,8 @@ public class UserController {
     @Autowired
     UserDao dao;
 
-    //@Autowired
-    //UserRepository userRepository;
-
-    public void registe(){
-
-    }
+    @Autowired
+    SybUserSession session;
 
     @ResponseBody
     @RequestMapping("/login")
@@ -37,7 +34,7 @@ public class UserController {
         try {
             user = dao.queryRecord(loginName, password);
 //            user = queryRecord(loginName, password);
-            loginSuccess(user , req);
+            session.setSessionUser(user, req);
         }catch (Exception e ){
             log.error("UserController查询user失败" , e);
         }
@@ -48,22 +45,32 @@ public class UserController {
         return rsp;
     }
 
-    /*
-    public User queryRecord(String loginName , String password){
-        List<User> list = userRepository.findByEmailAndPassword(loginName, password);
-        if(list != null ) {
-            return list.get(0) ;
+    @ResponseBody
+    @RequestMapping("/user/register")
+    public SybResponse registe(String loginName , String nickname , String password,String replypassword){
+        SybResponse rsp = new SybResponse();
+        rsp.setSuccess(false);
+        if(!password.equals(replypassword)){
+            rsp.setMessage("两次密码不一致,请重新输入");
+            return rsp;
         }
-        return null;
-    }*/
-
-    /**
-     * 登录成功,设置session
-     */
-    private void loginSuccess(User user , HttpServletRequest req){
-        UserSession session = new UserSession();
-        session.setUser(user);
-        req.getSession().setAttribute("session" , session );
+        User user = new User();
+        user.setEmail(loginName);
+        user.setUsername(nickname);
+        user.setPassword(password);
+        dao.insertRecord(user);
+        rsp.setStr("/");
+        rsp.setSuccess(true);
+        return rsp;
+        //{"success":false,"message":"登录邮箱已被注册","str":null,"responseData":null,"flag":null}
     }
 
+    /** 退出登录 */
+    @RequestMapping(value = "/logout")
+    public String logout(HttpServletRequest req){
+        UserSession rsp = session.getSessionUser(req);
+        if(rsp != null)
+            rsp.setUser(null);
+        return "redirect:/index";
+    }
 }
