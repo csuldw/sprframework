@@ -13,7 +13,7 @@ public class TopicView {
     Topic topic ;
     User user;
     List<TopicReply> replys;
-    int counts; //评论数
+//    int counts; //评论数
 
     public Topic getTopic() {
         return topic;
@@ -31,13 +31,13 @@ public class TopicView {
         this.user = user;
     }
 
-    public int getCounts() {
-        return counts;
-    }
-
-    public void setCounts(int counts) {
-        this.counts = counts;
-    }
+//    public int getCounts() {
+//        return counts;
+//    }
+//
+//    public void setCounts(int counts) {
+//        this.counts = counts;
+//    }
 
     public List<TopicReply> getReplys() {
         return replys;
@@ -45,7 +45,9 @@ public class TopicView {
 
     public void setReplys(List<TopicReply> replys) {
         this.replys = replys;
-        if( replys != null)
-        counts = replys.size();
+        if( replys != null) {
+//            counts = replys.size();
+            topic.setReplyCounts( replys.size() );
+        }
     }
 }
