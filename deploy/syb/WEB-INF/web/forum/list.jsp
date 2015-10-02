@@ -61,7 +61,7 @@
         </p>
     </div>
     <div class="topic-right-info ">
-        <a href="/forum/topic/get/${topic.id}" target="_blank" class="hint-comm-article"><span class="a">47</span><span class="b">吐槽</span></a>
+        <a href="/forum/topic/get/${topic.id}" target="_blank" class="hint-comm-article"><span class="a">${topic.replyCounts}</span><span class="b">吐槽</span></a>
     </div>
 </div>
 </c:forEach>

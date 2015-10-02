@@ -38,12 +38,12 @@
 </div>
 <div class="box-reply">
     <i class="fa fa-comments oil"></i>
-    <div class="oili">回复（${view.counts}）</div>
+    <div class="oili">回复（${view.topic.replyCounts}）</div>
 </div>
 <div class="cb"></div>
 <div class="comment-list box pad15A">
 
-<c:if test="${view.counts == 0 }" >
+<c:if test="${view.topic.replyCounts == 0 }" >
     <div class="box-title text-center"><h4>暂无回复</h4></div>
 </c:if>
 
