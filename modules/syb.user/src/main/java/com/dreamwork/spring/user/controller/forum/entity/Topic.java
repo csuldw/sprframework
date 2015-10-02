@@ -17,6 +17,7 @@ public class Topic {
     String userName;        //发帖的username
     String title;
     String topicContent;
+    Date createDate;
 
     public Integer getId() {
         return id;
@@ -64,5 +65,13 @@ public class Topic {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 }
