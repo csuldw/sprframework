@@ -45,5 +45,7 @@ public class TopicView {
 
     public void setReplys(List<TopicReply> replys) {
         this.replys = replys;
+        if( replys != null)
+        counts = replys.size();
     }
 }
