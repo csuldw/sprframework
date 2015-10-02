@@ -33,12 +33,12 @@
 
 <c:forEach items="${topics.resultList}" var="topic">
 <div class="aw-item active" data-topic-id="">
-    <a class="aw-user-name data-popover-f-u" data-placement="bottom" data-container="body" data-trigger="hover" href="/people/288" rel="nofollow">
-    <img target="_blank" class="img-circle" src="http://img.histarter.com/upload/2014-12-22/23/18/00/a0d2b2d625b1403995106a985dd86470/1419261480623/IMG_05360.jpg_fixhw80" alt="Tony84">
+    <a class="aw-user-name data-popover-f-u" data-placement="bottom" data-container="body" data-trigger="hover" href="/people/${topic.userId}" rel="nofollow">
+    <img target="_blank" class="img-circle" src="http://img.histarter.com/upload/2014-12-22/23/18/00/a0d2b2d625b1403995106a985dd86470/1419261480623/IMG_05360.jpg_fixhw80" alt="${topic.userName}">
         <div class="hide ">
             <div class="user-info-popover">
                 <img src="http://img.histarter.com/upload/2014-12-22/23/18/00/a0d2b2d625b1403995106a985dd86470/1419261480623/IMG_05360.jpg_fixhw80" class="img-circle">
-                <h3 class="meta-heading">Tony84</h3>
+                <h3 class="meta-heading">${topic.userName}</h3>
                 <h4 class="meta-subheading">
                     创业=创新+商业
                 </h4>
@@ -51,17 +51,17 @@
             」
             <a class='isTop' href="/forum/topic/get/${topic.id}" target="_blank"> ${topic.title}
             </a>
-            <img class="" style="margin-top: -5px;" src="http://img.histarter.com/img/forum/zd.gif" alt="置顶">
+            <%--<img class="" style="margin-top: -5px;" src="http://img.histarter.com/img/forum/zd.gif" alt="置顶">--%>
         </h4>
         <p>
-            • <a href="/people/288" target="_blank" class="aw-user-name">Tony84</a> •<span class="text-color-999">合伙人 <span class="text-color-999 to_hide">发起的话题 •
+            • <a href="/people/${topic.userId}" target="_blank" class="aw-user-name">${topic.userName}</a> •<span class="text-color-999">合伙人 <span class="text-color-999 to_hide">发起的话题 •
 1896 次围观 • 前天17:17:27
-• 最后回复人： <a style="color: #999;" href="/people/288">Tony84</a>
+• 最后回复人： <a style="color: #999;" href="/people/288">${topic.userName}</a>
 </span>
         </p>
     </div>
     <div class="topic-right-info ">
-        <a href="/forum/topic/get/166" target="_blank" class="hint-comm-article"><span class="a">47</span><span class="b">吐槽</span></a>
+        <a href="/forum/topic/get/${topic.id}" target="_blank" class="hint-comm-article"><span class="a">47</span><span class="b">吐槽</span></a>
     </div>
 </div>
 </c:forEach>
