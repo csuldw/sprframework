@@ -30,7 +30,7 @@
             <a href="/people/${view.topic.userId}" target="_blank" class="Username phuser ">${view.topic.userName}</a>
             [合伙人]
             <div class="cb mrg5T"></div>
-            <i class="fa fa-clock-o"></i> 2015年03月05日
+            <i class="fa fa-clock-o"></i> ${view.topic.createDate}
         </div>
         <div class="cb"></div>
         <div class="topic-content">${view.topic.topicContent}</div>
