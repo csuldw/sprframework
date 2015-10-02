@@ -30,7 +30,7 @@ create table t_topic (
     delete_state char(1) default '1',
     user_name varchar(100) comment '冗余字段',
     create_date TIMESTAMP default now() ,
-    replyCounts integer comment '回复数',
+    reply_counts integer comment '回复数',
     PRIMARY KEY (id)
 ) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
