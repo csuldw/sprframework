@@ -43,6 +43,10 @@
 <div class="cb"></div>
 <div class="comment-list box pad15A">
 
+<c:if test="${view.counts == 0 }" >
+    <div class="box-title text-center"><h4>暂无回复</h4></div>
+</c:if>
+
 <c:forEach items="${view.replys}" var="reply">
 <div class="tzinfo">
     <div class="pull-right">
@@ -53,7 +57,7 @@
         <a href="/people/${reply.user_id}" target="_blank" class="Username phuser ">${reply.user_name}</a>
         [其他]
         <div class="cb mrg5T"></div>
-        <i class="fa fa-clock-o"></i> 2015-03-06 11:59:24
+        <i class="fa fa-clock-o"></i> ${reply.createDate}
     </div>
     <div class="cb"></div>
     <div class="topic-content">
@@ -68,6 +72,8 @@
     <ul class="reply-pager"></ul>
 </div>
 <div class="cb"></div>
+
+<c:if test="${session != null && session.ISLOGIN}" >
 <div class="reply-widget box-title">
     <div class="box-title-bar mrg0A">添加一条新回复</div>
     <div class="aw-mod aw-editor-box">
@@ -89,7 +95,18 @@
         </button>
     </div>
 </div>
+</c:if>
+
+<c:if test="${session == null || !session.ISLOGIN}" >
+    <div class="box-title text-center">
+        <h4>
+            您还没有登录,请<a class="btn-action" href="javascript:void(0)">登录</a>后回复
+        </h4>
+    </div>
+</c:if>
+
 </div>
+
 <div class="col-xs-3 to_full">
     <aside class="widget-info forum-l-info ">
         <h2 class="h4 title">吐槽社区</h2>

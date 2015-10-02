@@ -2,6 +2,8 @@ package com.dreamwork.spring.user.controller.forum.entity;
 
 import com.dreamwork.spring.db.annotation.PrimaryKey;
 
+import java.util.Date;
+
 /**
  * Created by apple on 15/9/20.
  */
@@ -14,6 +16,7 @@ public class TopicReply {
     Integer user_id ;//integer comment 'reply user id ',
     String user_name ;//varchar(100) comment '冗余字段',
     String content ;//text,
+    Date createDate;
 
     public Integer getId() {
         return id;
@@ -53,5 +56,13 @@ public class TopicReply {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 }

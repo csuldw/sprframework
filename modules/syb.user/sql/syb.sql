@@ -41,6 +41,7 @@ create table t_topic_reply (
   user_name varchar(100) comment '冗余字段',
   content text,
   delete_state char(1) default '1',
+  create_date TIMESTAMP default now() ,
   PRIMARY KEY (id)
 ) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
