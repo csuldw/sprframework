@@ -18,6 +18,7 @@ public class Topic {
     String title;
     String topicContent;
     Date createDate;
+    int replyCounts;
 
     public Integer getId() {
         return id;
@@ -73,5 +74,13 @@ public class Topic {
 
     public void setCreateDate(Date createDate) {
         this.createDate = createDate;
+    }
+
+    public int getReplyCounts() {
+        return replyCounts;
+    }
+
+    public void setReplyCounts(int replyCounts) {
+        this.replyCounts = replyCounts;
     }
 }
